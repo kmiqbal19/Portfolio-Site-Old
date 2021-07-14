@@ -1,0 +1,8 @@
+nav#main-nav {
+  width: 100%;
+  height: calc(5vh + 20px);
+  background-color: chartreuse;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,10 @@
+.main-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.main-logo img {
+  height: 100%;
+  object-fit: cover;
+}
