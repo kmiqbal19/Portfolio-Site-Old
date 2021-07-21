@@ -1,0 +1,50 @@
+:root {
+  --primary-color: #101b24;
+
+  --secondary-color: #ba135d;
+  /* --secondary-color: #7dedff; */
+  --tertiary-color: white;
+}
+#showcase {
+  width: 100%;
+  height: 100vh;
+
+  position: relative;
+}
+div.hero {
+  position: absolute;
+  top: 20vh;
+  left: 10vw;
+  color: white;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+div.hero .hero-name {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-bottom: 2rem;
+  font-size: 6rem;
+  letter-spacing: 5px;
+}
+div.hero .hero-name span {
+  color: var(--secondary-color);
+}
+div.hero .hero-occupation {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+}
+@media screen and (max-width: 750px) {
+  div.hero {
+    left: 15vw;
+    top: 15vh;
+  }
+  div.hero .hero-name {
+    font-size: calc(6rem - 4vw);
+  }
+  div.hero .hero-occupation {
+    font-size: calc(1.5rem - 1.5vw);
+  }
+}

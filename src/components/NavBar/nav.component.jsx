@@ -1,23 +1,28 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink, withRouter } from "react-router-dom";
 import "./nav.component.css";
 import { menuLists } from "./MenuLists";
 import Logo from "./logo/main-logo.component";
 
-function Nav() {
+function Nav({ history }) {
   const [hamClicked, setHamClicked] = useState(false);
 
   const clickHandler = () => setHamClicked(!hamClicked);
-
+  useEffect(() => {
+    history.listen(() => {
+      return setHamClicked(!hamClicked);
+    });
+  });
   const MenuLists = menuLists.map((list, index) => {
     return (
-      <li key={index}>
+      <li key={index} className="nav-list--item">
         <NavLink
           to={list.url}
-          activeClassName="active"
-          className="nav-list--items"
+          activeClassName="nav-list--active"
+          className="nav-list"
         >
-          {list.title}
+          <span className="active">{`</`}</span> {list.title}
+          <span className="active">{` >`}</span>
         </NavLink>
       </li>
     );
@@ -33,10 +38,16 @@ function Nav() {
         {MenuLists}
       </ul>
       <div className="hamburger" onClick={() => clickHandler()}>
-        <i className={hamClicked ? "fas fa-times" : "fas fa-hamburger"}></i>
+        {/* <i className={hamClicked ? "fas fa-times" : "fas fa-hamburger"}></i> */}
+        <div
+          className={hamClicked ? "line line-1 clicked" : "line line-1"}
+        ></div>
+        <div
+          className={hamClicked ? "line line-2 clicked" : "line line-2"}
+        ></div>
       </div>
     </nav>
   );
 }
 
-export default Nav;
+export default withRouter(Nav);

@@ -1,0 +1,12 @@
+.three-d--elements {
+  width: 100%;
+  height: 100%;
+  /* border: 5px solid red; */
+  z-index: -1;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+  background: #101b24;
+  opacity: 1;
+}
