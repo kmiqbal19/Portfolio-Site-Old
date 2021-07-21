@@ -13,7 +13,7 @@
 }
 div.hero {
   position: absolute;
-  top: 20vh;
+  top: 15vh;
   left: 10vw;
   color: white;
   z-index: 1;
@@ -22,19 +22,18 @@ div.hero {
 div.hero .hero-name {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  margin-bottom: 2rem;
-  font-size: 6rem;
+  margin-bottom: 4rem;
+  font-size: 5rem;
   letter-spacing: 5px;
 }
 div.hero .hero-name span {
   color: var(--secondary-color);
 }
-div.hero .hero-occupation {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-
+.typing-para {
   font-size: 1.5rem;
-  letter-spacing: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 5rem;
+  letter-spacing: 3px;
 }
 @media screen and (max-width: 750px) {
   div.hero {
@@ -42,9 +41,13 @@ div.hero .hero-occupation {
     top: 15vh;
   }
   div.hero .hero-name {
-    font-size: calc(6rem - 4vw);
+    font-size: calc(5rem - 4vw);
   }
   div.hero .hero-occupation {
     font-size: calc(1.5rem - 1.5vw);
+  }
+  .typing-para {
+    margin-left: 1rem;
+    margin-top: 4rem;
   }
 }
