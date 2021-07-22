@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { TweenMax, Power3 } from "gsap/all";
 import Typical from "react-typical";
 import "./homepage.component.css";
 import ThreeDElements from "./Scene/threeD.component.jsx";
 
 function HomePage() {
+  let heroDiv = useRef(null);
+  useEffect(() => {
+    TweenMax.to(heroDiv, 1.5, { opacity: 1, y: -20, ease: Power3.easeOut });
+  }, []);
   return (
     <>
       <section id="showcase">
-        <div className="hero">
+        <div
+          className="hero"
+          ref={(el) => {
+            heroDiv = el;
+          }}
+        >
           <h3 className="hero-name">
             <span>{`</`}</span>K M Iqbal<span>{`>`}</span>
           </h3>
