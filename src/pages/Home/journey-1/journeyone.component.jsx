@@ -6,21 +6,8 @@ function CloudComponent() {
   gsap.registerPlugin(ScrollTrigger);
   let cloud1Ref = useRef(null);
   let cloud2Ref = useRef(null);
-  let headerRef = useRef(null);
+  let paraRef = useRef(null);
   useEffect(() => {
-    // gsap.to(cloud1Ref.current, {
-    //   x: 500,
-    //   duration: 2,
-    //   scrollTrigger: {
-    //     trigger: ".bird-2",
-    //     markers: true,
-    //     start: "center center",
-    //     end: "+=200",
-    //     toggleActions: "play none reverse reverse", // restart pause reset resume reverse complete
-    //     scrub: 1,
-    //     // pin: true,
-    //   },
-    // });
     const cloudScrollTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: cloud2Ref.current,
@@ -59,7 +46,7 @@ function CloudComponent() {
     });
     birdScrollTimeline
       .to(".bird-1", {
-        x: 1300,
+        x: 1400,
         delay: 0,
         ease: "SlowMo",
         duration: 2,
@@ -118,6 +105,21 @@ function CloudComponent() {
         duration: 0.5,
         ease: "ease",
       });
+
+    gsap.to(paraRef.current, {
+      opacity: 1,
+      delay: 1,
+      y: 10,
+      ease: "ease",
+      scrollTrigger: {
+        trigger: cloud2Ref.current,
+        markers: true,
+        start: "bottom center",
+        end: "+=100",
+        toggleActions: "play none reverse reverse",
+        scrub: 1,
+      },
+    });
   }, []);
   return (
     <div className="container-cloud">
@@ -355,9 +357,16 @@ function CloudComponent() {
           </g>
         </g>
       </svg>
-      <h1 ref={headerRef} className="header">
-        Hi How are You?
-      </h1>
+      <div ref={paraRef} className="description--journey-one">
+        <span className="para-one">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore
+        </span>
+        <span className="para-one">
+          et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+          accusam et justo duo dolores et ea rebum.
+        </span>
+      </div>
     </div>
   );
 }
