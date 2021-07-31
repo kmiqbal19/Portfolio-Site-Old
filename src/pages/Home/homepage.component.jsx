@@ -3,14 +3,18 @@ import { TweenMax, Power3 } from "gsap/all";
 import Typical from "react-typical";
 import "./homepage.component.css";
 import ThreeDElements from "./Scene/threeD.component.jsx";
-
+import CloudComponent from "./journey-1/journeyone.component";
 function HomePage() {
   let heroDiv = useRef(null);
   useEffect(() => {
-    TweenMax.to(heroDiv, 1.5, { opacity: 1, y: -20, ease: Power3.easeOut });
+    TweenMax.to(heroDiv, 1.5, {
+      opacity: 1,
+      y: -20,
+      ease: Power3.easeOut,
+    });
   }, []);
   return (
-    <>
+    <div className="container">
       <section id="showcase">
         <div
           className="hero"
@@ -38,8 +42,11 @@ function HomePage() {
         </div>
         <ThreeDElements />
       </section>
-      <section id="journey">journey</section>
-    </>
+      <section id="journey1">
+        <CloudComponent />
+      </section>
+      <section id="journey2"></section>
+    </div>
   );
 }
 

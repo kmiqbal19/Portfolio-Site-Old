@@ -1,9 +1,14 @@
 :root {
   --primary-color: #101b24;
+  /* --primary-color: #1c1d25; */
 
   --secondary-color: #ba135d;
   /* --secondary-color: #7dedff; */
   --tertiary-color: white;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
 }
 #showcase {
   width: 100%;
@@ -50,4 +55,19 @@ div.hero .hero-name span {
     margin-left: 1rem;
     margin-top: 4rem;
   }
+}
+
+/* Section Journey */
+#journey1 {
+  width: 100%;
+  height: 100%;
+}
+#journey2 {
+  width: 100%;
+  height: 100vh;
+  background-color: green;
+  border: 5px solid blue;
+}
+#journey2 p {
+  color: yellow;
 }
