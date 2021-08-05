@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./journeyone.components.css";
+import "./cloud.component.css";
 function CloudComponent() {
   gsap.registerPlugin(ScrollTrigger);
   let cloud1Ref = useRef(null);
@@ -11,12 +11,11 @@ function CloudComponent() {
     const cloudScrollTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: cloud2Ref.current,
-        markers: true,
+        // markers: true,
         start: "top center",
         end: "+=500",
-        toggleActions: "play none reverse reverse", // restart pause reset resume reverse complete
-        scrub: 1,
-        // pin: true,
+        // toggleActions: "play none reverse reverse",
+        scrub: 3,
       },
     });
     cloudScrollTimeline
@@ -36,26 +35,25 @@ function CloudComponent() {
     const birdScrollTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: cloud2Ref.current,
-        markers: true,
+        // markers: true,
         start: "top center",
         end: "+=700",
         toggleActions: "play none reverse reverse", // restart pause reset resume reverse complete
-        scrub: 1,
-        // pin: true,
+        scrub: 3,
       },
     });
     birdScrollTimeline
       .to(".bird-1", {
-        x: 1400,
+        x: 1350,
         delay: 0,
         ease: "SlowMo",
-        duration: 2,
+        duration: 5,
       })
       .to(".bird-2", {
         x: -1300,
         delay: 0,
         ease: "SlowMo",
-        duration: 2,
+        duration: 5,
       });
     const birdOneTimeline = gsap.timeline({ repeat: -1 });
     birdOneTimeline
@@ -71,7 +69,7 @@ function CloudComponent() {
       });
     birdOneTimeline
       .to(".movable-part__bird-1", {
-        rotate: -10,
+        rotate: -20,
         duration: 0.5,
         ease: "ease",
       })
@@ -95,7 +93,7 @@ function CloudComponent() {
     birdTwoTimeline
       .to(".movable-part__bird-2", {
         transformOrigin: "right",
-        rotate: 10,
+        rotate: 20,
         duration: 0.5,
         ease: "ease",
       })
@@ -113,7 +111,7 @@ function CloudComponent() {
       ease: "ease",
       scrollTrigger: {
         trigger: cloud2Ref.current,
-        markers: true,
+        // markers: true,
         start: "bottom center",
         end: "+=100",
         toggleActions: "play none reverse reverse",

@@ -3,7 +3,8 @@ import { TweenMax, Power3 } from "gsap/all";
 import Typical from "react-typical";
 import "./homepage.component.css";
 import ThreeDElements from "./Scene/threeD.component.jsx";
-import CloudComponent from "./journey-1/journeyone.component";
+import CloudComponent from "./CloudComponent/cloud.component";
+import CityComponent from "./CityComponent/city.component";
 function HomePage() {
   let heroDiv = useRef(null);
   useEffect(() => {
@@ -45,7 +46,9 @@ function HomePage() {
       <section id="journey1">
         <CloudComponent />
       </section>
-      <section id="journey2"></section>
+      <section id="journey2">
+        <CityComponent />
+      </section>
     </div>
   );
 }
