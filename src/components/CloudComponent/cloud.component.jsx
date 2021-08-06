@@ -114,7 +114,7 @@ function CloudComponent() {
         // markers: true,
         start: "bottom center",
         end: "+=100",
-        toggleActions: "play none reverse reverse",
+        // toggleActions: "play none reverse reverse",
         scrub: 1,
       },
     });

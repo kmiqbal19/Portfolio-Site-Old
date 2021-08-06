@@ -1,0 +1,31 @@
+.city-container {
+  background-color: #101b24;
+  min-height: 100%;
+}
+.aeroplane-wind__line {
+  opacity: 0;
+}
+.tree-leafs {
+  fill: green;
+}
+.car-smoke {
+  stroke: white;
+  opacity: 0.3;
+}
+svg.city {
+  width: 100%;
+}
+.para-two {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5rem;
+}
+.description--journey-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.3;
+}

@@ -5,6 +5,7 @@ import "./city.component.css";
 function CityComponent() {
   gsap.registerPlugin(ScrollTrigger);
   let cityRef = useRef(null);
+  let paraRef = useRef(null);
   useEffect(() => {
     // Aeroplane
     const aeroWindLines = document.querySelectorAll(".aeroplane-wind__line");
@@ -110,7 +111,7 @@ function CityComponent() {
         x: 1000,
         duration: 10,
         scrollTrigger: {
-          trigger: cityRef.current,
+          trigger: paraRef.current,
           start: "center center",
           end: "+=350",
           scrub: 4,
@@ -118,6 +119,33 @@ function CityComponent() {
         },
       }
     );
+    gsap.to(".car-wheel-2", {
+      rotate: 1080,
+
+      transformOrigin: "center",
+      scrollTrigger: {
+        trigger: paraRef.current,
+        start: "center center",
+        end: "+=350",
+        scrub: 4,
+      },
+    });
+    gsap.to(".car-body-2", { y: 4, yoyo: true, repeat: -1 });
+    // Descriptions
+    gsap.to(paraRef.current, {
+      opacity: 1,
+      delay: 1,
+      y: 10,
+      ease: "ease",
+      scrollTrigger: {
+        trigger: ".car-1",
+        // markers: true,
+        start: "top center",
+        end: "+=50",
+        // toggleActions: "play none reverse reverse",
+        scrub: 1,
+      },
+    });
   }, []);
   return (
     <div className="city-container">
@@ -1172,7 +1200,7 @@ function CityComponent() {
               d="M525.5 928.5C530.167 928.5 530.5 932.5 527 933.5M519.5 932.5C524.167 932.5 524 936.5 520.5 937.5M525.5 936C530.167 936 530.5 940 527 941M513 927.5C517.667 927.5 518 931.5 514.5 932.5M513 937.5C517.667 937.5 517.5 941.5 514 942.5"
               stroke="black"
             />
-            <g className="car-wheel">
+            <g className="car-wheel-2">
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -1184,7 +1212,7 @@ function CityComponent() {
                 fill="black"
               />
             </g>
-            <g className="car-wheel">
+            <g className="car-wheel-2">
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -1205,7 +1233,7 @@ function CityComponent() {
               fill="#C4C4C4"
               stroke="black"
             />
-            <g className="car-body">
+            <g className="car-body-2">
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -1273,6 +1301,16 @@ function CityComponent() {
           </g>
         </g>
       </svg>
+      <div ref={paraRef} className="description--journey-two">
+        <span className="para-two">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore
+        </span>
+        <span className="para-two">
+          et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+          accusam et justo duo dolores et ea rebum.
+        </span>
+      </div>
     </div>
   );
 }

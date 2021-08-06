@@ -66,6 +66,12 @@ div.hero .hero-name span {
 #journey2 {
   width: 100%;
   height: 100%;
-  background-color: green;
+  /* background-color: green; */
   /* border: 5px solid blue; */
+}
+#journey3 {
+  width: 100%;
+  height: 100vh;
+  background-color: green;
+  border: 5px solid blue;
 }
