@@ -5,6 +5,7 @@ import "./homepage.component.css";
 import ThreeDElements from "./Scene/threeD.component.jsx";
 import CloudComponent from "../../components/CloudComponent/cloud.component";
 import CityComponent from "../../components/CityComponent/city.component";
+import ProgrammingComponent from "../../components/ProgrammingComponent/programming.component";
 function HomePage() {
   let heroDiv = useRef(null);
   useEffect(() => {
@@ -49,7 +50,9 @@ function HomePage() {
       <section id="journey2">
         <CityComponent />
       </section>
-      <section id="journey3"></section>
+      <section id="journey3">
+        <ProgrammingComponent />
+      </section>
     </div>
   );
 }

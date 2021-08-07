@@ -98,8 +98,8 @@ function CityComponent() {
       duration: 10,
       x: 500,
       ease: "linear",
-      delay: 2,
-      repeat: 1,
+      delay: 3,
+      repeat: 3,
     });
     // gsap.to(".car-smoke", { opacity: 0.5, repeat: -1, ease: "linear" });
     gsap.fromTo(
@@ -120,7 +120,7 @@ function CityComponent() {
       }
     );
     gsap.to(".car-wheel-2", {
-      rotate: 1080,
+      rotate: 1440,
 
       transformOrigin: "center",
       scrollTrigger: {

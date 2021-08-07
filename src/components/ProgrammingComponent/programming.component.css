@@ -1,0 +1,10 @@
+.prog-container {
+  background-color: var(--primary-color);
+}
+.prog-svg {
+  margin-top: 20rem;
+  transform: scale(0.8);
+}
+.window-prog {
+  transform: scale(0);
+}
