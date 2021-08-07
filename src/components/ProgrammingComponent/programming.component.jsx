@@ -18,7 +18,8 @@ function ProgrammingComponent() {
         trigger: progSvgRef.current,
         start: "20% center",
         end: "+=100",
-        markers: true,
+        // markers: true,
+        toggleActions: "play none none reset",
       },
     });
     windowTl
