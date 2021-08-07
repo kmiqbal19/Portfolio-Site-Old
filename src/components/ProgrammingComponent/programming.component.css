@@ -8,3 +8,18 @@
 .window-prog {
   transform: scale(0);
 }
+.para-three {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5rem;
+}
+.description--journey-three {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.3;
+}

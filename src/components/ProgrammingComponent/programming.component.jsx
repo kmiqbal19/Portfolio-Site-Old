@@ -11,6 +11,7 @@ function ProgrammingComponent() {
   let boyArmProgRef = useRef(null);
   let boyHairProgRef = useRef(null);
   let leafProgRef = useRef(null);
+  let paraRef = useRef(null);
   useEffect(() => {
     // Programming Window
     const windowTl = gsap.timeline({
@@ -68,6 +69,20 @@ function ProgrammingComponent() {
         duration: 1,
         transformOrigin: "bottom",
       });
+    // Descriptions
+    gsap.to(paraRef.current, {
+      opacity: 1,
+      delay: 1,
+      y: 10,
+      ease: "ease",
+      scrollTrigger: {
+        trigger: progSvgRef.current,
+        start: "bottom center",
+        end: "+=50",
+        scrub: 1,
+        markers: true,
+      },
+    });
   }, []);
 
   return (
@@ -349,6 +364,16 @@ function ProgrammingComponent() {
           </clipPath>
         </defs>
       </svg>
+      <div ref={paraRef} className="description--journey-three">
+        <span className="para-three">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore
+        </span>
+        <span className="para-three">
+          et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+          accusam et justo duo dolores et ea rebum.
+        </span>
+      </div>
     </div>
   );
 }
