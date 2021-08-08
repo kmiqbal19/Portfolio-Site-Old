@@ -1,0 +1,17 @@
+.love-container {
+  padding-top: 20rem;
+  background-color: var(--primary-color);
+}
+
+.cloud-1-love {
+  transform: scale(1.2);
+  transform: translateX(-10%) translateY(-10%);
+}
+.cloud-2-love {
+  transform: scale(1.2);
+  transform: translateX(10%) translateY(-10%);
+}
+.love-text__me,
+.love-text__coding {
+  opacity: 0;
+}

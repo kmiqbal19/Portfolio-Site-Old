@@ -80,7 +80,7 @@ function ProgrammingComponent() {
         start: "bottom center",
         end: "+=50",
         scrub: 1,
-        markers: true,
+        // markers: true,
       },
     });
   }, []);
