@@ -116,6 +116,7 @@ function CityComponent() {
           end: "+=350",
           scrub: 4,
           // markers: true,
+          pin: true,
         },
       }
     );

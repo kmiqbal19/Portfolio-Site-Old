@@ -3,6 +3,7 @@ import { gsap, Elastic } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./love.component.css";
 function LoveComponent() {
+  gsap.registerPlugin(ScrollTrigger);
   let loveContainerRef = useRef(null);
   let loveSvgRef = useRef(null);
   let loveSunRef = useRef(null);
@@ -12,6 +13,7 @@ function LoveComponent() {
   let loveCloud2Ref = useRef(null);
   let loveTextMeRef = useRef(null);
   let loveTextCodingRef = useRef(null);
+  let paraRef = useRef(null);
   useEffect(() => {
     // Container Background
     const containerTl = gsap.timeline({
@@ -51,9 +53,11 @@ function LoveComponent() {
       duration: 10,
       scrollTrigger: {
         trigger: loveSvgRef.current,
-        start: "top center",
+        start: "bottom bottom",
         end: "+=500",
         scrub: 2,
+        pin: true,
+        markers: true,
       },
     });
     //  Trees
@@ -245,7 +249,7 @@ function LoveComponent() {
         scale: 0,
         ease: "ease",
         duration: 0.5,
-        delay: 1,
+        delay: 2,
       })
       .to(loveTextCodingRef.current, {
         opacity: 1,
@@ -258,8 +262,23 @@ function LoveComponent() {
         scale: 0,
         ease: "ease",
         duration: 0.5,
-        delay: 1,
+        delay: 2,
       });
+    // Descriptions
+    gsap.to(paraRef.current, {
+      opacity: 1,
+      delay: 1,
+      y: 10,
+      ease: "ease",
+      scrollTrigger: {
+        trigger: loveSvgRef.current,
+        // markers: true,
+        start: "bottom center",
+        end: "+=50",
+
+        scrub: 1,
+      },
+    });
   }, []);
   return (
     <div ref={loveContainerRef} className="love-container">
@@ -595,6 +614,16 @@ function LoveComponent() {
           </g>
         </g>
       </svg>
+      <div ref={paraRef} className="description--journey-four">
+        <span className="para-four">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore
+        </span>
+        <span className="para-four">
+          et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+          accusam et justo duo dolores et ea rebum.
+        </span>
+      </div>
     </div>
   );
 }
