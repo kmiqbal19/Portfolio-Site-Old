@@ -5,9 +5,6 @@
   width: 100%;
   min-height: 100vh;
   background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
 }
 
 .knowledge-container__spans {
@@ -16,7 +13,9 @@
   /* border: 5px solid greenyellow; */
   position: relative;
 }
-
+div.knowledge-container__spans span {
+  opacity: 0;
+}
 .design-knowledge {
   font-size: 14rem;
   font-family: "Playfair Display SC", serif;
@@ -96,4 +95,33 @@
   position: absolute;
   bottom: 28%;
   left: 13%;
+}
+div.question-connection__container {
+  width: 100%;
+  height: 100vh;
+  /* border: 5px solid blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+div.remember__span--container {
+  position: absolute;
+}
+.wonder-knowledge {
+  font-size: 4rem;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.4rem;
+  color: white;
+  opacity: 0;
+}
+.remember__span {
+  font-size: 4rem;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.4rem;
+  margin-right: 2rem;
+  opacity: 0;
+  color: white;
 }
