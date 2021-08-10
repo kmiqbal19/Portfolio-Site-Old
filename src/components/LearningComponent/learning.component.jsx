@@ -24,7 +24,7 @@ function LearningComponent() {
       scrollTrigger: {
         trigger: learningContainerRef.current,
         scrub: 3,
-        start: "30% center",
+        start: "bottom bottom",
 
         end: "+=500",
         // markers: {
@@ -32,7 +32,8 @@ function LearningComponent() {
         //   startColor: "blue",
         //   endColor: "green",
         // },
-        // pin: true,
+        pin: true,
+        pinSpacing: true,
       },
     });
     gsap.to(sittingManRef.current, {
@@ -41,10 +42,12 @@ function LearningComponent() {
       scrollTrigger: {
         trigger: learningContainerRef.current,
         scrub: 3,
-        start: "30% center",
+        start: "bottom bottom",
 
         end: "+=500",
-        markers: true,
+        // markers: true,
+        pin: true,
+        pinSpacing: true,
       },
     });
     gsap.to(leftMountainRef.current, {
@@ -53,10 +56,12 @@ function LearningComponent() {
       scrollTrigger: {
         trigger: learningContainerRef.current,
         scrub: 3,
-        start: "30% center",
+        start: "bottom bottom",
 
         end: "+=500",
-        markers: true,
+        // markers: true,
+        pin: true,
+        pinSpacing: true,
       },
     });
     gsap.to(rightMountainRef.current, {
@@ -65,10 +70,12 @@ function LearningComponent() {
       scrollTrigger: {
         trigger: learningContainerRef.current,
         scrub: 3,
-        start: "30% center",
+        start: "bottom bottom",
 
         end: "+=500",
-        markers: true,
+        // markers: true,
+        pin: true,
+        pinSpacing: true,
       },
     });
     gsap.to(cloudOneRef.current, {
@@ -78,10 +85,12 @@ function LearningComponent() {
       scrollTrigger: {
         trigger: learningContainerRef.current,
         scrub: 3,
-        start: "30% center",
+        start: "bottom bottom",
 
         end: "+=500",
-        markers: true,
+        // markers: true,
+        pin: true,
+        pinSpacing: true,
       },
     });
     gsap.to(cloudTwoRef.current, {
@@ -92,10 +101,12 @@ function LearningComponent() {
       scrollTrigger: {
         trigger: learningContainerRef.current,
         scrub: 3,
-        start: "30% center",
+        start: "bottom bottom",
 
         end: "+=500",
-        markers: true,
+        // markers: true,
+        pin: true,
+        pinSpacing: true,
       },
     });
   }, []);
