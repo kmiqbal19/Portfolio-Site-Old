@@ -1,0 +1,99 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Bree+Serif&family=Kaushan+Script&family=Orbitron&family=Palette+Mosaic&family=Permanent+Marker&family=Playfair+Display+SC&display=swap");
+/* Styles */
+.knowledge-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.knowledge-container__spans {
+  width: 100%;
+  height: 100vh;
+  /* border: 5px solid greenyellow; */
+  position: relative;
+}
+
+.design-knowledge {
+  font-size: 14rem;
+  font-family: "Playfair Display SC", serif;
+  font-weight: 500;
+  letter-spacing: calc(80px - 3vw);
+  position: absolute;
+  top: 0;
+  left: 2%;
+}
+/* .urban-knowledge {
+  font-size: 1rem;
+  font-family: "Bree Serif", serif;
+  transform: rotateZ(-90deg);
+  position: absolute;
+  bottom: 24%;
+  left: 3%;
+  font-style: italic;
+} */
+.planning-knowledge {
+  font-family: "Kaushan Script", cursive;
+  font-size: 7rem;
+  transform: rotateZ(-90deg);
+  position: absolute;
+  bottom: 20%;
+  left: -7%;
+}
+.development-knowledge {
+  font-size: 7rem;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 1.25rem;
+  position: absolute;
+  top: 35%;
+  left: 15%;
+}
+.frontend-knowledge {
+  font-size: 6rem;
+  font-family: "Bree Serif", serif;
+  position: absolute;
+  top: 18%;
+  right: 2%;
+}
+.illustration-knowledge {
+  font-size: 7rem;
+  font-family: "Palette Mosaic", cursive;
+  position: absolute;
+  top: 52%;
+  right: 5%;
+  /* letter-spacing: 2rem; */
+}
+.engineering-knowledge {
+  font-size: 8rem;
+  position: absolute;
+  bottom: 1%;
+  right: 0;
+  letter-spacing: 2rem;
+}
+.projects-knowledge {
+  font-size: 4.5rem;
+  font-family: "Permanent Marker", cursive;
+  position: absolute;
+  top: 8%;
+  right: 2%;
+}
+.ms-knowledge {
+  font-size: 5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: absolute;
+  bottom: 28%;
+  left: 27%;
+  font-style: italic;
+  letter-spacing: 1rem;
+  transform: rotateZ(-90deg);
+}
+.safety-knowledge {
+  font-size: 5rem;
+  font-family: "Kaushan Script", cursive;
+  position: absolute;
+  bottom: 28%;
+  left: 13%;
+}

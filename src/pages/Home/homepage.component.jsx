@@ -9,6 +9,7 @@ import ProgrammingComponent from "../../components/ProgrammingComponent/programm
 import LoveComponent from "../../components/LoveComponents/love.component";
 import HWComponent from "../../components/HWComponent/hw.component";
 import LearningComponent from "../../components/LearningComponent/learning.component";
+import KnowledgeComponent from "../../components/KnowledgeComponent/knowledge.component";
 function HomePage() {
   let heroDiv = useRef(null);
   useEffect(() => {
@@ -64,6 +65,9 @@ function HomePage() {
       </section>
       <section id="journey6">
         <LearningComponent />
+      </section>
+      <section id="journey7">
+        <KnowledgeComponent />
       </section>
     </div>
   );

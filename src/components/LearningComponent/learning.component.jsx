@@ -72,8 +72,9 @@ function LearningComponent() {
       },
     });
     gsap.to(cloudOneRef.current, {
-      x: 100,
+      x: 200,
       y: -100,
+      scale: 1.3,
       scrollTrigger: {
         trigger: learningContainerRef.current,
         scrub: 3,
@@ -84,8 +85,9 @@ function LearningComponent() {
       },
     });
     gsap.to(cloudTwoRef.current, {
-      x: -100,
+      x: -200,
       y: -100,
+      scale: 1.3,
 
       scrollTrigger: {
         trigger: learningContainerRef.current,
