@@ -75,7 +75,7 @@ function HWComponent() {
         start: "75% bottom",
         end: "+=1500",
         scrub: 1,
-        markers: true,
+        // markers: true,
         pin: true,
       },
     });
@@ -98,7 +98,7 @@ function HWComponent() {
         start: "75% bottom",
         end: "+=1500",
         scrub: 1,
-        markers: true,
+        // markers: true,
         pin: true,
       },
     });

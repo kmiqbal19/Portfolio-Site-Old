@@ -57,7 +57,7 @@ function LoveComponent() {
         end: "+=500",
         scrub: 2,
         pin: true,
-        markers: true,
+        // markers: true,
       },
     });
     //  Trees
