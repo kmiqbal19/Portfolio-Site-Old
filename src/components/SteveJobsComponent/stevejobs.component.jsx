@@ -29,7 +29,7 @@ function StevejobsComponent() {
     const ringMoveTl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "bottom bottom",
+        start: "98% bottom",
         end: "bottom bottom",
         // markers: true,
         toggleActions: "play none none reverse",

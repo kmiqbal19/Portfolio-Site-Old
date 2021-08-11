@@ -6,7 +6,7 @@
   /* --secondary-color: #7dedff; */
   --tertiary-color: white;
 }
-.container {
+.home-container {
   width: 100%;
   min-height: 100vh;
 }
