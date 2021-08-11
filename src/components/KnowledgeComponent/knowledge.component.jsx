@@ -13,7 +13,7 @@ function KnowledgeComponent() {
     gsap.to(spansKnowledge, {
       opacity: 1,
       ease: "ease",
-      stagger: 0.4,
+      stagger: 0.6,
       scrollTrigger: {
         trigger: spansContainerRef.current,
         start: "80% bottom",
@@ -42,7 +42,7 @@ function KnowledgeComponent() {
         start: "bottom bottom",
         end: "+=800",
         scrub: 1,
-        markers: true,
+        // markers: true,
         pin: true,
       },
     });
@@ -62,13 +62,13 @@ function KnowledgeComponent() {
         <span className="knowledge design-knowledge">DESIGN</span>
         <span className="knowledge frontend-knowledge">Frontend</span>
         <span className="knowledge development-knowledge">DEVELOPMENT</span>
-        {/* <span className="urban-knowledge">URBAN</span> */}
+        <span className="knowledge urban-knowledge">URBAN</span>
         <span className="knowledge planning-knowledge">Planning</span>
         <span className="knowledge engineering-knowledge">ENGINEERING</span>
         <span className="knowledge illustration-knowledge">ILLUSTRATION</span>
         <span className="knowledge projects-knowledge">PROJECTS</span>
         <span className="knowledge safety-knowledge">Safety</span>
-        <span className="knowledge ms-knowledge">MS</span>
+        <span className="knowledge ms-knowledge">M.Sc</span>
       </div>
       <div
         ref={questionConnectionContainerRef}

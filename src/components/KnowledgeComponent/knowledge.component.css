@@ -3,7 +3,7 @@
 /* Styles */
 .knowledge-container {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   background-color: white;
 }
 
@@ -25,15 +25,15 @@ div.knowledge-container__spans span {
   top: 0;
   left: 2%;
 }
-/* .urban-knowledge {
+.urban-knowledge {
   font-size: 1rem;
-  font-family: "Bree Serif", serif;
+  font-family: "Kaushan Script", cursive;
   transform: rotateZ(-90deg);
   position: absolute;
   bottom: 24%;
   left: 3%;
   font-style: italic;
-} */
+}
 .planning-knowledge {
   font-family: "Kaushan Script", cursive;
   font-size: 7rem;
@@ -80,11 +80,11 @@ div.knowledge-container__spans span {
   right: 2%;
 }
 .ms-knowledge {
-  font-size: 5rem;
+  font-size: 4rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   position: absolute;
   bottom: 28%;
-  left: 27%;
+  left: 26%;
   font-style: italic;
   letter-spacing: 1rem;
   transform: rotateZ(-90deg);

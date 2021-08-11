@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+div.stevejobs__container {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+
+  position: relative;
+  overflow: hidden;
+}
+
+img.ring-img1 {
+  position: absolute;
+  width: 800px;
+  height: 500px;
+  top: 20%;
+  left: 20%;
+}
+
+img.ring-img2 {
+  position: absolute;
+  width: 800px;
+  height: 500px;
+  top: 21%;
+  left: 20%;
+}
+.steve-quote__container {
+  position: absolute;
+  width: 50vw;
+  height: 70vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 0rem;
+  top: 15%;
+  left: 8%;
+  opacity: 0;
+}
+.steve-quote {
+  font-family: "Amatic SC", cursive;
+  color: white;
+  font-size: 3rem;
+}
+.steve-name {
+  font-family: "Amatic SC", cursive;
+  color: white;
+  font-size: 3rem;
+}
