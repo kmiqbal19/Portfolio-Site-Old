@@ -1,0 +1,80 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+/* Styles */
+.import-container {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: relative;
+  /* opacity: 0; */
+}
+
+.useeffect-text__import {
+  font-size: 4rem;
+  color: #a9dc76;
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  font-family: "Ubuntu", sans-serif;
+}
+.import-text__import {
+  color: hsl(345, 97%, 59%);
+  font-size: 3.5rem;
+  font-family: "Ubuntu", sans-serif;
+  position: absolute;
+  top: 10%;
+  left: 3%;
+}
+.from-text__import {
+  color: #fc3265;
+  font-size: 3.5rem;
+  font-family: "Ubuntu", sans-serif;
+  position: absolute;
+  top: 10%;
+  left: 38%;
+}
+.memory-text__import {
+  font-size: 3.5rem;
+  font-family: "Ubuntu", sans-serif;
+  color: whitesmoke;
+  position: absolute;
+  top: 10%;
+  left: 17%;
+}
+.brainpath-text__import {
+  font-size: 3.5rem;
+  font-family: "Ubuntu", sans-serif;
+  color: #ffae00;
+  position: absolute;
+  top: 10%;
+  right: 4%;
+}
+.parenthesis-text__import {
+  color: #ff9d00;
+}
+.parenthesis__single-text__import {
+  color: #fd0505;
+}
+.dependencyarray-text__import {
+  color: #00b5fd;
+}
+.dependency-text__import {
+  color: whitesmoke;
+}
+.arrowfunc-text__import {
+  color: #fc3265;
+}
+.semicolon-text__import {
+  color: grey;
+}
+.function-wrapper__import {
+  margin: 4rem;
+  opacity: 0;
+}
+.curlyleft-text__import,
+.curlyright-text__import {
+  color: rgb(231, 218, 176);
+}
+.anime-import {
+  opacity: 0;
+}

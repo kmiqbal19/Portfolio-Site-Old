@@ -19,7 +19,7 @@ function KnowledgeComponent() {
         start: "80% bottom",
         end: "80% bottom",
         // markers: true,
-        toggleActions: "play none none reset",
+        toggleActions: "play none none reverse",
       },
     });
     // QUESTION CONNECTIONS

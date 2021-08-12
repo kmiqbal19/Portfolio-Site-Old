@@ -47,6 +47,7 @@ function StevejobsComponent() {
         y: -10,
         ease: "ease",
         duration: 0.5,
+        delay: 0.4,
       });
   }, []);
 
