@@ -75,8 +75,7 @@ function KnowledgeComponent() {
         className="question-connection__container"
       >
         <span className="wonder-knowledge">
-          SOMETIMES I WONDER WHERE IS THE CONNECTION BETWEEN ALL THESE KNOWLEDGE
-          OF ME.....
+          SOMETIMES I WONDER WHERE IS THE CONNECTION BETWEEN ALL THESE ...
         </span>
         <div className="remember__span--container">
           <span className="then-knowledge remember__span">THEN</span>

@@ -6,6 +6,7 @@ div.learning-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 5px solid wheat; */
 }
 div.learning-container::before {
   content: "";

@@ -20,7 +20,7 @@ function ProgrammingComponent() {
         start: "20% center",
         end: "+=100",
         // markers: true,
-        toggleActions: "play none none reset",
+        toggleActions: "play none none reverse",
       },
     });
     windowTl
