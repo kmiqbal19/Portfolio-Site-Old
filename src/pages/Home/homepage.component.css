@@ -1,9 +1,8 @@
 :root {
   --primary-color: #101b24;
-  /* --primary-color: #1c1d25; */
 
   --secondary-color: #ba135d;
-  /* --secondary-color: #7dedff; */
+
   --tertiary-color: white;
 }
 .home-container {
@@ -28,32 +27,30 @@ div.hero .hero-name {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin-bottom: 4rem;
-  font-size: 5rem;
+  font-size: calc(4vw + 1rem);
   letter-spacing: 5px;
 }
-div.hero .hero-name span {
+div.hero h3.hero-name span {
   color: var(--secondary-color);
 }
 .typing-para {
-  font-size: 1.5rem;
+  font-size: calc(1.2vw + 0.5rem);
   font-family: Arial, Helvetica, sans-serif;
   margin-left: 5rem;
   letter-spacing: 3px;
 }
 @media screen and (max-width: 750px) {
   div.hero {
-    left: 15vw;
-    top: 15vh;
+    left: 12vw;
+    top: 20vh;
   }
   div.hero .hero-name {
-    font-size: calc(5rem - 4vw);
+    font-size: calc(5vw + 1rem);
   }
-  div.hero .hero-occupation {
-    font-size: calc(1.5rem - 1.5vw);
-  }
+
   .typing-para {
     margin-left: 1rem;
-
+    /* font-size: calc(1.5vw + 0.5rem); */
     margin-bottom: 4rem;
   }
 }

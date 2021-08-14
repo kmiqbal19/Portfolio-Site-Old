@@ -9,6 +9,8 @@ function CloudComponent() {
   let cloud2Ref = useRef(null);
   let paraRef = useRef(null);
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    //  Scroll Trigger with Match Media
     ScrollTrigger.matchMedia({
       "(min-width: 300px)": function () {
         // Cloud Scroll
@@ -17,13 +19,16 @@ function CloudComponent() {
             trigger: containerCloudRef.current,
             // markers: true,
             start: "90% bottom",
-            end: "+=1300",
+            end: "+=1800",
             scrub: 3,
             pin: true,
           },
         });
         cloudBirdScrollTimeline
-          .to(containerCloudRef.current, { backgroundColor: "#5ADEFF" })
+          .to(containerCloudRef.current, 1.5, {
+            backgroundColor: "#5ADEFF",
+            delay: 0.5,
+          })
           .from(cloud1Ref.current, {
             x: 1500,
             duration: 5,
@@ -37,20 +42,19 @@ function CloudComponent() {
             ease: "SlowMo",
           })
           // Bird Scroll
-          .to(".bird-1", {
-            x: 1400,
+          .to(".bird-1", 5, {
+            x: 1500,
             delay: 0,
             ease: "SlowMo",
-            duration: 5,
           })
-          .to(".bird-2", {
+          .to(".bird-2", 5, {
             x: -1350,
             delay: 0,
             ease: "SlowMo",
-            duration: 5,
           });
         // .to(paraRef.current, { opacity: 1, y: -200, ease: "ease", duration: 2 });
         // Bird One
+        // gsap.to(".bird-1", { x: -200 });
         const birdOneTimeline = gsap.timeline({ repeat: -1 });
         birdOneTimeline
           .to(".bird-1", {
@@ -75,6 +79,7 @@ function CloudComponent() {
             ease: "ease",
           });
         // Bird Two
+        // gsap.to(".bird-2", { x: 400 });
         const birdTwoTimeline = gsap.timeline({ repeat: -1 });
         birdTwoTimeline
           .to(".bird-2", {
@@ -127,10 +132,8 @@ function CloudComponent() {
           duration: 5,
           scrollTrigger: {
             trigger: containerCloudRef.current,
-            // markers: true,
             start: "90% bottom",
             end: "+=100",
-            // toggleActions: "play none reverse reverse",
             scrub: 1,
           },
         });
@@ -141,9 +144,9 @@ function CloudComponent() {
     <div ref={containerCloudRef} className="container-cloud">
       <svg
         className="cloud-svg"
-        width="1440"
-        height="1024"
-        viewBox="0 0 1440 1024"
+        width="1540"
+        height="1000"
+        viewBox="0 0 1540 1000"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >

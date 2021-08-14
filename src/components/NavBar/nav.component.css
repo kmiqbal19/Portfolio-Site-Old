@@ -7,8 +7,6 @@
 }
 :root {
   --primary-color: #101b24;
-  /* --primary-color: #1c1d25; */
-  /* --secondary-color: #7dedff; */
   --secondary-color: #ba135d;
   --tertiary-color: white;
 }
@@ -19,7 +17,10 @@ nav#main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  /* border: 2px solid red; */
 }
+
 /* NavLists */
 ul.nav-list__container {
   display: flex;
@@ -44,23 +45,6 @@ ul.nav-list__container {
   padding-bottom: 0.5rem;
   margin: 0.5rem 1.5rem;
 }
-/* .nav-list--item::after {
-  content: "";
-  position: absolute;
-  bottom: 5%;
-  display: block;
-  transform: scaleX(0);
-  transform-origin: left;
-  height: 0.08rem;
-  background-color: white;
-  transition: all 0.5s ease;
-  width: 100%;
-  z-index: 1;
-}
-.nav-list--item:hover::after {
-  transform: scaleX(1);
-  /* transform-origin: right; */
-/* background-color: blue; */
 
 .nav-list--item:hover .active {
   opacity: 1;
@@ -76,24 +60,16 @@ span.active {
 
 /* Hamburger */
 div.hamburger {
-  height: 3rem;
-  width: 4rem;
+  width: calc(6vw + 1rem);
+  height: calc(3vh + 1rem);
 
   z-index: 2;
-  padding: 0.5rem 0.5rem;
+
   cursor: pointer;
 
   display: none;
 }
 
-.fa-hamburger {
-  transform: rotate(-360deg);
-  transition: all 0.5s ease-in-out;
-}
-.fa-times {
-  transform: rotate(180deg);
-  transition: all 0.5s ease-in-out;
-}
 /* Responsive for 750px */
 @media screen and (max-width: 750px) {
   nav#main-nav {
@@ -108,15 +84,19 @@ div.hamburger {
     background-color: transparent;
     position: relative;
     overflow: visible;
+    position: fixed;
+    top: 5%;
+    right: 6%;
+    /* background-color: green; */
   }
   div.line {
     width: 100%;
-    padding-bottom: 0.2rem;
+
     background-color: var(--secondary-color);
     transition: all 0.5s ease-in-out;
-    position: absolute;
+    /* position: absolute;
     right: 2rem;
-    top: 2rem;
+    top: 2rem; */
   }
 
   div.line-1 {
@@ -131,20 +111,20 @@ div.hamburger {
   div.line-1.clicked {
     position: absolute;
     top: 30px;
-    width: 65%;
+    width: 75%;
     transform: rotateZ(410deg);
     height: 0.15rem;
   }
   div.line-2.clicked {
     position: absolute;
-    width: 65%;
+    width: 75%;
     transform: rotateZ(670deg);
     top: 30px;
   }
 
   /* Navlists */
   ul.nav-list__container {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -40rem;
     width: 30rem;

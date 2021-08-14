@@ -18,45 +18,39 @@ function CityComponent() {
     aeroplaneTimeline
       .to(".aeroplane-main", { y: 10, duration: 0.5, ease: "ease" })
       .to(".aeroplane-main", { y: 0, duration: 0.5, ease: "ease" });
-    const aeroplaneScrollTl = gsap.timeline({
+    // Aeroplane and Clouds
+    const aeroplaneCloudScrollTl = gsap.timeline({
       scrollTrigger: {
         trigger: cityRef.current,
-        start: "top center",
-        end: "+=500",
+        start: "75% bottom",
+        end: "+=1000",
         // markers: true,
         scrub: 3,
+        pin: true,
       },
     });
-    aeroplaneScrollTl.to(".aeroplane-main", {
-      x: 1400,
-      ease: "ease",
-      duration: 5,
-    });
+    aeroplaneCloudScrollTl
+      .from(".cloud-1-city", {
+        x: -1000,
+        ease: "ease",
+        duration: 2,
+      })
+      .from(".cloud-2-city", {
+        x: 1200,
+        ease: "ease",
+        duration: 2,
+      })
+      .to(".aeroplane-main", {
+        x: 1400,
+        ease: "ease",
+        duration: 5,
+      });
     // Trees
     const treeTimeline = gsap.timeline({ repeat: -1 });
     treeTimeline
       .to(".tree-leafs", { x: 1 })
       .to(".tree-leafs", { x: -1, ease: "SlowMo" });
-    // Clouds
-    const cloudScrollTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: cityRef.current,
-        start: "top center",
-        end: "+=100",
-        // markers: true,
-        scrub: 3,
-      },
-    });
-    cloudScrollTl.from(".cloud-1-city", {
-      x: -1000,
-      ease: "ease",
-      duration: 2,
-    });
-    cloudScrollTl.from(".cloud-2-city", {
-      x: 1200,
-      ease: "ease",
-      duration: 2,
-    });
+
     // Ferris Wheel
     gsap.to(".ferris-wheel", {
       rotate: 360,
@@ -152,7 +146,7 @@ function CityComponent() {
     <div className="city-container">
       <svg
         ref={cityRef}
-        className="city"
+        className="city-svg"
         width="1440"
         height="1024"
         viewBox="0 0 1440 1024"
@@ -1127,21 +1121,21 @@ function CityComponent() {
             fill-rule="evenodd"
             clip-rule="evenodd"
             d="M377 82C364.85 82 355 91.8497 355 104C355 116.15 364.85 126 377 126H512C524.15 126 534 116.15 534 104C534 91.8497 524.15 82 512 82H377ZM793 204C780.85 204 771 213.85 771 226C771 238.15 780.85 248 793 248H928C940.15 248 950 238.15 950 226C950 213.85 940.15 204 928 204H793Z"
-            fill="#C4C4C4"
+            fill="white"
           />
           <path
             className="cloud-2-city"
             fill-rule="evenodd"
             clip-rule="evenodd"
             d="M1101 116C1101 103.85 1110.85 94 1123 94H1192.91C1205.06 94 1214.91 103.85 1214.91 116H1246C1258.15 116 1268 125.85 1268 138C1268 150.15 1258.15 160 1246 160H1173C1160.85 160 1151 150.15 1151 138H1123C1110.85 138 1101 128.15 1101 116ZM430 114C417.85 114 408 123.85 408 136C408 148.15 417.85 158 430 158H565C577.15 158 587 148.15 587 136C587 123.85 577.15 114 565 114H430ZM883 226C870.85 226 861 235.85 861 248C861 260.15 870.85 270 883 270H958C970.15 270 980 260.15 980 248C980 235.85 970.15 226 958 226H883Z"
-            fill="#C4C4C4"
+            fill="white"
           />
           <path
             className="cloud-3"
             fill-rule="evenodd"
             clip-rule="evenodd"
             d="M27 108C14.8497 108 5 117.85 5 130V132C5 144.15 14.8497 154 27 154H61V155C61 167.15 70.8497 177 83 177H218C230.15 177 240 167.15 240 155V153C240 140.85 230.15 131 218 131H132V130C132 117.85 122.15 108 110 108H27Z"
-            fill="#C4C4C4"
+            fill="white"
           />
           <g className="car-1">
             <path

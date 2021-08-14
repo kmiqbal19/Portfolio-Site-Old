@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { TweenMax, Power3 } from "gsap/all";
+import { gsap, Power3 } from "gsap";
 import Typical from "react-typical";
 import "./homepage.component.css";
 import ThreeDElements from "./Scene/threeD.component.jsx";
@@ -14,10 +14,11 @@ import StevejobsComponent from "../../components/SteveJobsComponent/stevejobs.co
 import ImportComponent from "../../components/ImportComponent/import.component";
 import CreativityComponent from "../../components/CreativityComponent/creativity.component";
 import FooterComponent from "../../components/FooterComponent/footer.component";
+
 function HomePage() {
-  let heroDiv = useRef(null);
+  let heroDivRef = useRef(null);
   useEffect(() => {
-    TweenMax.to(heroDiv, 1.5, {
+    gsap.to(heroDivRef.current, 1.5, {
       opacity: 1,
       y: -20,
       ease: Power3.easeOut,
@@ -26,14 +27,9 @@ function HomePage() {
   return (
     <div className="home-container">
       <section id="showcase">
-        <div
-          className="hero"
-          ref={(el) => {
-            heroDiv = el;
-          }}
-        >
+        <div className="hero" ref={heroDivRef}>
           <h3 className="hero-name">
-            <span>{`</`}</span>K M Iqbal<span>{`>`}</span>
+            <span>{`// `}</span>K M Iqbal<span>{``}</span>
           </h3>
 
           <p className="typing-para">

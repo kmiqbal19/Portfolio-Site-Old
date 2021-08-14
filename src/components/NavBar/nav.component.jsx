@@ -28,25 +28,26 @@ function Nav({ history }) {
     );
   });
   return (
-    <nav id="main-nav">
-      <Logo />
-      <ul
-        className={
-          hamClicked ? "nav-list__container mobile" : "nav-list__container"
-        }
-      >
-        {MenuLists}
-      </ul>
-      <div className="hamburger" onClick={() => clickHandler()}>
-        {/* <i className={hamClicked ? "fas fa-times" : "fas fa-hamburger"}></i> */}
-        <div
-          className={hamClicked ? "line line-1 clicked" : "line line-1"}
-        ></div>
-        <div
-          className={hamClicked ? "line line-2 clicked" : "line line-2"}
-        ></div>
-      </div>
-    </nav>
+    <>
+      <nav id="main-nav">
+        <Logo />
+        <ul
+          className={
+            hamClicked ? "nav-list__container mobile" : "nav-list__container"
+          }
+        >
+          {MenuLists}
+        </ul>
+        <div className="hamburger" onClick={() => clickHandler()}>
+          <div
+            className={hamClicked ? "line line-1 clicked" : "line line-1"}
+          ></div>
+          <div
+            className={hamClicked ? "line line-2 clicked" : "line line-2"}
+          ></div>
+        </div>
+      </nav>
+    </>
   );
 }
 
