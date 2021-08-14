@@ -11,7 +11,7 @@ function CreativityComponent() {
   const curlyBraceRight = "}";
 
   useEffect(() => {
-    const boxes = document.querySelectorAll(".creativity__box");
+    const boxes = document.querySelectorAll(".creativity-box");
     const letters = document.querySelectorAll(".creativity-letter");
     Draggable.create(letters, {
       bounds: ".creativity-svg",
@@ -22,6 +22,15 @@ function CreativityComponent() {
       },
       onRelease: function () {
         gsap.to(this.target, { scale: 1 });
+    
+      },
+      onDrag: function () {
+        if (this.hitTest(boxes)) {
+          gsap.to(this.target, { fill: "yellow" });
+        }
+        if (!this.hitTest(boxes)) {
+          gsap.to(this.target, { fill: "blue" });
+        }
       },
     });
   }, []);

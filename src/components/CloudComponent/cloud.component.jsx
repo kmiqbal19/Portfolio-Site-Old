@@ -4,131 +4,150 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./cloud.component.css";
 function CloudComponent() {
   gsap.registerPlugin(ScrollTrigger);
+  let containerCloudRef = useRef(null);
   let cloud1Ref = useRef(null);
   let cloud2Ref = useRef(null);
   let paraRef = useRef(null);
   useEffect(() => {
-    const cloudScrollTimeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: cloud2Ref.current,
-        // markers: true,
-        start: "top center",
-        end: "+=500",
-        // toggleActions: "play none reverse reverse",
-        scrub: 3,
-      },
-    });
-    cloudScrollTimeline
-      .from(cloud1Ref.current, {
-        x: 1500,
-        duration: 5,
-        delay: 0,
-        ease: "SlowMo",
-      })
-      .from(cloud2Ref.current, {
-        x: -1500,
-        duration: 5,
-        delay: 0,
-        ease: "SlowMo",
-      });
+    ScrollTrigger.matchMedia({
+      "(min-width: 300px)": function () {
+        // Cloud Scroll
+        const cloudBirdScrollTimeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerCloudRef.current,
+            // markers: true,
+            start: "90% bottom",
+            end: "+=1300",
+            scrub: 3,
+            pin: true,
+          },
+        });
+        cloudBirdScrollTimeline
+          .to(containerCloudRef.current, { backgroundColor: "#5ADEFF" })
+          .from(cloud1Ref.current, {
+            x: 1500,
+            duration: 5,
+            delay: 0,
+            ease: "SlowMo",
+          })
+          .from(cloud2Ref.current, {
+            x: -1500,
+            duration: 5,
+            delay: 0,
+            ease: "SlowMo",
+          })
+          // Bird Scroll
+          .to(".bird-1", {
+            x: 1400,
+            delay: 0,
+            ease: "SlowMo",
+            duration: 5,
+          })
+          .to(".bird-2", {
+            x: -1350,
+            delay: 0,
+            ease: "SlowMo",
+            duration: 5,
+          });
+        // .to(paraRef.current, { opacity: 1, y: -200, ease: "ease", duration: 2 });
+        // Bird One
+        const birdOneTimeline = gsap.timeline({ repeat: -1 });
+        birdOneTimeline
+          .to(".bird-1", {
+            y: 10,
+            ease: "ease",
+            duration: 0.5,
+          })
+          .to(".bird-1", {
+            y: 0,
+            ease: "ease",
+            duration: 0.5,
+          });
+        birdOneTimeline
+          .to(".movable-part__bird-1", {
+            rotate: -20,
+            duration: 0.5,
+            ease: "ease",
+          })
+          .to(".movable-part__bird-1", {
+            rotate: 0,
+            duration: 0.5,
+            ease: "ease",
+          });
+        // Bird Two
+        const birdTwoTimeline = gsap.timeline({ repeat: -1 });
+        birdTwoTimeline
+          .to(".bird-2", {
+            y: 10,
+            ease: "ease",
+            duration: 0.5,
+          })
+          .to(".bird-2", {
+            y: 0,
+            ease: "ease",
+            duration: 0.5,
+          });
+        birdTwoTimeline
+          .to(".movable-part__bird-2", {
+            transformOrigin: "right",
+            rotate: 20,
+            duration: 0.5,
+            ease: "ease",
+          })
+          .to(".movable-part__bird-2", {
+            transformOrigin: "right",
+            rotate: 0,
+            duration: 0.5,
+            ease: "ease",
+          });
 
-    const birdScrollTimeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: cloud2Ref.current,
-        // markers: true,
-        start: "top center",
-        end: "+=700",
-        toggleActions: "play none reverse reverse", // restart pause reset resume reverse complete
-        scrub: 3,
+        gsap.to(paraRef.current, {
+          opacity: 1,
+          delay: 1,
+          y: -200,
+          ease: "ease",
+          duration: 5,
+          scrollTrigger: {
+            trigger: containerCloudRef.current,
+            // markers: true,
+            start: "90% bottom",
+            end: "+=100",
+            // toggleActions: "play none reverse reverse",
+            scrub: 1,
+          },
+        });
       },
-    });
-    birdScrollTimeline
-      .to(".bird-1", {
-        x: 1350,
-        delay: 0,
-        ease: "SlowMo",
-        duration: 5,
-      })
-      .to(".bird-2", {
-        x: -1300,
-        delay: 0,
-        ease: "SlowMo",
-        duration: 5,
-      });
-    const birdOneTimeline = gsap.timeline({ repeat: -1 });
-    birdOneTimeline
-      .to(".bird-1", {
-        y: 10,
-        ease: "ease",
-        duration: 0.5,
-      })
-      .to(".bird-1", {
-        y: 0,
-        ease: "ease",
-        duration: 0.5,
-      });
-    birdOneTimeline
-      .to(".movable-part__bird-1", {
-        rotate: -20,
-        duration: 0.5,
-        ease: "ease",
-      })
-      .to(".movable-part__bird-1", {
-        rotate: 0,
-        duration: 0.5,
-        ease: "ease",
-      });
-    const birdTwoTimeline = gsap.timeline({ repeat: -1 });
-    birdTwoTimeline
-      .to(".bird-2", {
-        y: 10,
-        ease: "ease",
-        duration: 0.5,
-      })
-      .to(".bird-2", {
-        y: 0,
-        ease: "ease",
-        duration: 0.5,
-      });
-    birdTwoTimeline
-      .to(".movable-part__bird-2", {
-        transformOrigin: "right",
-        rotate: 20,
-        duration: 0.5,
-        ease: "ease",
-      })
-      .to(".movable-part__bird-2", {
-        transformOrigin: "right",
-        rotate: 0,
-        duration: 0.5,
-        ease: "ease",
-      });
 
-    gsap.to(paraRef.current, {
-      opacity: 1,
-      delay: 1,
-      y: 10,
-      ease: "ease",
-      scrollTrigger: {
-        trigger: cloud2Ref.current,
-        // markers: true,
-        start: "bottom center",
-        end: "+=100",
-        // toggleActions: "play none reverse reverse",
-        scrub: 1,
+      "(max-width: 500px)": function () {
+        gsap.to(paraRef.current, {
+          opacity: 1,
+          delay: 1,
+          y: -230,
+          ease: "ease",
+          duration: 5,
+          scrollTrigger: {
+            trigger: containerCloudRef.current,
+            // markers: true,
+            start: "90% bottom",
+            end: "+=100",
+            // toggleActions: "play none reverse reverse",
+            scrub: 1,
+          },
+        });
       },
     });
   }, []);
   return (
-    <div className="container-cloud">
+    <div ref={containerCloudRef} className="container-cloud">
       <svg
+        className="cloud-svg"
         width="1440"
         height="1024"
         viewBox="0 0 1440 1024"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g id="Desktop - 1">
+        <g id="cloud_component">
           <rect width="1440" height="1024" fill="none" />
           <g className="bird-1">
             <g className="fixed-part__bird-1">
@@ -258,7 +277,7 @@ function CloudComponent() {
               width="206"
               height="50"
               rx="25"
-              fill="#C4C4C4"
+              fill="white"
             />
             <rect
               id="Rectangle 2"
@@ -267,7 +286,7 @@ function CloudComponent() {
               width="206"
               height="50"
               rx="25"
-              fill="#C4C4C4"
+              fill="white"
             />
             <rect
               id="Rectangle 5"
@@ -276,7 +295,7 @@ function CloudComponent() {
               width="206"
               height="50"
               rx="25"
-              fill="#C4C4C4"
+              fill="white"
             />
             <rect
               id="Rectangle 9"
@@ -285,7 +304,7 @@ function CloudComponent() {
               width="141"
               height="50"
               rx="25"
-              fill="#C4C4C4"
+              fill="white"
             />
             <rect
               id="Rectangle 11"
@@ -294,7 +313,7 @@ function CloudComponent() {
               width="165"
               height="50"
               rx="25"
-              fill="#C4C4C4"
+              fill="white"
             />
             <rect
               id="Rectangle 4"
@@ -303,7 +322,7 @@ function CloudComponent() {
               width="206"
               height="50"
               rx="25"
-              fill="#C4C4C4"
+              fill="white"
             />
           </g>
           <g ref={cloud1Ref} className="cloud-1">
@@ -314,7 +333,7 @@ function CloudComponent() {
               width="206"
               height="50"
               rx="25"
-              fill="#C4C4C4"
+              fill="white"
             />
             <rect
               id="Rectangle 8"
@@ -323,7 +342,7 @@ function CloudComponent() {
               width="165"
               height="50"
               rx="25"
-              fill="#C4C4C4"
+              fill="white"
             />
             <rect
               id="Rectangle 7"
@@ -332,7 +351,7 @@ function CloudComponent() {
               width="206"
               height="50"
               rx="25"
-              fill="#C4C4C4"
+              fill="white"
             />
             <rect
               id="Rectangle 6"
@@ -341,7 +360,7 @@ function CloudComponent() {
               width="206"
               height="50"
               rx="25"
-              fill="#C4C4C4"
+              fill="white"
             />
             <rect
               id="Rectangle 3"
@@ -350,7 +369,7 @@ function CloudComponent() {
               width="206"
               height="50"
               rx="25"
-              fill="#C4C4C4"
+              fill="white"
             />
           </g>
         </g>
