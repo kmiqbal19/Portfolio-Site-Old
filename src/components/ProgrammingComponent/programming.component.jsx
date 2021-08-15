@@ -13,74 +13,75 @@ function ProgrammingComponent() {
   let leafProgRef = useRef(null);
   let paraRef = useRef(null);
   useEffect(() => {
-    // Programming Window
-    const windowTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: progSvgRef.current,
-        start: "20% center",
-        end: "+=100",
-        // markers: true,
-        toggleActions: "play none none reverse",
-      },
-    });
-    windowTl
-      .to(progWindowRef.current, { scale: 0.9, x: 100, duration: 1 })
-      .from(boyProgRef.current, { x: -600, ease: "ease", duration: 1 });
-    // Programming Window Cursor
-    const cursorProgTl = gsap.timeline({ repeat: -1 });
-    cursorProgTl
-      .to(cursorProgRef.current, { opacity: 0, duration: 1, ease: "ease" })
-      .to(cursorProgRef.current, { opacity: 1, ease: "ease", duration: 0.5 });
-    // Boy Arm
+    ScrollTrigger.matchMedia({
+      "(min-width: 300px)": function () {
+        // Programming Window
+        const windowTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: progSvgRef.current,
+            start: "30% center",
+            end: "+=50",
+            // markers: true,
+            toggleActions: "play none none reverse",
+          },
+        });
+        windowTl
+          .to(progWindowRef.current, { scale: 0.9, x: 100, duration: 1 })
+          .from(boyProgRef.current, { x: -600, ease: "ease", duration: 1 })
+          .to(paraRef.current, {
+            opacity: 1,
+            duration: 0.5,
+            y: -260,
+            ease: "ease",
+          });
+        // Programming Window Cursor
+        const cursorProgTl = gsap.timeline({ repeat: -1 });
+        cursorProgTl
+          .to(cursorProgRef.current, { opacity: 0, duration: 1, ease: "ease" })
+          .to(cursorProgRef.current, {
+            opacity: 1,
+            ease: "ease",
+            duration: 0.5,
+          });
+        // Boy Arm
 
-    const armProgTl = gsap.timeline({ repeat: -1 });
-    armProgTl
-      .to(boyArmProgRef.current, {
-        rotate: 10,
-        ease: "ease",
-        duration: 1,
-      })
-      .to(boyArmProgRef.current, {
-        rotate: 0,
-        delay: 1,
-        ease: "ease",
-        duration: 1,
-      })
-      .to(boyHairProgRef.current, {
-        rotate: -5,
-        transformOrigin: "center",
+        const armProgTl = gsap.timeline({ repeat: -1 });
+        armProgTl
+          .to(boyArmProgRef.current, {
+            rotate: 10,
+            ease: "ease",
+            duration: 0.8,
+          })
+          .to(boyArmProgRef.current, {
+            rotate: 0,
+            delay: 0.5,
 
-        ease: "ease",
-        duration: 0.5,
-      });
-    // Leafs
-    gsap.to(leafProgRef.current, { x: 10 });
-    const leafsProgTl = gsap.timeline({ repeat: -1 });
-    leafsProgTl
-      .to(leafProgRef.current, {
-        rotate: -10,
-        ease: "ease",
-        duration: 1,
-        transformOrigin: "bottom",
-      })
-      .to(leafProgRef.current, {
-        rotate: 0,
-        ease: "ease",
-        duration: 1,
-        transformOrigin: "bottom",
-      });
-    // Descriptions
-    gsap.to(paraRef.current, {
-      opacity: 1,
-      delay: 1,
-      y: 10,
-      ease: "ease",
-      scrollTrigger: {
-        trigger: progSvgRef.current,
-        start: "bottom center",
-        end: "+=50",
-        scrub: 1,
-        // markers: true,
+            ease: "ease",
+            duration: 0.8,
+          })
+          .to(boyHairProgRef.current, {
+            rotate: -5,
+            transformOrigin: "center",
+
+            ease: "ease",
+            duration: 0.5,
+          });
+        // Leafs
+        gsap.to(leafProgRef.current, { x: 10 });
+        const leafsProgTl = gsap.timeline({ repeat: -1 });
+        leafsProgTl
+          .to(leafProgRef.current, {
+            rotate: -10,
+            ease: "ease",
+            duration: 1,
+            transformOrigin: "bottom",
+          })
+          .to(leafProgRef.current, {
+            rotate: 0,
+            ease: "ease",
+            duration: 1,
+            transformOrigin: "bottom",
+          });
       },
     });
   }, []);
@@ -92,11 +93,11 @@ function ProgrammingComponent() {
         className="prog-svg"
         width="1400"
         height="800"
-        viewBox="0 0 1462 984"
+        viewBox="0 0 1500 986"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g id="Desktop - 1">
+        <g id="prog-frame">
           <rect width="1400" height="800" fill="none" />
           <g id="programming">
             <g ref={progWindowRef} className="window-prog">
