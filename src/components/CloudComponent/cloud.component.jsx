@@ -26,7 +26,8 @@ function CloudComponent() {
         });
         cloudBirdScrollTimeline
           .to(containerCloudRef.current, 1.5, {
-            backgroundColor: "#5ADEFF",
+            backgroundImage:
+              "linear-gradient(to bottom, rgba(90,222,255,1) 0%, rgba(196,224,232,1) 73%, rgba(0,203,254,1) 100%)",
             delay: 0.5,
           })
           .from(cloud1Ref.current, {

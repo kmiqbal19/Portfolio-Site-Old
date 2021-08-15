@@ -8,11 +8,11 @@ function Nav({ history }) {
   const [hamClicked, setHamClicked] = useState(false);
 
   const clickHandler = () => setHamClicked(!hamClicked);
-  useEffect(() => {
-    history.listen(() => {
-      return setHamClicked(!hamClicked);
-    });
-  });
+  // useEffect(() => {
+  //   history.listen(() => {
+  //     return setHamClicked(!hamClicked);
+  //   });
+  // });
   const MenuLists = menuLists.map((list, index) => {
     return (
       <li key={index} className="nav-list--item">
@@ -51,4 +51,5 @@ function Nav({ history }) {
   );
 }
 
-export default withRouter(Nav);
+// export default withRouter(Nav);
+export default Nav;

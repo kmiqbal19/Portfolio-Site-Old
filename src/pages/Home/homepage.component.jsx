@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { gsap, Power3 } from "gsap";
 import Typical from "react-typical";
 import "./homepage.component.css";
+
 import ThreeDElements from "./Scene/threeD.component.jsx";
 import CloudComponent from "../../components/CloudComponent/cloud.component";
 import CityComponent from "../../components/CityComponent/city.component";
@@ -29,7 +30,7 @@ function HomePage() {
       <section id="showcase">
         <div className="hero" ref={heroDivRef}>
           <h3 className="hero-name">
-            <span>{`// `}</span>K M Iqbal<span>{``}</span>
+            <span className="hero-name__span">{`// `}</span>K M Iqbal
           </h3>
 
           <p className="typing-para">

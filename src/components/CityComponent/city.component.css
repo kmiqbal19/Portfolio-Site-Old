@@ -1,5 +1,10 @@
 .city-container {
-  background-color: #101b24;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 203, 254, 1) 0%,
+    rgba(255, 241, 95, 1) 61%,
+    rgba(232, 133, 28, 0.8130602582830007) 100%
+  );
   min-height: 100%;
 }
 .aeroplane-wind__line {
@@ -9,7 +14,7 @@
   fill: green;
 }
 .car-smoke {
-  stroke: white;
+  /* stroke: white; */
   opacity: 0.3;
 }
 svg.city-svg {
@@ -17,7 +22,7 @@ svg.city-svg {
 }
 .para-two {
   color: white;
-  font-size: 2rem;
+  font-size: calc(2vw + 4px);
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   margin-bottom: 0.5rem;
@@ -27,5 +32,21 @@ svg.city-svg {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  opacity: 0.3;
+}
+/* Media Queries */
+@media screen and (max-width: 750px) {
+  .city-svg {
+    transform: scaleY(1.2);
+  }
+  .description--journey-two {
+    transform: translateY(-250px);
+  }
+}
+@media screen and (max-width: 500px) {
+  .city-svg {
+    transform: scaleY(1.4);
+  }
+  .description--journey-two {
+    transform: translateY(-300px);
+  }
 }
