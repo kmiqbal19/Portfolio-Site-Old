@@ -15,269 +15,257 @@ function LoveComponent() {
   let loveTextCodingRef = useRef(null);
   let paraRef = useRef(null);
   useEffect(() => {
-    // Container Background
-    const containerTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: loveSvgRef.current,
-        start: "30% bottom",
-        end: "+=300",
-        scrub: 4,
-        // markers: true,
+    ScrollTrigger.matchMedia({
+      "(min-width: 300px)": function () {
+        // Clouds
+        const cloudsTlScroll = gsap.timeline({
+          scrollTrigger: {
+            trigger: loveSvgRef.current,
+            start: "top center",
+            end: "+=400",
+            scrub: 3,
+          },
+        });
+        cloudsTlScroll
+          .from(loveCloud1Ref.current, { x: -800, ease: "ease", duration: 1 })
+          .from(loveCloud2Ref.current, { x: 900, ease: "ease", duration: 1 })
+          .to(paraRef.current, {
+            opacity: 1,
+          });
+        // Love Sun
+        const loveSunTl = gsap.timeline({ repeat: -1 });
+        loveSunTl
+          .to(loveSunRef.current, { y: 15, ease: "ease", duration: 1 })
+          .to(loveSunRef.current, { y: 0, ease: "ease", duration: 1 });
+
+        gsap.from(loveSunRef.current, {
+          x: 1100,
+          fill: "#D01760",
+          scale: 2,
+          ease: "ease",
+          duration: 10,
+          scrollTrigger: {
+            trigger: loveSvgRef.current,
+            start: "bottom bottom",
+            end: "+=500",
+            scrub: 2,
+            pin: true,
+            // markers: true,
+          },
+        });
+        //  Trees
+        const treeTl = gsap.timeline({ repeat: -1 });
+        treeTl
+          .to(".leaf-love", {
+            rotate: 2,
+            transformOrigin: "bottom",
+            ease: "linear",
+            duration: 1,
+          })
+          .to(".leaf-love", {
+            rotate: 0,
+            transformOrigin: "bottom",
+            ease: "linear",
+            duration: 1,
+          });
+        // Left Dolls
+        const leftArmLeftDollTl = gsap.timeline({ repeat: -1 });
+        const rightArmLeftDollTl = gsap.timeline({ repeat: -1 });
+        const mouthLeftDollTl = gsap.timeline({ repeat: -1 });
+        const legLeftDollTl = gsap.timeline({ repeat: -1 });
+        const eyeLeftDollTl = gsap.timeline({ repeat: -1 });
+        leftArmLeftDollTl
+          .to(".left-doll__left-arm", {
+            rotate: 20,
+            ease: "ease",
+            duration: 0.8,
+            transformOrigin: "top",
+          })
+          .to(".left-doll__left-arm", {
+            rotate: 0,
+            ease: "ease",
+            duration: 0.8,
+            transformOrigin: "top",
+          });
+        rightArmLeftDollTl
+          .to(".left-doll__right-arm", {
+            rotate: -10,
+            ease: "ease",
+            duration: 0.8,
+            transformOrigin: "top",
+          })
+          .to(".left-doll__right-arm", {
+            rotate: 0,
+            ease: "ease",
+            duration: 0.8,
+            transformOrigin: "top",
+          });
+        mouthLeftDollTl
+          .to(".left-doll__mouth", {
+            scale: 0.3,
+            ease: "ease",
+            transformOrigin: "center",
+            duration: 1,
+          })
+          .to(".left-doll__mouth", {
+            scale: 1,
+            ease: "ease",
+            duration: 1,
+            delay: 1.5,
+            transformOrigin: "center",
+          });
+        legLeftDollTl
+          .to(".left-doll__right-leg", {
+            rotate: -20,
+            transformOrigin: "top",
+            delay: 2,
+          })
+          .to(".left-doll__right-leg", {
+            rotate: 0,
+            transformOrigin: "top",
+            duration: 1,
+          });
+        eyeLeftDollTl
+          .to(".left-doll__eye-ball", {
+            rotate: -20,
+
+            duration: 2,
+          })
+          .to(".left-doll__eye-ball", {
+            rotate: 0,
+
+            duration: 2,
+          })
+          .to(".left-doll__full-body", {
+            rotate: -10,
+            duration: 2,
+            delay: 2,
+            transformOrigin: "center",
+          })
+          .to(".left-doll__full-body", {
+            rotate: 0,
+            duration: 2,
+            delay: 3,
+            transformOrigin: "center",
+          });
+        // Right Dolls
+        const leftArmRightDollTl = gsap.timeline({ repeat: -1 });
+        const rightArmRightDollTl = gsap.timeline({ repeat: -1 });
+        const mouthRightDollTl = gsap.timeline({ repeat: -1 });
+        const legRightDollTl = gsap.timeline({ repeat: -1 });
+        const eyeRightDollTl = gsap.timeline({ repeat: -1 });
+        leftArmRightDollTl
+          .to(".right-doll__left-arm", {
+            rotate: 20,
+            ease: "ease",
+            duration: 0.8,
+            transformOrigin: "top",
+          })
+          .to(".right-doll__left-arm", {
+            rotate: 0,
+            ease: "ease",
+            duration: 0.8,
+            transformOrigin: "top",
+          });
+        rightArmRightDollTl
+          .to(".right-doll__right-arm", {
+            rotate: -10,
+            ease: "ease",
+            duration: 0.8,
+            transformOrigin: "top",
+          })
+          .to(".right-doll__right-arm", {
+            rotate: 0,
+            ease: "ease",
+            duration: 0.8,
+            transformOrigin: "top",
+          });
+        mouthRightDollTl
+          .to(".right-doll__mouth", {
+            scale: 0.3,
+            ease: "ease",
+            transformOrigin: "center",
+            duration: 1,
+          })
+          .to(".right-doll__mouth", {
+            scale: 1,
+            ease: "ease",
+            duration: 1,
+            delay: 2,
+            transformOrigin: "center",
+          });
+        legRightDollTl
+          .to(".right-doll__left-leg", {
+            rotate: 20,
+            transformOrigin: "top",
+            delay: 2,
+          })
+          .to(".right-doll__left-leg", {
+            rotate: 0,
+            transformOrigin: "top",
+            duration: 1,
+          });
+        eyeRightDollTl
+          .to(".right-doll__eye-ball", {
+            rotate: 20,
+
+            duration: 2,
+          })
+          .to(".right-doll__eye-ball", {
+            rotate: 0,
+
+            duration: 2,
+          })
+          .to(".right-doll", {
+            rotate: 10,
+            duration: 2,
+            delay: 2,
+            transformOrigin: "center",
+          })
+          .to(".right-doll", {
+            rotate: 0,
+            duration: 2,
+            delay: 2,
+            transformOrigin: "center",
+          });
+        // Love Conversation
+        const loveConversationTl = gsap.timeline({ repeat: -1 });
+        loveConversationTl
+          .to(loveTextMeRef.current, {
+            opacity: 1,
+            scale: 1,
+            ease: Elastic.easeOut,
+            duration: 1,
+          })
+          .to(loveTextMeRef.current, {
+            opacity: 0,
+            scale: 0,
+            ease: "ease",
+            duration: 0.5,
+            delay: 2,
+          })
+          .to(loveTextCodingRef.current, {
+            opacity: 1,
+            scale: 1,
+            ease: Elastic.easeOut,
+            duration: 0.5,
+          })
+          .to(loveTextCodingRef.current, {
+            opacity: 0,
+            scale: 0,
+            ease: "ease",
+            duration: 0.5,
+            delay: 2,
+          });
       },
-    });
-    containerTl.to(loveContainerRef.current, { backgroundColor: "#5ADEFF" });
-    // Clouds
-
-    const cloudsTlScroll = gsap.timeline({
-      scrollTrigger: {
-        trigger: loveSvgRef.current,
-        start: "top center",
-        end: "+=200",
-        scrub: 3,
-      },
-    });
-    cloudsTlScroll
-      .from(loveCloud1Ref.current, { x: -500, ease: "ease", duration: 1 })
-      .from(loveCloud2Ref.current, { x: 600, ease: "ease", duration: 1 });
-    // Love Sun
-    const loveSunTl = gsap.timeline({ repeat: -1 });
-    loveSunTl
-      .to(loveSunRef.current, { y: 15, ease: "ease", duration: 1 })
-      .to(loveSunRef.current, { y: 0, ease: "ease", duration: 1 });
-
-    gsap.from(loveSunRef.current, {
-      x: 1000,
-      fill: "#cb0e40",
-      scale: 2,
-      ease: "ease",
-      duration: 10,
-      scrollTrigger: {
-        trigger: loveSvgRef.current,
-        start: "bottom bottom",
-        end: "+=500",
-        scrub: 2,
-        pin: true,
-        // markers: true,
-      },
-    });
-    //  Trees
-    const treeTl = gsap.timeline({ repeat: -1 });
-    treeTl
-      .to(".leaf-love", {
-        rotate: 2,
-        transformOrigin: "bottom",
-        ease: "linear",
-        duration: 1,
-      })
-      .to(".leaf-love", {
-        rotate: 0,
-        transformOrigin: "bottom",
-        ease: "linear",
-        duration: 1,
-      });
-    // Left Dolls
-    const leftArmLeftDollTl = gsap.timeline({ repeat: -1 });
-    const rightArmLeftDollTl = gsap.timeline({ repeat: -1 });
-    const mouthLeftDollTl = gsap.timeline({ repeat: -1 });
-    const legLeftDollTl = gsap.timeline({ repeat: -1 });
-    const eyeLeftDollTl = gsap.timeline({ repeat: -1 });
-    leftArmLeftDollTl
-      .to(".left-doll__left-arm", {
-        rotate: 20,
-        ease: "ease",
-        duration: 0.8,
-        transformOrigin: "top",
-      })
-      .to(".left-doll__left-arm", {
-        rotate: 0,
-        ease: "ease",
-        duration: 0.8,
-        transformOrigin: "top",
-      });
-    rightArmLeftDollTl
-      .to(".left-doll__right-arm", {
-        rotate: -10,
-        ease: "ease",
-        duration: 0.8,
-        transformOrigin: "top",
-      })
-      .to(".left-doll__right-arm", {
-        rotate: 0,
-        ease: "ease",
-        duration: 0.8,
-        transformOrigin: "top",
-      });
-    mouthLeftDollTl
-      .to(".left-doll__mouth", {
-        scale: 0.3,
-        ease: "ease",
-        transformOrigin: "center",
-        duration: 1,
-      })
-      .to(".left-doll__mouth", {
-        scale: 1,
-        ease: "ease",
-        duration: 1,
-        delay: 1.5,
-        transformOrigin: "center",
-      });
-    legLeftDollTl
-      .to(".left-doll__right-leg", {
-        rotate: -20,
-        transformOrigin: "top",
-        delay: 2,
-      })
-      .to(".left-doll__right-leg", {
-        rotate: 0,
-        transformOrigin: "top",
-        duration: 1,
-      });
-    eyeLeftDollTl
-      .to(".left-doll__eye-ball", {
-        rotate: -20,
-
-        duration: 2,
-      })
-      .to(".left-doll__eye-ball", {
-        rotate: 0,
-
-        duration: 2,
-      })
-      .to(".left-doll__full-body", {
-        rotate: -10,
-        duration: 2,
-        delay: 2,
-        transformOrigin: "center",
-      })
-      .to(".left-doll__full-body", {
-        rotate: 0,
-        duration: 2,
-        delay: 3,
-        transformOrigin: "center",
-      });
-    // Right Dolls
-    const leftArmRightDollTl = gsap.timeline({ repeat: -1 });
-    const rightArmRightDollTl = gsap.timeline({ repeat: -1 });
-    const mouthRightDollTl = gsap.timeline({ repeat: -1 });
-    const legRightDollTl = gsap.timeline({ repeat: -1 });
-    const eyeRightDollTl = gsap.timeline({ repeat: -1 });
-    leftArmRightDollTl
-      .to(".right-doll__left-arm", {
-        rotate: 20,
-        ease: "ease",
-        duration: 0.8,
-        transformOrigin: "top",
-      })
-      .to(".right-doll__left-arm", {
-        rotate: 0,
-        ease: "ease",
-        duration: 0.8,
-        transformOrigin: "top",
-      });
-    rightArmRightDollTl
-      .to(".right-doll__right-arm", {
-        rotate: -10,
-        ease: "ease",
-        duration: 0.8,
-        transformOrigin: "top",
-      })
-      .to(".right-doll__right-arm", {
-        rotate: 0,
-        ease: "ease",
-        duration: 0.8,
-        transformOrigin: "top",
-      });
-    mouthRightDollTl
-      .to(".right-doll__mouth", {
-        scale: 0.3,
-        ease: "ease",
-        transformOrigin: "center",
-        duration: 1,
-      })
-      .to(".right-doll__mouth", {
-        scale: 1,
-        ease: "ease",
-        duration: 1,
-        delay: 2,
-        transformOrigin: "center",
-      });
-    legRightDollTl
-      .to(".right-doll__left-leg", {
-        rotate: 20,
-        transformOrigin: "top",
-        delay: 2,
-      })
-      .to(".right-doll__left-leg", {
-        rotate: 0,
-        transformOrigin: "top",
-        duration: 1,
-      });
-    eyeRightDollTl
-      .to(".right-doll__eye-ball", {
-        rotate: 20,
-
-        duration: 2,
-      })
-      .to(".right-doll__eye-ball", {
-        rotate: 0,
-
-        duration: 2,
-      })
-      .to(".right-doll", {
-        rotate: 10,
-        duration: 2,
-        delay: 2,
-        transformOrigin: "center",
-      })
-      .to(".right-doll", {
-        rotate: 0,
-        duration: 2,
-        delay: 2,
-        transformOrigin: "center",
-      });
-    // Love Conversation
-    const loveConversationTl = gsap.timeline({ repeat: -1 });
-    loveConversationTl
-      .to(loveTextMeRef.current, {
-        opacity: 1,
-        scale: 1,
-        ease: Elastic.easeOut,
-        duration: 1,
-      })
-      .to(loveTextMeRef.current, {
-        opacity: 0,
-        scale: 0,
-        ease: "ease",
-        duration: 0.5,
-        delay: 2,
-      })
-      .to(loveTextCodingRef.current, {
-        opacity: 1,
-        scale: 1,
-        ease: Elastic.easeOut,
-        duration: 0.5,
-      })
-      .to(loveTextCodingRef.current, {
-        opacity: 0,
-        scale: 0,
-        ease: "ease",
-        duration: 0.5,
-        delay: 2,
-      });
-    // Descriptions
-    gsap.to(paraRef.current, {
-      opacity: 1,
-      delay: 1,
-      y: 10,
-      ease: "ease",
-      scrollTrigger: {
-        trigger: loveSvgRef.current,
-        // markers: true,
-        start: "bottom center",
-        end: "+=50",
-
-        scrub: 1,
-      },
+      // "(max-width: 800px)": function () {
+      //   gsap.to(paraRef.current, {
+      //     opacity: 1,
+      //     y: -600,
+      //     ease: "ease",
+      //     duration: 5,
+      //   });
+      // },
     });
   }, []);
   return (
@@ -291,14 +279,14 @@ function LoveComponent() {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g id="Desktop - 1">
+        <g id="love-frame">
           <rect width="1500" height="800" fill="none" />
           <g id="undraw_true_love_cy8x 1">
             <path
               ref={loveSunRef}
               className="love-sun"
               d="M381.236 104.534L381.624 104.996L382.006 104.528L382.023 104.507C394.061 89.7588 410.365 81.5 427.337 81.5C444.309 81.5 460.612 89.7588 472.651 104.507C478.612 111.809 483.344 120.484 486.574 130.037C489.805 139.591 491.468 149.832 491.468 160.177C491.468 170.521 489.805 180.763 486.574 190.316C483.344 199.87 478.612 208.544 472.651 215.847L381.636 327.346L290.879 216.164L290.893 216.147L290.643 215.831C278.9 201.012 272.376 181.11 272.502 160.423C272.627 139.737 279.392 119.957 291.312 105.353C303.231 90.7527 319.335 82.5083 336.138 82.3553C352.94 82.2024 369.142 90.1526 381.236 104.534Z"
-              fill="#FFCC33"
+              fill="#FC9601"
               stroke="black"
             />
             <g ref={loveFirstMountainRef} className="first-mountain">

@@ -22,6 +22,7 @@ function ProgrammingComponent() {
             start: "30% center",
             end: "+=50",
             // markers: true,
+
             toggleActions: "play none none reverse",
           },
         });

@@ -1,6 +1,20 @@
 .love-container {
-  padding-top: 20rem;
-  background-color: var(--primary-color);
+  padding-top: 10rem;
+  background: linear-gradient(
+    to bottom,
+    rgb(89, 98, 202) 0%,
+    rgba(211, 76, 98, 0.808) 30%,
+    rgba(233, 204, 119, 0.959) 61%,
+    rgba(108, 200, 241, 1) 100%
+  );
+  position: relative;
+}
+.love-svg {
+  width: 100%;
+  height: 80%;
+  transform: scale(0.8);
+  /* border: 3px solid blue; */
+  overflow: visible;
 }
 
 .cloud-1-love {
@@ -17,16 +31,24 @@
 }
 .para-four {
   color: white;
-  font-size: 2rem;
+  font-size: calc(2vw + 4px);
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   margin-bottom: 0.5rem;
 }
 .description--journey-four {
-  padding-top: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  opacity: 0.3;
+  opacity: 0;
+  transform: translateY(-150px);
+  transition: transform 1s ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  .description--journey-four {
+    position: absolute;
+    top: 70%;
+    left: 0;
+  }
 }
