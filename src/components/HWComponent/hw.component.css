@@ -1,6 +1,38 @@
 .hw-container {
-  background-color: #5adeff;
+  background-color: rgba(108, 200, 241, 1);
+  /* padding-top: 10rem; */
+}
+.hw-svg {
+  width: 100%;
+  /* height: 80%; */
 }
 .star-hw {
   opacity: 0;
+}
+.para-five {
+  color: white;
+  font-size: calc(2vw + 4px);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5rem;
+}
+.description--journey-five {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 1s ease-in-out;
+  transform: translateY(-500px);
+}
+@media screen and (max-width: 750px) {
+  .hw-container {
+    background-color: rgba(108, 200, 241, 1);
+    padding-top: 40rem;
+  }
+  .hw-svg {
+    transform: scale(2) translateX(-100px);
+  }
+  /* .description--journey-five {
+    opacity: 0;
+  } */
 }

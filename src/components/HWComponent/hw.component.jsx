@@ -1,110 +1,125 @@
 import React, { useRef, useEffect } from "react";
-import { gsap, Elastic } from "gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import "./hw.component.css";
 
 function HWComponent() {
   // GSAP Registrations
   gsap.registerPlugin(ScrollTrigger);
-  gsap.registerPlugin(MotionPathPlugin);
+
   //   References
   let hwContainerRef = useRef(null);
   let hwSvgRef = useRef(null);
+  let paraRef = useRef(null);
   // Effects after Mounted
   useEffect(() => {
-    // left arm
-    const leftArmHWTl = gsap.timeline({ repeat: -1 });
-    leftArmHWTl
-      .to(".left-arm__hw", {
-        rotate: -10,
-        ease: "ease",
-        duration: 0.5,
-        transformOrigin: "bottom",
-      })
-      .to(".left-arm__hw", {
-        rotate: 0,
-        ease: "ease",
-        duration: 0.5,
-        transformOrigin: "bottom",
-      });
-    // right arm
-    const rightArmHWTl = gsap.timeline({ repeat: -1 });
-    rightArmHWTl
-      .to(".right-arm__hw", {
-        rotate: -8,
-        ease: "ease",
-        duration: 0.5,
-        transformOrigin: "bottom",
-        delay: 0.5,
-      })
-      .to(".right-arm__hw", {
-        rotate: 0,
-        ease: "ease",
-        duration: 0.5,
-        transformOrigin: "bottom",
-      });
-    // head and sunglass
-    const headGlassHWTl = gsap.timeline({ repeat: -1 });
-    headGlassHWTl
-      .to(".sunglass__hw", {
-        rotate: -8,
-        ease: "ease",
-        duration: 1,
-        transformOrigin: "right",
-      })
-      .to(".sunglass__hw", {
-        rotate: 0,
-        ease: "ease",
-        duration: 1,
-        transformOrigin: "right",
-      });
-    // Sun
-    gsap.to(".sun-body__hw", {
-      rotate: 360,
-      transformOrigin: "center",
-      repeat: -1,
-      ease: "linear",
-      duration: 8,
-    });
+    ScrollTrigger.matchMedia({
+      "(min-width: 300px)": function () {
+        // left arm
+        const leftArmHWTl = gsap.timeline({ repeat: -1 });
+        leftArmHWTl
+          .to(".left-arm__hw", {
+            rotate: -10,
+            ease: "ease",
+            duration: 0.5,
+            transformOrigin: "bottom",
+          })
+          .to(".left-arm__hw", {
+            rotate: 0,
+            ease: "ease",
+            duration: 0.5,
+            transformOrigin: "bottom",
+          });
+        // right arm
+        const rightArmHWTl = gsap.timeline({ repeat: -1 });
+        rightArmHWTl
+          .to(".right-arm__hw", {
+            rotate: -8,
+            ease: "ease",
+            duration: 0.5,
+            transformOrigin: "bottom",
+            delay: 0.5,
+          })
+          .to(".right-arm__hw", {
+            rotate: 0,
+            ease: "ease",
+            duration: 0.5,
+            transformOrigin: "bottom",
+          });
+        // head and sunglass
+        const headGlassHWTl = gsap.timeline({ repeat: -1 });
+        headGlassHWTl
+          .to(".sunglass__hw", {
+            rotate: -8,
+            ease: "ease",
+            duration: 1,
+            transformOrigin: "right",
+          })
+          .to(".sunglass__hw", {
+            rotate: 0,
+            ease: "ease",
+            duration: 1,
+            transformOrigin: "right",
+          });
+        // Sun
+        gsap.to(".sun-body__hw", {
+          rotate: 360,
+          transformOrigin: "center",
+          repeat: -1,
+          ease: "linear",
+          duration: 8,
+        });
 
-    // Moon Sun Star Scroll
-    const moonSunHWTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: hwSvgRef.current,
-        start: "75% bottom",
-        end: "+=1500",
-        scrub: 1,
-        // markers: true,
-        pin: true,
+        // Moon Sun Star Scroll
+        const moonSunHWTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: hwSvgRef.current,
+            start: "75% bottom",
+            end: "+=1500",
+            scrub: 1,
+            // markers: true,
+            pin: true,
+          },
+        });
+        moonSunHWTl
+          .fromTo(
+            ".sun__hw",
+            { opacity: 1, x: -450, y: -500, scale: 0.5 },
+            { y: -400, x: 1200, scale: 1 }
+          )
+          .fromTo(
+            ".moon__hw",
+            { x: -300, y: -150, scale: 0.5 },
+            { y: -100, x: 1000, scale: 0.8 }
+          )
+          .to(".star-hw", { opacity: 1 });
+        // Background Scroll
+        const containerColorHWTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: hwSvgRef.current,
+            start: "75% bottom",
+            end: "+=1500",
+            scrub: 3,
+            // markers: true,
+            pin: true,
+          },
+        });
+        containerColorHWTl
+          .to(hwContainerRef.current, { backgroundColor: "#ffd7b5" })
+          .to(hwContainerRef.current, { backgroundColor: "black" });
       },
+      // "(max-width:750px)": function () {
+      //   gsap.to(paraRef.current, {
+      //     opacity: 1,
+      //     scrollTrigger: {
+      //       trigger: hwSvgRef.current,
+      //       start: "bottom bottom",
+
+      //       markers: true,
+      //     },
+      //   });
+      // },
     });
-    moonSunHWTl
-      .fromTo(
-        ".sun__hw",
-        { opacity: 1, x: -450, y: -500, scale: 0.5 },
-        { y: -400, x: 1200, scale: 1 }
-      )
-      .fromTo(
-        ".moon__hw",
-        { x: -300, y: -150, scale: 0.5 },
-        { y: -100, x: 1000, scale: 0.8 }
-      )
-      .to(".star-hw", { opacity: 1 });
-    // Background Scroll
-    const containerColorHWTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: hwSvgRef.current,
-        start: "75% bottom",
-        end: "+=1500",
-        scrub: 1,
-        // markers: true,
-        pin: true,
-      },
-    });
-    containerColorHWTl
-      .to(hwContainerRef.current, { backgroundColor: "#ffd7b5" })
-      .to(hwContainerRef.current, { backgroundColor: "black" });
   }, []);
   return (
     <div ref={hwContainerRef} className="hw-container">
@@ -117,7 +132,7 @@ function HWComponent() {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g id="Desktop - 1">
+        <g id="hw-frame">
           <rect width="1440" height="1024" fill="none" />
           <ellipse
             className="shadow-hw"
@@ -421,6 +436,16 @@ function HWComponent() {
           />
         </g>
       </svg>
+      <div ref={paraRef} className="description--journey-five">
+        <span className="para-five">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore
+        </span>
+        {/* <span className="para-five">
+          et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+          accusam et justo duo dolores et ea rebum.
+        </span> */}
+      </div>
     </div>
   );
 }
