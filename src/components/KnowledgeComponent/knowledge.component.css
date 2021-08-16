@@ -362,15 +362,20 @@ div.remember__span--container {
   position: absolute;
 }
 .wonder-knowledge {
-  font-size: 4rem;
+  font-size: calc(3vw + 1rem);
   text-align: center;
   font-family: "Orbitron", sans-serif;
   letter-spacing: 0.4rem;
   color: white;
   opacity: 0;
+  padding: 2rem;
+}
+.remember__span--container {
+  position: absolute;
+  text-align: center;
 }
 .remember__span {
-  font-size: 4rem;
+  font-size: calc(3vw + 1rem);
   text-align: center;
   font-family: "Orbitron", sans-serif;
   letter-spacing: 0.4rem;
@@ -379,7 +384,7 @@ div.remember__span--container {
   color: white;
 }
 .question-connection__mark {
-  font-size: 45rem;
+  font-size: calc(30vh + 15rem);
   color: rgb(0, 0, 0);
   text-shadow: 0px 0px 10px #4bbbe7, 0px 0px 20px #4bbbe7,
     0px 0px 30px rgb(75, 169, 231), 0px 0px 50px #4bbbe7,
@@ -400,5 +405,14 @@ div.remember__span--container {
   50% {
     transform: translateY(0px);
     opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .remember__span--container {
+    border: 3px solid blue;
+    position: absolute;
+    padding: 2rem;
+    text-align: center;
   }
 }
