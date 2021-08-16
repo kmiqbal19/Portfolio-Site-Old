@@ -1,3 +1,6 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+/* Main Stylings */
 div.learning-container {
   width: 100%;
   height: 100vh;
@@ -38,10 +41,30 @@ div.learning-container img {
   pointer-events: none;
 }
 .heading-parallax {
-  position: relative;
-  color: black;
-  font-size: 5vw;
-  width: 50vw;
-  height: 50vh;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-size: calc(5vw + 2rem);
+  width: 70vw;
+  height: 15vh;
   text-align: center;
+  font-family: "Pacifico", cursive;
+  top: 18vh;
+  left: 20vw;
+}
+/* .heading-parallax__span {
+  margin-left: 6rem;
+} */
+/* Media Queries */
+@media screen and (max-width: 599px) {
+  div.learning-container img {
+    width: 130%;
+  }
+  .heading-parallax {
+    font-size: calc(3vw + 2rem);
+    top: 30vh;
+    left: 20vw;
+  }
+  .heading-parallax__span {
+    margin-left: 0rem;
+  }
 }

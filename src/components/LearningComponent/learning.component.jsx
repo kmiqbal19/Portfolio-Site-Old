@@ -19,94 +19,242 @@ function LearningComponent() {
   let cloudTwoRef = useRef(null);
   let textRef = useRef(null);
   useEffect(() => {
-    gsap.to(backgroundImageRef.current, {
-      scale: 1.3,
-      scrollTrigger: {
-        trigger: learningContainerRef.current,
-        scrub: 3,
-        start: "bottom bottom",
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.matchMedia({
+      "(min-width: 600px)": function () {
+        gsap.to(backgroundImageRef.current, {
+          scale: 1.3,
+          scrollTrigger: {
+            trigger: learningContainerRef.current,
+            scrub: 3,
+            start: "bottom bottom",
 
-        end: "+=500",
-        // markers: {
-        //   fontSize: 20,
-        //   startColor: "blue",
-        //   endColor: "green",
-        // },
-        pin: true,
-        pinSpacing: true,
+            end: "+=1000",
+            // markers: {
+            //   fontSize: 20,
+            //   startColor: "blue",
+            //   endColor: "green",
+            // },
+            pin: true,
+            pinSpacing: true,
+          },
+        });
+        gsap.to(sittingManRef.current, {
+          scale: 0.8,
+          transformOrigin: "bottom",
+          scrollTrigger: {
+            trigger: learningContainerRef.current,
+            scrub: 3,
+            start: "bottom bottom",
+
+            end: "+=1000",
+            // markers: true,
+            pin: true,
+            pinSpacing: true,
+          },
+        });
+        gsap.to(leftMountainRef.current, {
+          x: -300,
+
+          scrollTrigger: {
+            trigger: learningContainerRef.current,
+            scrub: 3,
+            start: "bottom bottom",
+
+            end: "+=1000",
+            // markers: true,
+            pin: true,
+            pinSpacing: true,
+          },
+        });
+        gsap.to(rightMountainRef.current, {
+          x: 300,
+
+          scrollTrigger: {
+            trigger: learningContainerRef.current,
+            scrub: 3,
+            start: "bottom bottom",
+
+            end: "+=1000",
+            // markers: true,
+            pin: true,
+            pinSpacing: true,
+          },
+        });
+        gsap.to(cloudOneRef.current, {
+          x: 200,
+          y: -100,
+          scale: 1.3,
+          scrollTrigger: {
+            trigger: learningContainerRef.current,
+            scrub: 3,
+            start: "bottom bottom",
+
+            end: "+=1000",
+            // markers: true,
+            pin: true,
+            pinSpacing: true,
+          },
+        });
+        gsap.to(cloudTwoRef.current, {
+          x: -200,
+          y: -100,
+          scale: 1.3,
+
+          scrollTrigger: {
+            trigger: learningContainerRef.current,
+            scrub: 3,
+            start: "bottom bottom",
+
+            end: "+=1000",
+            // markers: true,
+            pin: true,
+            pinSpacing: true,
+          },
+        });
+        // For Text
+        // gsap.from(textRef.current, {
+        //   fontSize: "40",
+        //   scrollTrigger: {
+        //     trigger: learningContainerRef.current,
+        //     scrub: 3,
+        //     start: "bottom bottom",
+
+        //     end: "+=1000",
+        //     // markers: true,
+        //     pin: true,
+        //     pinSpacing: true,
+        //   },
+        // });
       },
-    });
-    gsap.to(sittingManRef.current, {
-      scale: 0.8,
-      transformOrigin: "bottom",
-      scrollTrigger: {
-        trigger: learningContainerRef.current,
-        scrub: 3,
-        start: "bottom bottom",
+      "(max-width:599px)": function () {
+        gsap.to(backgroundImageRef.current, {
+          scale: 1.3,
+          scrollTrigger: {
+            trigger: learningContainerRef.current,
+            scrub: 3,
+            start: "bottom bottom",
 
-        end: "+=500",
-        // markers: true,
-        pin: true,
-        pinSpacing: true,
+            end: "+=1000",
+
+            pin: true,
+            pinSpacing: true,
+          },
+        });
+
+        gsap.fromTo(
+          leftMountainRef.current,
+          {
+            x: -50,
+          },
+          {
+            x: -300,
+            scrollTrigger: {
+              trigger: learningContainerRef.current,
+              scrub: 3,
+              start: "bottom bottom",
+
+              end: "+=1000",
+              // markers: true,
+              pin: true,
+              pinSpacing: true,
+            },
+          }
+        );
+        gsap.fromTo(
+          rightMountainRef.current,
+          {
+            x: -110,
+          },
+          {
+            x: 0,
+            scrollTrigger: {
+              trigger: learningContainerRef.current,
+              scrub: 3,
+              start: "bottom bottom",
+
+              end: "+=1000",
+              // markers: true,
+              pin: true,
+              pinSpacing: true,
+            },
+          }
+        );
+        gsap.fromTo(
+          cloudOneRef.current,
+          { x: -150, y: 0 },
+          {
+            x: 200,
+            y: -100,
+            scale: 1.5,
+            scrollTrigger: {
+              trigger: learningContainerRef.current,
+              scrub: 3,
+              start: "bottom bottom",
+
+              end: "+=1000",
+              // markers: true,
+              pin: true,
+              pinSpacing: true,
+            },
+          }
+        );
+        gsap.to(cloudTwoRef.current, {
+          x: -200,
+          y: -100,
+          scale: 1.3,
+
+          scrollTrigger: {
+            trigger: learningContainerRef.current,
+            scrub: 3,
+            start: "bottom bottom",
+
+            end: "+=1000",
+            // markers: true,
+            pin: true,
+            pinSpacing: true,
+          },
+        });
+
+        gsap.fromTo(
+          sittingManRef.current,
+          { x: -50 },
+          {
+            scale: 0.8,
+            transformOrigin: "bottom",
+            scrollTrigger: {
+              trigger: learningContainerRef.current,
+              scrub: 3,
+              start: "bottom bottom",
+
+              end: "+=1000",
+              // markers: true,
+              pin: true,
+              pinSpacing: true,
+            },
+          }
+        );
       },
-    });
-    gsap.to(leftMountainRef.current, {
-      x: -300,
+      "(max-width:450px)": function () {
+        gsap.fromTo(
+          cloudOneRef.current,
+          { x: -80, y: 0 },
+          {
+            x: 200,
+            y: -100,
+            scale: 1.5,
+            scrollTrigger: {
+              trigger: learningContainerRef.current,
+              scrub: 3,
+              start: "bottom bottom",
 
-      scrollTrigger: {
-        trigger: learningContainerRef.current,
-        scrub: 3,
-        start: "bottom bottom",
-
-        end: "+=500",
-        // markers: true,
-        pin: true,
-        pinSpacing: true,
-      },
-    });
-    gsap.to(rightMountainRef.current, {
-      x: 300,
-
-      scrollTrigger: {
-        trigger: learningContainerRef.current,
-        scrub: 3,
-        start: "bottom bottom",
-
-        end: "+=500",
-        // markers: true,
-        pin: true,
-        pinSpacing: true,
-      },
-    });
-    gsap.to(cloudOneRef.current, {
-      x: 200,
-      y: -100,
-      scale: 1.3,
-      scrollTrigger: {
-        trigger: learningContainerRef.current,
-        scrub: 3,
-        start: "bottom bottom",
-
-        end: "+=500",
-        // markers: true,
-        pin: true,
-        pinSpacing: true,
-      },
-    });
-    gsap.to(cloudTwoRef.current, {
-      x: -200,
-      y: -100,
-      scale: 1.3,
-
-      scrollTrigger: {
-        trigger: learningContainerRef.current,
-        scrub: 3,
-        start: "bottom bottom",
-
-        end: "+=500",
-        // markers: true,
-        pin: true,
-        pinSpacing: true,
+              end: "+=1000",
+              // markers: true,
+              pin: true,
+              pinSpacing: true,
+            },
+          }
+        );
       },
     });
   }, []);
@@ -119,7 +267,8 @@ function LearningComponent() {
         className="bg-parallax"
       />
       <h2 ref={textRef} className="heading-parallax">
-        LEARNING IS A NEVER-ENDING JOURNEY
+        Learning is a Never-
+        <span className="heading-parallax__span">Ending Journey...</span>
       </h2>
       <img
         ref={leftMountainRef}

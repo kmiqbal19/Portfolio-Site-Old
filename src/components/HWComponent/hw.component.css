@@ -9,6 +9,19 @@
 .star-hw {
   opacity: 0;
 }
+.but-hw__container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.but-hw {
+  color: white;
+  font-size: 8rem;
+  text-align: center;
+  opacity: 0;
+}
 .para-five {
   color: white;
   font-size: calc(2vw + 4px);

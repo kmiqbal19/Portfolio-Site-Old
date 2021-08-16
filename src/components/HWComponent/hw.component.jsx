@@ -14,7 +14,7 @@ function HWComponent() {
   // Effects after Mounted
   useEffect(() => {
     ScrollTrigger.matchMedia({
-      "(min-width: 300px)": function () {
+      all: function () {
         // left arm
         const leftArmHWTl = gsap.timeline({ repeat: -1 });
         leftArmHWTl
@@ -69,7 +69,20 @@ function HWComponent() {
           ease: "linear",
           duration: 8,
         });
-
+        // BUT
+        gsap.to(".but-hw", {
+          opacity: 1,
+          duration: 1,
+          ease: "ease",
+          scrollTrigger: {
+            trigger: ".but-hw__container",
+            start: "300% bottom",
+            end: "300% bottom",
+            // markers: true,
+          },
+        });
+      },
+      "(min-width:751px)": function () {
         // Moon Sun Star Scroll
         const moonSunHWTl = gsap.timeline({
           scrollTrigger: {
@@ -108,17 +121,45 @@ function HWComponent() {
           .to(hwContainerRef.current, { backgroundColor: "#ffd7b5" })
           .to(hwContainerRef.current, { backgroundColor: "black" });
       },
-      // "(max-width:750px)": function () {
-      //   gsap.to(paraRef.current, {
-      //     opacity: 1,
-      //     scrollTrigger: {
-      //       trigger: hwSvgRef.current,
-      //       start: "bottom bottom",
-
-      //       markers: true,
-      //     },
-      //   });
-      // },
+      "(max-width:750px)": function () {
+        // Moon Sun Star Scroll
+        const moonSunHWTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: hwSvgRef.current,
+            start: "40% 30%",
+            end: "+=1500",
+            scrub: 1,
+            // markers: true,
+            pin: true,
+          },
+        });
+        moonSunHWTl
+          .fromTo(
+            ".sun__hw",
+            { opacity: 1, x: -450, y: -500, scale: 0.5 },
+            { y: -400, x: 1200, scale: 1 }
+          )
+          .fromTo(
+            ".moon__hw",
+            { x: -300, y: -150, scale: 0.5 },
+            { y: -100, x: 1000, scale: 0.8 }
+          )
+          .to(".star-hw", { opacity: 1 });
+        // Background Scroll
+        const containerColorHWTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: hwSvgRef.current,
+            start: "40% 30%",
+            end: "+=1500",
+            scrub: 3,
+            // markers: true,
+            pin: true,
+          },
+        });
+        containerColorHWTl
+          .to(hwContainerRef.current, { backgroundColor: "#ffd7b5" })
+          .to(hwContainerRef.current, { backgroundColor: "black" });
+      },
     });
   }, []);
   return (
@@ -445,6 +486,9 @@ function HWComponent() {
           et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
           accusam et justo duo dolores et ea rebum.
         </span> */}
+      </div>
+      <div className="but-hw__container">
+        <h1 className="but-hw">BUT</h1>
       </div>
     </div>
   );
