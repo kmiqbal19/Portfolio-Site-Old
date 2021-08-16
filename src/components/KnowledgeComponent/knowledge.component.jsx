@@ -28,7 +28,7 @@ function KnowledgeComponent() {
       backgroundColor: "black",
       scrollTrigger: {
         trigger: questionConnectionContainerRef.current,
-        start: "40% center",
+        start: "bottom bottom",
         end: "+=200",
         scrub: 1,
         // markers: true,
@@ -74,6 +74,7 @@ function KnowledgeComponent() {
         ref={questionConnectionContainerRef}
         className="question-connection__container"
       >
+        <span className="question-connection__mark">?</span>
         <span className="wonder-knowledge">
           SOMETIMES I WONDER WHERE IS THE CONNECTION BETWEEN ALL THESE ...
         </span>

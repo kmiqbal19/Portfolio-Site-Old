@@ -378,3 +378,27 @@ div.remember__span--container {
   opacity: 0;
   color: white;
 }
+.question-connection__mark {
+  font-size: 45rem;
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 0px 10px #4bbbe7, 0px 0px 20px #4bbbe7,
+    0px 0px 30px rgb(75, 169, 231), 0px 0px 50px #4bbbe7,
+    0px 0px 40px rgb(231, 75, 75);
+
+  position: absolute;
+  animation-name: question-anime;
+  animation-timing-function: linear;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes question-anime {
+  0%,
+  100% {
+    transform: translateY(-15px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(0px);
+    opacity: 0.8;
+  }
+}
