@@ -55,6 +55,13 @@ div.learning-container img {
   margin-left: 6rem;
 } */
 /* Media Queries */
+@media screen and (max-width: 750px) {
+  .heading-parallax {
+    font-size: calc(3.5vw + 2rem);
+    top: 30vh;
+    left: 20vw;
+  }
+}
 @media screen and (max-width: 599px) {
   div.learning-container img {
     width: 130%;

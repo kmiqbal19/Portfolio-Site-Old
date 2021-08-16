@@ -1,6 +1,7 @@
 /* Import Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Bree+Serif&family=Kaushan+Script&family=Orbitron&family=Palette+Mosaic&family=Permanent+Marker&family=Playfair+Display+SC&display=swap");
 /* Styles */
+/* First Page */
 .knowledge-container {
   width: 100%;
   height: 100%;
@@ -18,33 +19,33 @@ div.knowledge-container__spans span {
   opacity: 0;
 }
 .design-knowledge {
-  font-size: 14rem;
+  font-size: calc(13vw + 2rem);
   font-family: "Playfair Display SC", serif;
   font-weight: 500;
-  letter-spacing: calc(80px - 3vw);
+  letter-spacing: calc(3vw);
   position: absolute;
   top: 0;
   left: 2%;
 }
 .urban-knowledge {
-  font-size: 1rem;
+  font-size: calc(1vw + 0.5rem);
   font-family: "Kaushan Script", cursive;
   transform: rotateZ(-90deg);
   position: absolute;
   bottom: 24%;
-  left: 3%;
+  left: 2%;
   font-style: italic;
 }
 .planning-knowledge {
   font-family: "Kaushan Script", cursive;
-  font-size: 7rem;
+  font-size: calc(6vw + 1rem);
   transform: rotateZ(-90deg);
   position: absolute;
   bottom: 20%;
-  left: -7%;
+  left: -6%;
 }
 .development-knowledge {
-  font-size: 7rem;
+  font-size: calc(6vw + 1rem);
   font-family: "Orbitron", sans-serif;
   letter-spacing: 1.25rem;
   position: absolute;
@@ -52,14 +53,14 @@ div.knowledge-container__spans span {
   left: 15%;
 }
 .frontend-knowledge {
-  font-size: 6rem;
+  font-size: calc(5vw + 1rem);
   font-family: "Bree Serif", serif;
   position: absolute;
   top: 18%;
   right: 2%;
 }
 .illustration-knowledge {
-  font-size: 7rem;
+  font-size: calc(6vw + 1rem);
   font-family: "Palette Mosaic", cursive;
   position: absolute;
   top: 52%;
@@ -67,21 +68,21 @@ div.knowledge-container__spans span {
   /* letter-spacing: 2rem; */
 }
 .engineering-knowledge {
-  font-size: 8rem;
+  font-size: calc(7vw + 1.3rem);
   position: absolute;
   bottom: 1%;
   right: 0;
   letter-spacing: 2rem;
 }
 .projects-knowledge {
-  font-size: 4.5rem;
+  font-size: calc(3vw + 1.5rem);
   font-family: "Permanent Marker", cursive;
   position: absolute;
   top: 8%;
   right: 2%;
 }
 .ms-knowledge {
-  font-size: 4rem;
+  font-size: calc(3vw + 1rem);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   position: absolute;
   bottom: 28%;
@@ -91,12 +92,263 @@ div.knowledge-container__spans span {
   transform: rotateZ(-90deg);
 }
 .safety-knowledge {
-  font-size: 5rem;
+  font-size: calc(4vw + 1rem);
   font-family: "Kaushan Script", cursive;
   position: absolute;
   bottom: 28%;
   left: 13%;
 }
+/* Media Queries for First Page */
+@media screen and (max-width: 1100px) {
+  .design-knowledge {
+    font-size: calc(10vw + 4rem);
+    top: 0;
+    left: 2vw;
+  }
+  .urban-knowledge {
+    font-size: calc(0.8vw + 0.5rem);
+
+    bottom: 24vh;
+    left: 2vw;
+  }
+  .planning-knowledge {
+    font-size: calc(6vw + 1rem);
+
+    bottom: 20vh;
+    left: -6vw;
+  }
+  .development-knowledge {
+    font-size: calc(6vw + 1rem);
+    letter-spacing: 1vw;
+    top: 35vh;
+    left: 15vw;
+  }
+  .frontend-knowledge {
+    font-size: calc(6vw + 1rem);
+
+    top: 20vh;
+    right: 4vw;
+  }
+  .illustration-knowledge {
+    font-size: calc(6vw + 1rem);
+
+    top: 52vh;
+    right: 5vw;
+    /* letter-spacing: 2rem; */
+  }
+  .engineering-knowledge {
+    font-size: calc(7vw + 1.3rem);
+    letter-spacing: 1.2vw;
+    bottom: 5vh;
+    right: 2vw;
+  }
+  .projects-knowledge {
+    font-size: calc(2.5vw + 1.5rem);
+
+    top: 8vh;
+    right: 2vw;
+  }
+  .ms-knowledge {
+    font-size: calc(3vw + 1rem);
+
+    bottom: 30vh;
+    left: 26vw;
+  }
+  .safety-knowledge {
+    font-size: calc(4vw + 1rem);
+
+    bottom: 28vh;
+    left: 13vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .design-knowledge {
+    font-size: calc(10vw + 4rem);
+    top: 0;
+    left: 2vw;
+  }
+  .urban-knowledge {
+    font-size: calc(0.8vw + 0.5rem);
+
+    bottom: 32vh;
+    left: 2vw;
+  }
+  .planning-knowledge {
+    font-size: calc(6vw + 1rem);
+
+    bottom: 30vh;
+    left: -6vw;
+  }
+  .development-knowledge {
+    font-size: calc(6vw + 1rem);
+
+    top: 35vh;
+    left: 15vw;
+  }
+  .frontend-knowledge {
+    font-size: calc(6vw + 1rem);
+
+    top: 23vh;
+    right: 4vw;
+  }
+  .illustration-knowledge {
+    font-size: calc(6vw + 1rem);
+
+    top: 60vh;
+    right: 1vw;
+    /* letter-spacing: 2rem; */
+  }
+  .engineering-knowledge {
+    font-size: calc(7vw + 1.3rem);
+
+    bottom: 5vh;
+    right: 0vw;
+  }
+  .projects-knowledge {
+    font-size: calc(2.5vw + 1.5rem);
+
+    top: 25vh;
+    right: 50vw;
+  }
+  .ms-knowledge {
+    font-size: calc(3vw + 1rem);
+    transform: rotateZ(0deg);
+    bottom: 40vh;
+    left: 15vw;
+  }
+  .safety-knowledge {
+    font-size: calc(4vw + 1rem);
+
+    bottom: 28vh;
+    left: 13vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .design-knowledge {
+    font-size: calc(10vw + 4rem);
+    top: 0;
+    left: 2vw;
+  }
+  .urban-knowledge {
+    font-size: calc(0.8vw + 0.5rem);
+
+    bottom: 32vh;
+    left: 2vw;
+  }
+  .planning-knowledge {
+    font-size: calc(6vw + 1rem);
+
+    bottom: 30vh;
+    left: -6vw;
+  }
+  .development-knowledge {
+    font-size: calc(6vw + 1rem);
+
+    top: 35vh;
+    left: 5vw;
+  }
+  .frontend-knowledge {
+    font-size: calc(6vw + 1rem);
+
+    top: 23vh;
+    right: 4vw;
+  }
+  .illustration-knowledge {
+    font-size: calc(6vw + 1rem);
+
+    top: 60vh;
+    right: 5vw;
+    /* letter-spacing: 2rem; */
+  }
+  .engineering-knowledge {
+    font-size: calc(7vw + 1.3rem);
+
+    bottom: 5vh;
+    right: 3vw;
+  }
+  .projects-knowledge {
+    font-size: calc(2.5vw + 1.5rem);
+
+    top: 25vh;
+    right: 50vw;
+  }
+  .ms-knowledge {
+    font-size: calc(3vw + 1rem);
+    transform: rotateZ(0deg);
+    bottom: 45vh;
+    left: 20vw;
+  }
+  .safety-knowledge {
+    font-size: calc(4vw + 1rem);
+
+    bottom: 45vh;
+    left: 60vw;
+  }
+}
+@media screen and (max-width: 450px) {
+  .design-knowledge {
+    font-size: calc(8vw + 4rem);
+    top: 0;
+    left: 0vw;
+  }
+  .urban-knowledge {
+    font-size: calc(0.8vw + 0.5rem);
+
+    bottom: 32vh;
+    left: 2vw;
+  }
+  .planning-knowledge {
+    font-size: calc(6vw + 1rem);
+
+    bottom: 30vh;
+    left: -6vw;
+  }
+  .development-knowledge {
+    font-size: calc(6vw + 1rem);
+
+    top: 35vh;
+    left: 0vw;
+  }
+  .frontend-knowledge {
+    font-size: calc(7vw + 1rem);
+
+    top: 20vh;
+    right: 4vw;
+  }
+  .illustration-knowledge {
+    font-size: calc(6vw + 1rem);
+
+    top: 60vh;
+    right: 5vw;
+    /* letter-spacing: 2rem; */
+  }
+  .engineering-knowledge {
+    font-size: calc(7vw + 1.3rem);
+
+    bottom: 15vh;
+    right: 1vw;
+  }
+  .projects-knowledge {
+    font-size: calc(3.5vw + 1.5rem);
+
+    top: 25vh;
+    right: 50vw;
+  }
+  .ms-knowledge {
+    font-size: calc(5vw + 1rem);
+    transform: rotateZ(0deg);
+    bottom: 45vh;
+    left: 20vw;
+  }
+  .safety-knowledge {
+    font-size: calc(5vw + 1rem);
+
+    bottom: 45vh;
+    left: 60vw;
+  }
+}
+
+/********************* Next Page **********************/
 div.question-connection__container {
   width: 100%;
   height: 100vh;
