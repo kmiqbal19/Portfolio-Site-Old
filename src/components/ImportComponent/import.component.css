@@ -10,7 +10,7 @@
 }
 
 .useeffect-text__import {
-  font-size: 4rem;
+  font-size: calc(2vw + 2rem);
   color: #a9dc76;
   position: absolute;
   top: 25%;
@@ -19,7 +19,7 @@
 }
 .import-text__import {
   color: hsl(345, 97%, 59%);
-  font-size: 3.5rem;
+  font-size: calc(1.5rem + 2vw);
   font-family: "Ubuntu", sans-serif;
   position: absolute;
   top: 10%;
@@ -27,14 +27,14 @@
 }
 .from-text__import {
   color: #fc3265;
-  font-size: 3.5rem;
+  font-size: calc(1.5rem + 2vw);
   font-family: "Ubuntu", sans-serif;
   position: absolute;
   top: 10%;
   left: 38%;
 }
 .memory-text__import {
-  font-size: 3.5rem;
+  font-size: calc(1.5rem + 2vw);
   font-family: "Ubuntu", sans-serif;
   color: whitesmoke;
   position: absolute;
@@ -42,7 +42,7 @@
   left: 17%;
 }
 .brainpath-text__import {
-  font-size: 3.5rem;
+  font-size: calc(1.5rem + 2vw);
   font-family: "Ubuntu", sans-serif;
   color: #ffae00;
   position: absolute;
@@ -77,4 +77,118 @@
 }
 .anime-import {
   opacity: 0;
+}
+/* Media Queries */
+@media screen and (max-width: 1050px) {
+  .useeffect-text__import {
+    font-size: calc(2vw + 1.5rem);
+  }
+  .import-text__import {
+    font-size: calc(1rem + 2vw);
+    top: 13%;
+    left: 3%;
+  }
+  .from-text__import {
+    font-size: calc(1rem + 2vw);
+
+    top: 13%;
+    left: 38%;
+  }
+  .memory-text__import {
+    font-size: calc(1rem + 2vw);
+    top: 13%;
+    left: 17%;
+  }
+  .brainpath-text__import {
+    font-size: calc(1rem + 2vw);
+
+    top: 13%;
+    right: 4%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .useeffect-text__import {
+    font-size: calc(1.5vw + 1.5rem);
+  }
+  .import-text__import {
+    font-size: calc(1rem + 1.5vw);
+    top: 15%;
+    left: 3%;
+  }
+  .from-text__import {
+    font-size: calc(1rem + 1.5vw);
+
+    top: 15%;
+    left: 38%;
+  }
+  .memory-text__import {
+    font-size: calc(1rem + 1.5vw);
+    top: 15%;
+    left: 17%;
+  }
+  .brainpath-text__import {
+    font-size: calc(1rem + 1.5vw);
+
+    top: 15%;
+    right: 4%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .useeffect-text__import {
+    font-size: calc(2vw + 1.5rem);
+    top: 30%;
+  }
+  .import-text__import {
+    font-size: calc(1rem + 4vw);
+    top: 7%;
+    left: 5%;
+  }
+  .from-text__import {
+    font-size: calc(1rem + 4vw);
+
+    top: 7%;
+    left: 70%;
+  }
+  .memory-text__import {
+    font-size: calc(1rem + 4vw);
+    top: 7%;
+    left: 30%;
+  }
+  .brainpath-text__import {
+    font-size: calc(1rem + 4vw);
+
+    top: 20%;
+    right: 10%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .useeffect-text__import {
+    font-size: calc(2vw + 1.5rem);
+    top: 30%;
+  }
+  .import-text__import {
+    font-size: calc(1rem + 4vw);
+    top: 10%;
+    left: 5%;
+  }
+  .from-text__import {
+    font-size: calc(1rem + 4vw);
+
+    top: 10%;
+    left: 70%;
+  }
+  .memory-text__import {
+    font-size: calc(1rem + 4vw);
+    top: 10%;
+    left: 30%;
+  }
+  .brainpath-text__import {
+    font-size: calc(1rem + 4vw);
+
+    top: 20%;
+    right: 3%;
+  }
+  .function-wrapper__import {
+    margin-left: 3rem;
+  }
 }
