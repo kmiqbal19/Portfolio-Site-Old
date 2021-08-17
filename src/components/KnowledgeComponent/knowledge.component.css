@@ -410,7 +410,7 @@ div.remember__span--container {
 
 @media screen and (max-width: 500px) {
   .remember__span--container {
-    border: 3px solid blue;
+    /* border: 3px solid blue; */
     position: absolute;
     padding: 2rem;
     text-align: center;

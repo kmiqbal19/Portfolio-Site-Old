@@ -192,7 +192,7 @@ function CityComponent() {
               start: "center center",
               end: "+=500",
               scrub: 4,
-              markers: true,
+              // markers: true,
             },
           }
         );

@@ -11,44 +11,182 @@ function StevejobsComponent() {
   let ring2Ref = useRef(null);
   let steveQuoteContainerRef = useRef(null);
   useEffect(() => {
-    gsap.to(ring1Ref.current, {
-      rotate: 360,
-      duration: 2,
-      repeat: -1,
-      transformOrigin: "center",
-      ease: "linear",
-    });
-    gsap.to(ring2Ref.current, {
-      rotate: 360,
-      duration: 8,
-      repeat: -1,
-      transformOrigin: "center",
-      ease: "linear",
-    });
-    // Rings movement
-    const ringMoveTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "98% bottom",
-        end: "bottom bottom",
-        // markers: true,
-        toggleActions: "play none none reverse",
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.matchMedia({
+      all: function () {
+        // Ring Rotation
+        gsap.to(ring1Ref.current, {
+          rotate: 360,
+          duration: 2,
+          repeat: -1,
+          transformOrigin: "center",
+          ease: "linear",
+        });
+        gsap.to(ring2Ref.current, {
+          rotate: 360,
+          duration: 8,
+          repeat: -1,
+          transformOrigin: "center",
+          ease: "linear",
+        });
+      },
+      "(min-width: 1350px)": function () {
+        // Rings movement
+        const ringMoveTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "98% bottom",
+            end: "bottom bottom",
+            // markers: true,
+            toggleActions: "play none none reverse",
+          },
+        });
+        ringMoveTl
+          .to(ring2Ref.current, { x: 500, duration: 0.5 })
+          .to(ring1Ref.current, {
+            x: 500,
+            ease: Expo.easeIn,
+            duration: 0.7,
+          })
+          .to(steveQuoteContainerRef.current, {
+            opacity: 1,
+            y: -10,
+            ease: "ease",
+            duration: 0.5,
+            delay: 0.4,
+          });
+      },
+      "(min-width: 1050px) and (max-width: 1349px)": function () {
+        // Rings movement
+        const ringMoveTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "98% bottom",
+            end: "bottom bottom",
+            // markers: true,
+            toggleActions: "play none none reverse",
+          },
+        });
+        ringMoveTl
+          .to(ring2Ref.current, { x: 350, duration: 0.5 })
+          .to(ring1Ref.current, {
+            x: 350,
+            ease: Expo.easeIn,
+            duration: 0.7,
+          })
+          .to(steveQuoteContainerRef.current, {
+            opacity: 1,
+            y: -10,
+            ease: "ease",
+            duration: 0.5,
+            delay: 0.4,
+          });
+      },
+      "(min-width: 900px) and (max-width: 1049px)": function () {
+        // Rings movement
+        const ringMoveTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "98% bottom",
+            end: "bottom bottom",
+            // markers: true,
+            toggleActions: "play none none reverse",
+          },
+        });
+        ringMoveTl
+          .to(ring2Ref.current, { x: 350, duration: 0.5 })
+          .to(ring1Ref.current, {
+            x: 350,
+            ease: Expo.easeIn,
+            duration: 0.7,
+          })
+          .to(steveQuoteContainerRef.current, {
+            opacity: 1,
+            y: -10,
+            ease: "ease",
+            duration: 0.5,
+            delay: 0.4,
+          });
+      },
+      "(min-width: 751px) and (max-width: 899px)": function () {
+        // Rings movement
+        const ringMoveTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "98% bottom",
+            end: "bottom bottom",
+            // markers: true,
+            toggleActions: "play none none reverse",
+          },
+        });
+        ringMoveTl
+          .to(ring2Ref.current, { x: 250, duration: 0.5 })
+          .to(ring1Ref.current, {
+            x: 250,
+            ease: Expo.easeIn,
+            duration: 0.7,
+          })
+          .to(steveQuoteContainerRef.current, {
+            opacity: 1,
+            y: -10,
+            ease: "ease",
+            duration: 0.5,
+            delay: 0.4,
+          });
+      },
+      "(min-width: 600px) and (max-width: 750px)": function () {
+        // Rings movement
+        const ringMoveTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "98% bottom",
+            end: "bottom bottom",
+            // markers: true,
+            toggleActions: "play none none reverse",
+          },
+        });
+        ringMoveTl
+          .to(ring2Ref.current, { x: 140, duration: 0.5 })
+          .to(ring1Ref.current, {
+            x: 140,
+            ease: Expo.easeIn,
+            duration: 0.7,
+          })
+          .to(steveQuoteContainerRef.current, {
+            opacity: 1,
+            y: -10,
+            ease: "ease",
+            duration: 0.5,
+            delay: 0.4,
+          });
+      },
+      "(min-width: 200px) and (max-width: 599px)": function () {
+        // Rings movement
+        const ringMoveTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "98% bottom",
+            end: "bottom bottom",
+            // markers: true,
+            toggleActions: "play none none reverse",
+          },
+        });
+        ringMoveTl
+          .to(ring2Ref.current, { y: 340, duration: 0.7 })
+          .to(ring1Ref.current, {
+            y: 340,
+            ease: Expo.easeIn,
+            duration: 1,
+          })
+          .to(steveQuoteContainerRef.current, {
+            opacity: 1,
+            y: -10,
+            ease: "ease",
+            duration: 0.5,
+            delay: 0.4,
+          });
       },
     });
-    ringMoveTl
-      .to(ring2Ref.current, { x: 500, duration: 0.5 })
-      .to(ring1Ref.current, {
-        x: 500,
-        ease: Expo.easeIn,
-        duration: 0.7,
-      })
-      .to(steveQuoteContainerRef.current, {
-        opacity: 1,
-        y: -10,
-        ease: "ease",
-        duration: 0.5,
-        delay: 0.4,
-      });
   }, []);
 
   return (

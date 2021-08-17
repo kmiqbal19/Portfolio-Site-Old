@@ -39,10 +39,115 @@ img.ring-img2 {
 .steve-quote {
   font-family: "Amatic SC", cursive;
   color: white;
-  font-size: 3rem;
+  font-size: calc(2.5vw + 1rem);
 }
 .steve-name {
   font-family: "Amatic SC", cursive;
   color: white;
-  font-size: 3rem;
+  font-size: calc(2.5vw + 1rem);
+}
+/* Media Queries */
+@media screen and (max-width: 1350px) {
+  img.ring-img1 {
+    width: 640px;
+    height: 400px;
+    top: 20%;
+    left: 20%;
+  }
+
+  img.ring-img2 {
+    position: absolute;
+    width: 640px;
+    height: 400px;
+    top: 21%;
+    left: 20%;
+  }
+  .steve-quote__container {
+    top: 22%;
+    left: 8%;
+  }
+}
+@media screen and (max-width: 1049px) {
+  img.ring-img1 {
+    width: 480px;
+    height: 300px;
+    top: 20%;
+    left: 20%;
+  }
+
+  img.ring-img2 {
+    position: absolute;
+    width: 480px;
+    height: 300px;
+    top: 21%;
+    left: 20%;
+  }
+  .steve-quote__container {
+    top: 22%;
+    left: 8%;
+  }
+}
+@media screen and (max-width: 900px) {
+  img.ring-img1 {
+    width: 480px;
+    height: 300px;
+    top: 25%;
+    left: 20%;
+  }
+
+  img.ring-img2 {
+    position: absolute;
+    width: 480px;
+    height: 300px;
+    top: 25%;
+    left: 20%;
+  }
+  .steve-quote__container {
+    top: 22%;
+    left: 8%;
+  }
+}
+@media screen and (max-width: 600px) {
+  img.ring-img1 {
+    width: 320px;
+    height: 200px;
+    top: 5%;
+    left: 18%;
+  }
+
+  img.ring-img2 {
+    position: absolute;
+    width: 320px;
+    height: 200px;
+    top: 5%;
+    left: 18%;
+  }
+  .steve-quote__container {
+    top: 5%;
+    left: 8%;
+    width: 80vw;
+    height: 70vh;
+  }
+}
+@media screen and (max-width: 450px) {
+  img.ring-img1 {
+    width: 320px;
+    height: 200px;
+    top: 5%;
+    left: 10%;
+  }
+
+  img.ring-img2 {
+    position: absolute;
+    width: 320px;
+    height: 200px;
+    top: 5%;
+    left: 10%;
+  }
+  .steve-quote__container {
+    top: 5%;
+    left: 8%;
+    width: 80vw;
+    height: 70vh;
+  }
 }
