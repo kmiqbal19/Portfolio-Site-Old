@@ -47,7 +47,7 @@ function LoveComponent() {
           scrollTrigger: {
             trigger: loveSvgRef.current,
             start: "bottom bottom",
-            end: "+=500",
+            end: "+=1000",
             scrub: 2,
             pin: true,
             // markers: true,

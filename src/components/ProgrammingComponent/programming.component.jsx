@@ -20,10 +20,11 @@ function ProgrammingComponent() {
           scrollTrigger: {
             trigger: progSvgRef.current,
             start: "30% center",
-            end: "+=50",
+            end: "+=400",
             // markers: true,
 
             toggleActions: "play none none reverse",
+            pin: true,
           },
         });
         windowTl
