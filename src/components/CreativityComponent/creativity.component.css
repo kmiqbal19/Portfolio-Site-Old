@@ -1,3 +1,6 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+/* Main Styles */
 div.creativity-container {
   width: 100%;
   height: 100vh;
@@ -15,20 +18,22 @@ div.creativity-container {
   position: absolute;
   top: 4%;
   left: 5%;
+  font-family: "Ubuntu", sans-serif;
 }
 .curlyleft-text__creativity,
 .curlyright-text__creativity {
   font-size: 3.5rem;
   color: #fcc03e;
   position: absolute;
+  font-family: "Ubuntu", sans-serif;
 }
 .curlyleft-text__creativity {
   top: 5%;
-  left: 18%;
+  left: 22%;
 }
 .curlyright-text__creativity {
   bottom: 5%;
-  left: 18%;
+  left: 22%;
 }
 .creativity-span {
   color: whitesmoke;
@@ -46,5 +51,110 @@ div.creativity-container {
     2px 2px 10px rgb(180, 64, 64);
 }
 .creativity-svg {
-  /* border: 2px solid red; */
+  width: 100vw;
+  height: 70vh;
+}
+@media screen and (max-width: 1100px) {
+  .return-text__creativity {
+    font-size: calc(3vw + 1rem);
+
+    top: 5%;
+    left: 5%;
+  }
+  .curlyleft-text__creativity,
+  .curlyright-text__creativity {
+    font-size: calc(2vw + 1.5rem);
+  }
+  .curlyleft-text__creativity {
+    top: 5%;
+    left: 22%;
+  }
+  .curlyright-text__creativity {
+    bottom: 5%;
+    left: 22%;
+  }
+  .creativity-span {
+    font-size: 1.5rem;
+
+    right: 30%;
+    top: 5%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .return-text__creativity {
+    font-size: calc(4vw + 1rem);
+
+    top: 5%;
+    left: 5%;
+  }
+  .curlyleft-text__creativity,
+  .curlyright-text__creativity {
+    font-size: calc(3vw + 1.5rem);
+  }
+  .curlyleft-text__creativity {
+    top: 5%;
+    left: 30%;
+  }
+  .curlyright-text__creativity {
+    bottom: 5%;
+    left: 30%;
+  }
+  .creativity-span {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    right: 18%;
+    top: 6%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .return-text__creativity {
+    font-size: calc(5vw + 1.3rem);
+
+    top: 5%;
+    left: 5%;
+  }
+  .curlyleft-text__creativity,
+  .curlyright-text__creativity {
+    font-size: calc(5vw + 1.5rem);
+  }
+  .curlyleft-text__creativity {
+    top: 5%;
+    left: 35%;
+  }
+  .curlyright-text__creativity {
+    bottom: 5%;
+    left: 35%;
+  }
+  .creativity-span {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    right: 10%;
+    top: 7%;
+  }
+}
+@media screen and (max-width: 430px) {
+  .return-text__creativity {
+    font-size: calc(5vw + 1.3rem);
+
+    top: 15%;
+    left: 5%;
+  }
+  .curlyleft-text__creativity,
+  .curlyright-text__creativity {
+    font-size: calc(5vw + 1.5rem);
+  }
+  .curlyleft-text__creativity {
+    top: 15%;
+    left: 40%;
+  }
+  .curlyright-text__creativity {
+    bottom: 15%;
+    left: 40%;
+  }
+  .creativity-span {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    right: 20%;
+    top: 7%;
+  }
 }
