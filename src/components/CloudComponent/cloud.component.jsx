@@ -380,12 +380,10 @@ function CloudComponent() {
       </svg>
       <div ref={paraRef} className="description--journey-one">
         <span className="para-one">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore
+          Do you know pigeons can recognize human faces and also can learn words!!
         </span>
         <span className="para-one">
-          et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-          accusam et justo duo dolores et ea rebum.
+     Ah! BTW Hi, I am Iqbal and now going to share you my journey to web development. 
         </span>
       </div>
     </div>

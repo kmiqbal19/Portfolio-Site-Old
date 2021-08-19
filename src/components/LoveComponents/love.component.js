@@ -604,12 +604,12 @@ function LoveComponent() {
       </svg>
       <div ref={paraRef} className="description--journey-four">
         <span className="para-four">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore
+          We were in relationship....Sometimes it was just we both of us{" "}
+          <i class="fas fa-heart"></i>.....
         </span>
         <span className="para-four">
-          et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-          accusam et justo duo dolores et ea rebum.
+          Though it didn't last long <i class="far fa-meh-rolling-eyes"></i>
+          ....... Why??? you will understand later....
         </span>
       </div>
     </div>

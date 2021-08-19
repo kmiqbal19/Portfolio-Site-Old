@@ -130,7 +130,7 @@ div.hamburger {
     right: -40rem;
     width: 30rem;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(35, 93, 95, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;

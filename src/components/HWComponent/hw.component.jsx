@@ -72,7 +72,7 @@ function HWComponent() {
         // BUT
         gsap.to(".but-hw", {
           opacity: 1,
-          duration: 1,
+          duration: 0.3,
           ease: "ease",
           scrollTrigger: {
             trigger: ".but-hw__container",
@@ -479,8 +479,8 @@ function HWComponent() {
       </svg>
       <div ref={paraRef} className="description--journey-five">
         <span className="para-five">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore
+          Yes....I started to code like day and night. understand code, code
+          understand ....Yah! Something like this....
         </span>
         {/* <span className="para-five">
           et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
@@ -488,7 +488,15 @@ function HWComponent() {
         </span> */}
       </div>
       <div className="but-hw__container">
-        <h1 className="but-hw">BUT</h1>
+        <p className="but-hw">
+          But I realized....Coding Sucks <i class="fas fa-tired"></i> !! And I
+          broke up with it <i class="fas fa-angry"></i>.......
+          <br />
+          But also understood, the power of it will not come within one or two
+          day or week or one two month. So I took my time to learn it and still
+          learning....And I will learn, again learn, again learn....learn ,
+          learn , learn...Because,not only for me but also for all ....
+        </p>
       </div>
     </div>
   );

@@ -50,11 +50,11 @@ function FooterComponent() {
         </span>
         <div
           className={
-            !infoClick ? "built-with__footer" : "built-with__footer hidden"
+            infoClick ? "built-with__footer" : "built-with__footer hidden"
           }
         >
           <span className="builtwith-footer__text">
-            Built with <i class="far fa-heart"></i>
+            Built with <i class="fas fa-heart"></i>
           </span>
           <BuiltWith />
         </div>

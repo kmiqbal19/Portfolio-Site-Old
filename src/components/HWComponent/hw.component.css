@@ -1,3 +1,6 @@
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+/* Main Stylings */
 .hw-container {
   background-color: rgba(108, 200, 241, 1);
   /* padding-top: 10rem; */
@@ -15,18 +18,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 3rem;
 }
 .but-hw {
   color: white;
-  font-size: 8rem;
+  font-size: 2rem;
   text-align: center;
   opacity: 0;
+  font-family: "Indie Flower", cursive;
+  letter-spacing: 1px;
 }
 .para-five {
   color: white;
   font-size: calc(2vw + 4px);
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(56, 74, 112, 0.5);
   margin-bottom: 0.5rem;
 }
 .description--journey-five {
@@ -35,7 +41,7 @@
   align-items: center;
   flex-direction: column;
   transition: all 1s ease-in-out;
-  transform: translateY(-500px);
+  transform: translateY(-300px);
 }
 @media screen and (max-width: 750px) {
   .hw-container {

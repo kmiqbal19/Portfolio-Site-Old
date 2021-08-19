@@ -42,13 +42,13 @@ div.learning-container img {
 }
 .heading-parallax {
   position: absolute;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: calc(5vw + 2rem);
   width: 70vw;
   height: 15vh;
   text-align: center;
-  font-family: "Pacifico", cursive;
-  top: 18vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  top: 20vh;
   left: 20vw;
 }
 /* .heading-parallax__span {

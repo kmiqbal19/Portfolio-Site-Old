@@ -16,7 +16,7 @@ function ImportComponent() {
       opacity: 1,
       duration: 1,
       // ease: "ease",
-      stagger: 0.5,
+      stagger: 0.1,
 
       scrollTrigger: {
         trigger: containerRef.current,
@@ -30,8 +30,8 @@ function ImportComponent() {
       opacity: 1,
       duration: 1,
       ease: "ease",
-      stagger: 0.8,
-      delay: 2,
+      stagger: 0.3,
+      delay: 1,
       scrollTrigger: {
         trigger: containerRef.current,
         start: "90% bottom",

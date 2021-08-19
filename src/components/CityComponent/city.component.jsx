@@ -276,6 +276,60 @@ function CityComponent() {
             <g className="aeroplane-wind">
               <line
                 className="aeroplane-wind__line"
+                x1="44"
+                y1="277.657"
+                x2="148"
+                y2="277.657"
+                stroke="black"
+                stroke-width="0.685714"
+              />
+              <line
+                className="aeroplane-wind__line"
+                x1="33"
+                y1="339.657"
+                x2="148"
+                y2="339.657"
+                stroke="black"
+                stroke-width="0.685714"
+              />
+              <line
+                className="aeroplane-wind__line"
+                x1="65"
+                y1="280.657"
+                x2="159"
+                y2="280.657"
+                stroke="black"
+                stroke-width="0.685714"
+              />
+              <line
+                className="aeroplane-wind__line"
+                x1="55"
+                y1="343.657"
+                x2="159"
+                y2="343.657"
+                stroke="black"
+                stroke-width="0.685714"
+              />
+              <line
+                className="aeroplane-wind__line"
+                x1="44"
+                y1="284.657"
+                x2="131"
+                y2="284.657"
+                stroke="black"
+                stroke-width="0.685714"
+              />
+              <line
+                className="aeroplane-wind__line"
+                x1="32.9964"
+                y1="347.657"
+                x2="131.425"
+                y2="346.618"
+                stroke="black"
+                stroke-width="0.685714"
+              />
+              {/* <line
+                className="aeroplane-wind__line"
                 x1="120.466"
                 y1="276.657"
                 x2="147.894"
@@ -327,7 +381,7 @@ function CityComponent() {
                 y2="346.618"
                 stroke="black"
                 stroke-width="0.685714"
-              />
+              /> */}
             </g>
           </g>
           <g className="main-city">
@@ -1366,12 +1420,12 @@ function CityComponent() {
       </svg>
       <div ref={paraRef} className="description--journey-two">
         <span className="para-two">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore
+          Wow!!!! Did you saw that...What a planned beautiful city. I started to
+          learn programming
         </span>
         <span className="para-two">
-          et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-          accusam et justo duo dolores et ea rebum.
+          in my bachelor of urban planning. That mighty course was programming
+          for planners.
         </span>
       </div>
     </div>

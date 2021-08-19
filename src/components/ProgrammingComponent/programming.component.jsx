@@ -369,12 +369,12 @@ function ProgrammingComponent() {
       </svg>
       <div ref={paraRef} className="description--journey-three">
         <span className="para-three">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore
+          Later in 2019, A facilitation of web development really picked my
+          interest in this. I taught myself
         </span>
         <span className="para-three">
-          et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-          accusam et justo duo dolores et ea rebum.
+          with different great resources of web development. And eventually my
+          interest has turned to my passion.
         </span>
       </div>
     </div>
