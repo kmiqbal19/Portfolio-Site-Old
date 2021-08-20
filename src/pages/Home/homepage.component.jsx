@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from "react";
-import { gsap, Power3 } from "gsap";
-import Typical from "react-typical";
-import "./homepage.component.css";
 
+import "./homepage.component.css";
+import HeroComponent from "../../components/HeroComponent/hero.component";
+import ShootingCube from "../../components/ShootingCubeComponent/shootingcube.component";
 import ThreeDElements from "./Scene/threeD.component.jsx";
 import CloudComponent from "../../components/CloudComponent/cloud.component";
 import CityComponent from "../../components/CityComponent/city.component";
@@ -17,36 +17,11 @@ import CreativityComponent from "../../components/CreativityComponent/creativity
 import FooterComponent from "../../components/FooterComponent/footer.component";
 
 function HomePage() {
-  let heroDivRef = useRef(null);
-  useEffect(() => {
-    gsap.to(heroDivRef.current, 1.5, {
-      opacity: 1,
-      y: -20,
-      ease: Power3.easeOut,
-    });
-  }, []);
   return (
     <div className="home-container" data-scroll-section>
       <section id="showcase">
-        <div className="hero" ref={heroDivRef}>
-          <h3 className="hero-name">
-            <span className="hero-name__span">{`// `}</span>K M Iqbal
-          </h3>
-
-          <p className="typing-para">
-            <Typical
-              steps={[
-                "A Frontend Developer",
-                4000,
-                "An Urban Planner",
-                2000,
-                "A M.Sc Student",
-                2000,
-              ]}
-              loop={Infinity}
-            />
-          </p>
-        </div>
+        <HeroComponent />
+        <ShootingCube />
         <ThreeDElements />
       </section>
       <section id="journey1">

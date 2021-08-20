@@ -13,47 +13,7 @@
   width: 100%;
   height: 100vh;
   position: relative;
-}
-div.hero {
-  position: absolute;
-  top: 25vh;
-  left: 10vw;
-  color: white;
-  z-index: 1;
-  transition: all 0.5s ease;
-  opacity: 0;
-}
-div.hero .hero-name {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  margin-bottom: 4rem;
-  font-size: calc(3.5vw + 1rem);
-  letter-spacing: 5px;
-}
-div.hero h3.hero-name span {
-  color: var(--secondary-color);
-  letter-spacing: 0px;
-}
-.typing-para {
-  font-size: calc(1.2vw + 0.5rem);
-  font-family: Arial, Helvetica, sans-serif;
-  margin-left: 7rem;
-  letter-spacing: 3px;
-}
-@media screen and (max-width: 750px) {
-  div.hero {
-    left: 12vw;
-    top: 20vh;
-  }
-  div.hero .hero-name {
-    font-size: calc(5vw + 1rem);
-  }
-
-  .typing-para {
-    margin-left: 1rem;
-    /* font-size: calc(1.5vw + 0.5rem); */
-    margin-bottom: 4rem;
-  }
+  background-color: var(--primary-color);
 }
 
 /* Section Journey */

@@ -1,0 +1,43 @@
+.shootingcube-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  /* border: 3px solid tomato; */
+}
+.cube {
+  width: 10px;
+  height: 10px;
+  /* background-image: linear-gradient(to left, transparent, grey); */
+  background-color: rgba(46, 45, 45, 0.603);
+  position: inherit;
+  box-shadow: 0 0 2px rgb(57, 51, 58), 0 0 2px rgb(181, 192, 199);
+}
+.cube-1 {
+  left: 5%;
+  top: 15%;
+}
+.cube-2 {
+  left: 5%;
+  top: 50%;
+}
+.cube-3 {
+  right: 5%;
+  top: 70%;
+}
+.cube-4 {
+  bottom: 5%;
+  right: 30%;
+}
+.cube-5 {
+  left: 60%;
+  top: 5%;
+}
+.cube-6 {
+  right: 5%;
+  top: 40%;
+}
+.cube-7 {
+  left: 25%;
+  bottom: 5%;
+}

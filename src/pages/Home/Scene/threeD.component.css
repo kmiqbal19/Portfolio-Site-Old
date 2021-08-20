@@ -7,6 +7,6 @@
 canvas {
   width: calc(70vw + 100px);
   height: calc(60vh + 100px);
-  background: #101b24;
+
   opacity: 1;
 }
