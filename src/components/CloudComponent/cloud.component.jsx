@@ -2,16 +2,71 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./cloud.component.css";
+// import useLocoScroll from "../../hooks/useLocoScroll";
 function CloudComponent() {
   gsap.registerPlugin(ScrollTrigger);
   let containerCloudRef = useRef(null);
   let cloud1Ref = useRef(null);
   let cloud2Ref = useRef(null);
   let paraRef = useRef(null);
+  // useLocoScroll();
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     //  Scroll Trigger with Match Media
     ScrollTrigger.matchMedia({
+      all: function () {
+        // Bird One
+        const birdOneTimeline = gsap.timeline({ repeat: -1 });
+        birdOneTimeline
+          .to(".bird-1", {
+            y: 10,
+            ease: "ease",
+            duration: 0.5,
+          })
+          .to(".bird-1", {
+            y: 0,
+            ease: "ease",
+            duration: 0.5,
+          });
+        birdOneTimeline
+          .to(".movable-part__bird-1", {
+            rotate: -20,
+            duration: 0.5,
+            ease: "ease",
+          })
+          .to(".movable-part__bird-1", {
+            rotate: 0,
+            duration: 0.5,
+            ease: "ease",
+          });
+        // Bird Two
+
+        const birdTwoTimeline = gsap.timeline({ repeat: -1 });
+        birdTwoTimeline
+          .to(".bird-2", {
+            y: 10,
+            ease: "ease",
+            duration: 0.5,
+          })
+          .to(".bird-2", {
+            y: 0,
+            ease: "ease",
+            duration: 0.5,
+          });
+        birdTwoTimeline
+          .to(".movable-part__bird-2", {
+            transformOrigin: "right",
+            rotate: 20,
+            duration: 0.5,
+            ease: "ease",
+          })
+          .to(".movable-part__bird-2", {
+            transformOrigin: "right",
+            rotate: 0,
+            duration: 0.5,
+            ease: "ease",
+          });
+      },
       "(min-width: 300px)": function () {
         // Cloud Scroll
         const cloudBirdScrollTimeline = gsap.timeline({
@@ -22,6 +77,7 @@ function CloudComponent() {
             end: "+=1800",
             scrub: 3,
             pin: true,
+            // scroller: ".home-container",
           },
         });
         cloudBirdScrollTimeline
@@ -53,59 +109,6 @@ function CloudComponent() {
             delay: 0,
             ease: "SlowMo",
           });
-        // .to(paraRef.current, { opacity: 1, y: -200, ease: "ease", duration: 2 });
-        // Bird One
-        // gsap.to(".bird-1", { x: -200 });
-        const birdOneTimeline = gsap.timeline({ repeat: -1 });
-        birdOneTimeline
-          .to(".bird-1", {
-            y: 10,
-            ease: "ease",
-            duration: 0.5,
-          })
-          .to(".bird-1", {
-            y: 0,
-            ease: "ease",
-            duration: 0.5,
-          });
-        birdOneTimeline
-          .to(".movable-part__bird-1", {
-            rotate: -20,
-            duration: 0.5,
-            ease: "ease",
-          })
-          .to(".movable-part__bird-1", {
-            rotate: 0,
-            duration: 0.5,
-            ease: "ease",
-          });
-        // Bird Two
-        // gsap.to(".bird-2", { x: 400 });
-        const birdTwoTimeline = gsap.timeline({ repeat: -1 });
-        birdTwoTimeline
-          .to(".bird-2", {
-            y: 10,
-            ease: "ease",
-            duration: 0.5,
-          })
-          .to(".bird-2", {
-            y: 0,
-            ease: "ease",
-            duration: 0.5,
-          });
-        birdTwoTimeline
-          .to(".movable-part__bird-2", {
-            transformOrigin: "right",
-            rotate: 20,
-            duration: 0.5,
-            ease: "ease",
-          })
-          .to(".movable-part__bird-2", {
-            transformOrigin: "right",
-            rotate: 0,
-            duration: 0.5,
-            ease: "ease",
-          });
 
         gsap.to(paraRef.current, {
           opacity: 1,
@@ -118,8 +121,9 @@ function CloudComponent() {
             // markers: true,
             start: "90% bottom",
             end: "+=100",
-            // toggleActions: "play none reverse reverse",
+
             scrub: 1,
+            // scroller: ".home-container",
           },
         });
       },
@@ -136,6 +140,7 @@ function CloudComponent() {
             start: "90% bottom",
             end: "+=100",
             scrub: 1,
+            // scroller: ".home-container",
           },
         });
       },
@@ -380,10 +385,12 @@ function CloudComponent() {
       </svg>
       <div ref={paraRef} className="description--journey-one">
         <span className="para-one">
-          Do you know pigeons can recognize human faces and also can learn words!!
+          Do you know pigeons can recognize human faces and also can learn
+          words!!
         </span>
         <span className="para-one">
-     Ah! BTW Hi, I am Iqbal and now going to share you my journey to web development. 
+          Ah! BTW Hi, I am Iqbal and now going to share you my journey to web
+          development.
         </span>
       </div>
     </div>

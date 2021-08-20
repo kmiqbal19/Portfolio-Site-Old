@@ -2,13 +2,15 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./city.component.css";
+// import useLocoScroll from "../../hooks/useLocoScroll";
 function CityComponent() {
+  // useLocoScroll();
   gsap.registerPlugin(ScrollTrigger);
   let cityRef = useRef(null);
   let paraRef = useRef(null);
   useEffect(() => {
     ScrollTrigger.matchMedia({
-      "(min-width: 300px)": function () {
+      all: function () {
         // Aeroplane
         const aeroWindLines = document.querySelectorAll(
           ".aeroplane-wind__line"
@@ -22,33 +24,7 @@ function CityComponent() {
         aeroplaneTimeline
           .to(".aeroplane-main", { y: 10, duration: 0.5, ease: "ease" })
           .to(".aeroplane-main", { y: 0, duration: 0.5, ease: "ease" });
-        // Aeroplane and Clouds
-        const aeroplaneCloudScrollTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: cityRef.current,
-            start: "75% bottom",
-            end: "+=1000",
-            // markers: true,
-            scrub: 3,
-            pin: true,
-          },
-        });
-        aeroplaneCloudScrollTl
-          .from(".cloud-1-city", {
-            x: -1000,
-            ease: "ease",
-            duration: 2,
-          })
-          .from(".cloud-2-city", {
-            x: 1200,
-            ease: "ease",
-            duration: 2,
-          })
-          .to(".aeroplane-main", {
-            x: 1400,
-            ease: "ease",
-            duration: 5,
-          });
+
         // Trees
         const treeTimeline = gsap.timeline({ repeat: -1 });
         treeTimeline
@@ -99,7 +75,39 @@ function CityComponent() {
           delay: 3,
           repeat: 3,
         });
-        // gsap.to(".car-smoke", { opacity: 0.5, repeat: -1, ease: "linear" });
+        gsap.to(".car-body-2", { y: 4, yoyo: true, repeat: -1 });
+      },
+      "(min-width: 300px)": function () {
+        // Aeroplane and Clouds
+        const aeroplaneCloudScrollTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: cityRef.current,
+            start: "75% bottom",
+            end: "+=1000",
+            // markers: true,
+            scrub: 3,
+            pin: true,
+            // scroller: '.home-container'
+          },
+        });
+        aeroplaneCloudScrollTl
+          .from(".cloud-1-city", {
+            x: -1000,
+            ease: "ease",
+            duration: 2,
+          })
+          .from(".cloud-2-city", {
+            x: 1200,
+            ease: "ease",
+            duration: 2,
+          })
+          .to(".aeroplane-main", {
+            x: 1400,
+            ease: "ease",
+            duration: 5,
+          });
+
+        //  Car 2 Scroll
         gsap.fromTo(
           ".car-2",
           {
@@ -114,6 +122,7 @@ function CityComponent() {
               end: "+=500",
               scrub: 4,
               // markers: true,
+              // scroller: '.home-container'
             },
           }
         );
@@ -126,25 +135,9 @@ function CityComponent() {
             start: "80% 40%",
             end: "+=350",
             scrub: 4,
+            // scroller: '.home-container'
           },
         });
-        gsap.to(".car-body-2", { y: 4, yoyo: true, repeat: -1 });
-        // Descriptions
-        // gsap.to(paraRef.current, 1, {
-        //   opacity: 1,
-
-        //   y: -10,
-        //   ease: "ease",
-        //   scrollTrigger: {
-        //     trigger: cityRef.current,
-        //     markers: true,
-        //     start: "80% 40%",
-        //     end: "+=500",
-
-        //     scrub: 1,
-        //     pin: true,
-        //   },
-        // });
       },
       "(max-width: 800px)": function () {
         // Car 2
@@ -162,6 +155,7 @@ function CityComponent() {
               end: "+=500",
               scrub: 4,
               // markers: true,
+              // scroller: '.home-container'
             },
           }
         );
@@ -174,6 +168,7 @@ function CityComponent() {
             start: "40% 40%",
             end: "+=350",
             scrub: 4,
+            // scroller: '.home-container'
           },
         });
       },
@@ -193,6 +188,7 @@ function CityComponent() {
               end: "+=500",
               scrub: 4,
               // markers: true,
+              // scroller: '.home-container'
             },
           }
         );
@@ -205,6 +201,7 @@ function CityComponent() {
             start: "center center",
             end: "+=350",
             scrub: 4,
+            // scroller: '.home-container'
           },
         });
       },

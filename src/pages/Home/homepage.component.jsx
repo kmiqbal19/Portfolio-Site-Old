@@ -26,7 +26,7 @@ function HomePage() {
     });
   }, []);
   return (
-    <div className="home-container">
+    <div className="home-container" data-scroll-section>
       <section id="showcase">
         <div className="hero" ref={heroDivRef}>
           <h3 className="hero-name">
@@ -58,6 +58,7 @@ function HomePage() {
       <section id="journey3">
         <ProgrammingComponent />
       </section>
+
       <section id="journey4">
         <LoveComponent />
       </section>

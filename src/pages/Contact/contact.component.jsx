@@ -1,7 +1,11 @@
 import React from "react";
 
 function ContactPage() {
-  return <div>Contact</div>;
+  return (
+    <div className="contact-container" data-scroll-section>
+      Contact
+    </div>
+  );
 }
 
 export default ContactPage;

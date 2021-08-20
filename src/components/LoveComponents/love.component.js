@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { gsap, Elastic } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./love.component.css";
+// import useLocoScroll from "../../hooks/useLocoScroll";
 function LoveComponent() {
   gsap.registerPlugin(ScrollTrigger);
   let loveContainerRef = useRef(null);
@@ -14,45 +15,10 @@ function LoveComponent() {
   let loveTextMeRef = useRef(null);
   let loveTextCodingRef = useRef(null);
   let paraRef = useRef(null);
+  // useLocoScroll();
   useEffect(() => {
     ScrollTrigger.matchMedia({
-      "(min-width: 300px)": function () {
-        // Clouds
-        const cloudsTlScroll = gsap.timeline({
-          scrollTrigger: {
-            trigger: loveSvgRef.current,
-            start: "top center",
-            end: "+=400",
-            scrub: 3,
-          },
-        });
-        cloudsTlScroll
-          .from(loveCloud1Ref.current, { x: -800, ease: "ease", duration: 1 })
-          .from(loveCloud2Ref.current, { x: 900, ease: "ease", duration: 1 })
-          .to(paraRef.current, {
-            opacity: 1,
-          });
-        // Love Sun
-        const loveSunTl = gsap.timeline({ repeat: -1 });
-        loveSunTl
-          .to(loveSunRef.current, { y: 15, ease: "ease", duration: 1 })
-          .to(loveSunRef.current, { y: 0, ease: "ease", duration: 1 });
-
-        gsap.from(loveSunRef.current, {
-          x: 1100,
-          fill: "#D01760",
-          scale: 2,
-          ease: "ease",
-          duration: 10,
-          scrollTrigger: {
-            trigger: loveSvgRef.current,
-            start: "bottom bottom",
-            end: "+=1000",
-            scrub: 2,
-            pin: true,
-            // markers: true,
-          },
-        });
+      all: function () {
         //  Trees
         const treeTl = gsap.timeline({ repeat: -1 });
         treeTl
@@ -257,19 +223,52 @@ function LoveComponent() {
             duration: 0.5,
             delay: 2,
           });
+
+        const loveSunTl = gsap.timeline({ repeat: -1 });
+        loveSunTl
+          .to(loveSunRef.current, { y: 15, ease: "ease", duration: 1 })
+          .to(loveSunRef.current, { y: 0, ease: "ease", duration: 1 });
       },
-      // "(max-width: 800px)": function () {
-      //   gsap.to(paraRef.current, {
-      //     opacity: 1,
-      //     y: -600,
-      //     ease: "ease",
-      //     duration: 5,
-      //   });
-      // },
+      "(min-width: 300px)": function () {
+        // Clouds
+        const cloudsTlScroll = gsap.timeline({
+          scrollTrigger: {
+            trigger: loveSvgRef.current,
+            start: "top center",
+            end: "+=400",
+            scrub: 3,
+            // scroller: ".home-container",
+          },
+        });
+        cloudsTlScroll
+          .from(loveCloud1Ref.current, { x: -800, ease: "ease", duration: 1 })
+          .from(loveCloud2Ref.current, { x: 900, ease: "ease", duration: 1 })
+          .to(paraRef.current, {
+            opacity: 1,
+          });
+        // Love Sun
+
+        gsap.from(loveSunRef.current, {
+          x: 1100,
+          fill: "#D01760",
+          scale: 2,
+          ease: "ease",
+          duration: 10,
+          scrollTrigger: {
+            trigger: loveSvgRef.current,
+            start: "bottom bottom",
+            end: "+=1000",
+            scrub: 2,
+            pin: true,
+            // markers: true,
+            // scroller: ".home-container",
+          },
+        });
+      },
     });
   }, []);
   return (
-    <div ref={loveContainerRef} className="love-container">
+    <div ref={loveContainerRef} className="love-container" data-scroll-section>
       <svg
         ref={loveSvgRef}
         className="love-svg"

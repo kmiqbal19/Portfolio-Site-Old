@@ -2,7 +2,9 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./programming.component.css";
+// import useLocoScroll from "../../hooks/useLocoScroll";
 function ProgrammingComponent() {
+  // useLocoScroll();
   gsap.registerPlugin(ScrollTrigger);
   let progWindowRef = useRef(null);
   let progSvgRef = useRef(null);
@@ -14,28 +16,7 @@ function ProgrammingComponent() {
   let paraRef = useRef(null);
   useEffect(() => {
     ScrollTrigger.matchMedia({
-      "(min-width: 300px)": function () {
-        // Programming Window
-        const windowTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: progSvgRef.current,
-            start: "30% center",
-            end: "+=400",
-            // markers: true,
-
-            toggleActions: "play none none reverse",
-            pin: true,
-          },
-        });
-        windowTl
-          .to(progWindowRef.current, { scale: 0.9, x: 100, duration: 1 })
-          .from(boyProgRef.current, { x: -600, ease: "ease", duration: 1 })
-          .to(paraRef.current, {
-            opacity: 1,
-            duration: 0.5,
-            y: -260,
-            ease: "ease",
-          });
+      all: function () {
         // Programming Window Cursor
         const cursorProgTl = gsap.timeline({ repeat: -1 });
         cursorProgTl
@@ -83,6 +64,30 @@ function ProgrammingComponent() {
             ease: "ease",
             duration: 1,
             transformOrigin: "bottom",
+          });
+      },
+      "(min-width: 300px)": function () {
+        // Programming Window
+        const windowTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: progSvgRef.current,
+            start: "30% center",
+            end: "+=400",
+            // markers: true,
+
+            toggleActions: "play none none reverse",
+            // pin: true,
+            // scroller: ".home-container",
+          },
+        });
+        windowTl
+          .to(progWindowRef.current, { scale: 0.9, x: 100, duration: 1 })
+          .from(boyProgRef.current, { x: -650, ease: "ease", duration: 1 })
+          .to(paraRef.current, {
+            opacity: 1,
+            duration: 0.5,
+            y: -260,
+            ease: "ease",
           });
       },
     });

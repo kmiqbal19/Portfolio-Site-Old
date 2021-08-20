@@ -34,8 +34,9 @@ function ImportComponent() {
       delay: 1,
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "90% bottom",
-        end: "90% bottom",
+        start: "60% bottom",
+        end: "60% bottom",
+
         toggleActions: "play none none reverse",
         // markers: true,
       },
