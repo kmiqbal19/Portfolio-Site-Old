@@ -9,7 +9,7 @@
   width: 10px;
   height: 10px;
   /* background-image: linear-gradient(to left, transparent, grey); */
-  background-color: rgba(46, 45, 45, 0.603);
+  background-color: rgba(20, 20, 39, 0.603);
   position: inherit;
   box-shadow: 0 0 2px rgb(57, 51, 58), 0 0 2px rgb(181, 192, 199);
 }

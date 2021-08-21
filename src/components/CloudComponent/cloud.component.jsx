@@ -66,6 +66,15 @@ function CloudComponent() {
             duration: 0.5,
             ease: "ease",
           });
+        // Nav Lists
+        gsap.to(".nav-list", {
+          color: "brown",
+          scrollTrigger: {
+            trigger: containerCloudRef.current,
+            start: "bottom bottom",
+            scrub: 1,
+          },
+        });
       },
       "(min-width: 300px)": function () {
         // Cloud Scroll

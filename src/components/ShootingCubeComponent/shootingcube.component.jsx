@@ -13,7 +13,7 @@ function ShootingCube() {
       {
         x: 1500,
         rotate: 360,
-        scale: 1.2,
+        scale: 1.4,
         transformOrigin: "center",
         repeat: -1,
         ease: "ease",
@@ -27,7 +27,7 @@ function ShootingCube() {
       { x: -150 },
       {
         x: 1500,
-        scale: 1.4,
+        scale: 2,
         rotate: -360,
         delay: 1,
         transformOrigin: "center",

@@ -81,6 +81,15 @@ function HWComponent() {
             // markers: true,
           },
         });
+        // Nav Lists
+        gsap.to(".nav-list", {
+          color: "#ddd",
+          scrollTrigger: {
+            trigger: hwSvgRef.current,
+            start: "bottom bottom",
+            scrub: 1,
+          },
+        });
       },
       "(min-width:751px)": function () {
         // Moon Sun Star Scroll

@@ -1,5 +1,9 @@
 export const menuLists = [
   {
+    title: "home",
+    url: "/home",
+  },
+  {
     title: "projects",
     url: "/projects",
   },

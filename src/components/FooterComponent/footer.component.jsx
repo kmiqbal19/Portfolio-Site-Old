@@ -1,12 +1,42 @@
 import React, { useState, useEffect, useRef } from "react";
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./footer.component.css";
 import stateBuilt from "./stateBuiltwith";
+import bgImage from "../../../src/assets/Images/bg-thankyou.png";
 function FooterComponent() {
+  let footerContainerRef = useRef(null);
+  let loseFearRef = useRef(null);
+  let bgFooterRef = useRef(null);
   const [infoClick, setInfoClicked] = useState(false);
   const clickHandler = () => setInfoClicked(!infoClick);
-
+  useEffect(() => {
+    ScrollTrigger.matchMedia({
+      all: function () {
+        gsap.to(loseFearRef.current, {
+          y: -20,
+          opacity: 1,
+          ease: "ease",
+          duration: 1,
+          scrollTrigger: {
+            trigger: footerContainerRef.current,
+            start: "98% bottom",
+            toggleActions: "play none none reverse",
+          },
+        });
+        gsap.to(bgFooterRef.current, {
+          opacity: 1,
+          ease: "ease",
+          duration: 5,
+          scrollTrigger: {
+            trigger: footerContainerRef.current,
+            start: "90% bottom",
+            toggleActions: "play none none reverse",
+          },
+        });
+      },
+    });
+  }, []);
   const BuiltWith = () => {
     return stateBuilt.map((tool, index) => {
       return (
@@ -27,10 +57,16 @@ function FooterComponent() {
     });
   };
   return (
-    <div className="footer-container">
-      <div className="losefear-footer">
+    <div ref={footerContainerRef} className="footer-container">
+      <img
+        ref={bgFooterRef}
+        className="bg-footer"
+        src={bgImage}
+        alt="bg-thankyou"
+      />
+      <div ref={loseFearRef} className="losefear-footer">
         <span className="thankyou__footer">
-          Thank you for checking out my website!
+          Thanks for checking out my website!
         </span>
         <span className="losefear-footer__text">
           {"// To be creative, lose the fear of being wrong.."}
