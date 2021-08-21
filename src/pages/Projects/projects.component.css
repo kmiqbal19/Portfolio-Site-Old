@@ -1,0 +1,82 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+/* Main Stylings */
+section.projects-wrapper {
+  width: 100vw;
+  min-height: 100%;
+  /* border: 3px solid brown; */
+  background-color: var(--primary-color);
+}
+div.project__container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.project__image--container {
+  width: calc(25vw + 15rem);
+  height: calc(30vh + 15rem);
+  /* border: 2px solid red; */
+  position: absolute;
+  top: 10%;
+  right: 18%;
+  z-index: 1;
+  opacity: 0;
+  box-shadow: 0.5px 3px 5px rgba(20, 20, 20, 0.877),
+    1px 3px 5px rgba(48, 47, 47, 0.712), 0.5px 3px 5px rgba(90, 89, 89, 0.774);
+}
+.project__image--container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project__bg {
+  width: calc(20vw + 10rem);
+  height: calc(30vh + 5rem);
+  background-color: purple;
+  /* border: 2px solid green; */
+  position: absolute;
+  top: 50%;
+  right: 5%;
+}
+.project-number {
+  font-size: calc(10rem + 20vh);
+  font-family: "Monoton", cursive;
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  color: white;
+}
+.project__description--container {
+  width: calc(20vw + 15rem);
+  height: calc(40vh + 20rem);
+  /* border: 5px solid blue; */
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  z-index: 2;
+}
+.project__description--heading {
+  font-size: calc(4rem + 2vw);
+  text-decoration: underline;
+  padding: 3rem;
+  margin-bottom: 2rem;
+  color: white;
+  /* text-align: right; */
+}
+.live-button__project {
+  padding: 1rem 1.5rem;
+  margin-left: 4rem;
+
+  background-color: red;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: whitesmoke;
+}
+.project__description--para {
+  padding: 3rem;
+  font-size: 1.2rem;
+  text-align: justify;
+  margin-top: 1.5rem;
+  color: white;
+}

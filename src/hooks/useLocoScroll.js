@@ -3,16 +3,16 @@ import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/src/locomotive-scroll.scss";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-export default function useLocoScroll() {
+export default function useLocoScroll(query) {
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     // if (!start) return;
-    const scrollEl = document.querySelector(".home-container");
+    const scrollEl = document.querySelector(query);
     const locoScroll = new LocomotiveScroll({
       el: scrollEl,
       smooth: true,
       multiplier: 1,
-      // class: "is-reveal",
+      class: "is-reveal",
     });
     locoScroll.on("scroll", ScrollTrigger.update);
 
