@@ -27,7 +27,7 @@ function FooterComponent() {
         gsap.to(bgFooterRef.current, {
           opacity: 1,
           ease: "ease",
-          duration: 5,
+          duration: 3,
           scrollTrigger: {
             trigger: footerContainerRef.current,
             start: "90% bottom",

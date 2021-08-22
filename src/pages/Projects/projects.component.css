@@ -1,11 +1,12 @@
 /* Import Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap");
 /* Main Stylings */
 section.projects-wrapper {
   width: 100vw;
   min-height: 100%;
   /* border: 3px solid brown; */
-  background-color: var(--primary-color);
+  background-color: #ddd;
 }
 div.project__container {
   width: 100%;
@@ -15,7 +16,6 @@ div.project__container {
 .project__image--container {
   width: calc(25vw + 15rem);
   height: calc(30vh + 15rem);
-  /* border: 2px solid red; */
   position: absolute;
   top: 10%;
   right: 18%;
@@ -33,7 +33,7 @@ div.project__container {
   width: calc(20vw + 10rem);
   height: calc(30vh + 5rem);
   background-color: purple;
-  /* border: 2px solid green; */
+
   position: absolute;
   top: 50%;
   right: 5%;
@@ -44,30 +44,32 @@ div.project__container {
   position: absolute;
   top: -40%;
   right: -10%;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .project__description--container {
   width: calc(20vw + 15rem);
   height: calc(40vh + 20rem);
-  /* border: 5px solid blue; */
+
   position: absolute;
-  top: 10%;
-  left: 5%;
+  top: 5%;
+  left: 4%;
   z-index: 2;
+  opacity: 0;
 }
 .project__description--heading {
-  font-size: calc(4rem + 2vw);
-  text-decoration: underline;
-  padding: 3rem;
-  margin-bottom: 2rem;
-  color: white;
-  /* text-align: right; */
+  font-size: calc(5rem + 3vw);
+
+  padding: 0rem 3rem 1.5rem;
+  color: #1d1b26;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: "Kaisei Tokumin", serif;
 }
 .live-button__project {
   padding: 1rem 1.5rem;
   margin-left: 4rem;
 
-  background-color: red;
+  background-color: rgb(240, 102, 102);
   border-radius: 5px;
   font-size: 1.5rem;
   text-decoration: none;
@@ -78,5 +80,5 @@ div.project__container {
   font-size: 1.2rem;
   text-align: justify;
   margin-top: 1.5rem;
-  color: white;
+  color: #1d1b26;
 }

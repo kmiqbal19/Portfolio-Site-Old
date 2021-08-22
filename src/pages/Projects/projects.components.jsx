@@ -4,10 +4,22 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import "./projects.component.css";
 import ProjectList from "./projectList";
 import useLocoScroll from "../../hooks/useLocoScroll";
+import Nav from "../../components/NavBar/nav.component";
 function ProjectsPage() {
-  useLocoScroll(".projects-wrapper");
   gsap.registerPlugin(ScrollTrigger);
+  // useLocoScroll(".projects-wrapper");
+
   useEffect(() => {
+    // Main Logo
+    gsap.to("#left-ellipse", { fill: "#1d1b26" });
+    gsap.to("#right-ellipse", { fill: "#1d1b26" });
+    gsap.to("#i-main", { fill: "#1d1b26" });
+    // NavBar
+    gsap.to("#main-nav", {
+      backgroundImage: "linear-gradient(to bottom, #ddd 50%, transparent)",
+    });
+    gsap.to(".nav-list", { color: "#1d1b26" });
+    // Image Containers
     gsap.to(".project__image--container-1", {
       y: -20,
       ease: "ease",
@@ -17,19 +29,19 @@ function ProjectsPage() {
         trigger: ".project__container-1",
         start: "90% bottom",
         toggleActions: "play none none reverse",
-        scroller: ".projects-wrapper",
+        // scroller: ".projects-wrapper",
       },
     });
     gsap.to(".project__image--container-2", {
       y: -20,
       ease: "ease",
-      duration: 1,
+      duration: 0.8,
       opacity: 1,
       scrollTrigger: {
         trigger: ".project__container-2",
         start: "90% bottom",
         toggleActions: "play none none reverse",
-        scroller: ".projects-wrapper",
+        // scroller: ".projects-wrapper",
       },
     });
     gsap.to(".project__image--container-3", {
@@ -41,7 +53,45 @@ function ProjectsPage() {
         trigger: ".project__container-3",
         start: "90% bottom",
         toggleActions: "play none none reverse",
-        scroller: ".projects-wrapper",
+        // scroller: ".projects-wrapper",
+      },
+    });
+
+    // Descriptions Container
+    gsap.to(".project__description--container-1", {
+      x: 20,
+      ease: "ease",
+      duration: 0.8,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".project__container-1",
+        start: "90% bottom",
+        toggleActions: "play none none reverse",
+        // scroller: ".projects-wrapper",
+      },
+    });
+    gsap.to(".project__description--container-2", {
+      x: 20,
+      ease: "ease",
+      duration: 0.8,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".project__container-2",
+        start: "90% bottom",
+        toggleActions: "play none none reverse",
+        // scroller: ".projects-wrapper",
+      },
+    });
+    gsap.to(".project__description--container-3", {
+      x: 20,
+      ease: "ease",
+      duration: 0.8,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".project__container-3",
+        start: "90% bottom",
+        toggleActions: "play none none reverse",
+        // scroller: ".projects-wrapper",
       },
     });
   }, []);
@@ -64,7 +114,11 @@ function ProjectsPage() {
             {/* <img src="" alt="fs" /> */}
             <p className="project-number">{project.projectNumber}</p>
           </div>
-          <div className="project__description--container">
+          <div
+            className={`project__description--container project__description--container-${
+              index + 1
+            }`}
+          >
             <p className="project__description--heading">
               {project.projectHeading}
             </p>
@@ -80,31 +134,12 @@ function ProjectsPage() {
     });
   };
   return (
-    <section className="projects-wrapper">
-      <ProjectsGen />
-      {/* <div className="project__container">
-        <div className="project__image--container">
-          <img className="project__image" src={image} alt="fs" />
-        </div>
-        <div className="project__bg">
-          <img src="" alt="fs" />
-          <p className="project-number">01</p>
-        </div>
-        <div className="project__description--container">
-          <p className="project__description--heading"> Crown Clothings</p>
-          <a className="live-button__project" href="fsd">
-            See Live
-          </a>
-          <p className="project__description--para">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet
-            suspendisse interdum consectetur libero id faucibus nisl tincidunt
-            eget. Facilisis sed odio morbi quis. Augue ut lectus arcu bibendum
-            at varius vel pharetra.{" "}
-          </p>
-        </div>
-      </div> */}
-    </section>
+    <>
+      <Nav />
+      <section className="projects-wrapper">
+        <ProjectsGen />
+      </section>
+    </>
   );
 }
 

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-
+import { gsap } from "gsap";
 import "./homepage.component.css";
 import HeroComponent from "../../components/HeroComponent/hero.component";
 import ShootingCube from "../../components/ShootingCubeComponent/shootingcube.component";
@@ -17,6 +17,17 @@ import CreativityComponent from "../../components/CreativityComponent/creativity
 import FooterComponent from "../../components/FooterComponent/footer.component";
 
 function HomePage() {
+  useEffect(() => {
+    // Main Logo
+    gsap.to("#left-ellipse", { fill: "#ddd" });
+    gsap.to("#right-ellipse", { fill: "#ddd" });
+    gsap.to("#i-main", { fill: "#ddd" });
+    // Navbar
+    gsap.to("#main-nav", {
+      backgroundImage: "linear-gradient(to bottom, transparent, transparent)",
+    });
+    gsap.to(".nav-list", { color: "#ddd" });
+  }, []);
   return (
     <div className="home-container" data-scroll-section>
       <section id="showcase">

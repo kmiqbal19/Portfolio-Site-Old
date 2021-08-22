@@ -26,10 +26,10 @@ function KnowledgeComponent() {
         });
         // Nav Lists
         gsap.to(".nav-list", {
-          color: "brown",
+          color: "#1d1b26",
           scrollTrigger: {
             trigger: spansContainerRef.current,
-            start: "bottom bottom",
+            start: "50% bottom",
             scrub: 1,
           },
         });

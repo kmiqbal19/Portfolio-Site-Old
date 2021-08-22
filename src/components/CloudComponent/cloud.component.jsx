@@ -68,7 +68,7 @@ function CloudComponent() {
           });
         // Nav Lists
         gsap.to(".nav-list", {
-          color: "brown",
+          color: "#1d1b26",
           scrollTrigger: {
             trigger: containerCloudRef.current,
             start: "bottom bottom",

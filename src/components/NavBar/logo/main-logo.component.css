@@ -1,12 +1,13 @@
 .main-logo {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
   width: 4rem;
-  margin-left: 3rem;
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
 }
-.main-logo img {
+/* .main-logo img {
   height: 100%;
   object-fit: cover;
-}
+} */
