@@ -3,21 +3,21 @@ import image2 from "../../assets/Images/Projects Image/pro-1.jpg";
 import image3 from "../../assets/Images/Projects Image/startup-594090_1280.jpg";
 const ProjectList = [
   {
-    projectImage: image1,
-    projectImageName: "fdsafa",
+    projectImage: "https://i.ibb.co/6WSzy63/audrey-clothings.png",
+    projectImageName: "audrey-clothing",
     projectNumber: "01",
-    projectHeading: "Crown Clothing",
-    projectLink: "https://dribbble.com/tags/project_showcase",
+    projectHeading: "Audrey Clothing",
+    projectLink: "https://audrey-clothings.netlify.app",
     projectDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget. Facilisis sed odio morbi quis. Augue ut lectus arcu bibendum  at varius vel pharetra.",
     bgColor: "green",
   },
   {
-    projectImage: image2,
-    projectImageName: "fdsafa",
+    projectImage: "https://i.ibb.co/4Mfw3sV/food-mine.png",
+    projectImageName: "food-mine",
     projectNumber: "02",
-    projectHeading: "Food Bank",
-    projectLink: "www.google.com",
+    projectHeading: "Food Mine",
+    projectLink: "http://food-mine.netlify.app",
     projectDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget. Facilisis sed odio morbi quis. Augue ut lectus arcu bibendum  at varius vel pharetra.",
     bgColor: "yellow",
