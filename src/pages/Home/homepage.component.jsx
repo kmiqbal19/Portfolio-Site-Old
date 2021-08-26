@@ -29,7 +29,7 @@ function HomePage() {
     gsap.to(".nav-list", { color: "#ddd" });
   }, []);
   return (
-    <div className="home-container" data-scroll-section>
+    <div className="home-container">
       <section id="showcase">
         <HeroComponent />
         <ShootingCube />
