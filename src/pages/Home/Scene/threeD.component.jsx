@@ -15,7 +15,6 @@ const ThreeDElements = ({ history }) => {
   useEffect(() => {
     THREE.DefaultLoadingManager.onLoad = () => setFinished(true);
   }, []);
-
   const Loading = () => {
     return finished === false ? (
       <div ref={loadingRef} className="loading">

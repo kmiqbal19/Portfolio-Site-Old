@@ -11,6 +11,7 @@ function Nav({ history }) {
   const clickHandler = () => setHamClicked(!hamClicked);
   useEffect(() => {
     history.listen(() => {
+      window.scrollTo(0, 0);
       return setHamClicked(!hamClicked);
     });
   });
