@@ -20,79 +20,83 @@ function ProjectsPage() {
       backgroundImage: "linear-gradient(to bottom, #ddd 50%, transparent)",
     });
     gsap.to(".nav-list", { color: "#1d1b26" });
-    // Image Containers
-    gsap.to(".project__image--container-1", {
-      y: -20,
-      ease: "ease",
-      duration: 1,
-      opacity: 1,
-      scrollTrigger: {
-        trigger: ".project__container-1",
-        start: "90% bottom",
-        toggleActions: "play none none reverse",
-        // scroller: ".projects-wrapper",
-      },
-    });
-    gsap.to(".project__image--container-2", {
-      y: -20,
-      ease: "ease",
-      duration: 0.8,
-      opacity: 1,
-      scrollTrigger: {
-        trigger: ".project__container-2",
-        start: "90% bottom",
-        toggleActions: "play none none reverse",
-        // scroller: ".projects-wrapper",
-      },
-    });
-    gsap.to(".project__image--container-3", {
-      y: -20,
-      ease: "ease",
-      duration: 1,
-      opacity: 1,
-      scrollTrigger: {
-        trigger: ".project__container-3",
-        start: "90% bottom",
-        toggleActions: "play none none reverse",
-        // scroller: ".projects-wrapper",
-      },
-    });
+    ScrollTrigger.matchMedia({
+      "(min-width: 900px)": function () {
+        // Image Containers
+        gsap.to(".project__image--container-1", {
+          y: -20,
+          ease: "ease",
+          duration: 1,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".project__container-1",
+            start: "90% bottom",
+            toggleActions: "play none none reverse",
+            // scroller: ".projects-wrapper",
+          },
+        });
+        gsap.to(".project__image--container-2", {
+          y: -20,
+          ease: "ease",
+          duration: 0.8,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".project__container-2",
+            start: "90% bottom",
+            toggleActions: "play none none reverse",
+            // scroller: ".projects-wrapper",
+          },
+        });
+        gsap.to(".project__image--container-3", {
+          y: -20,
+          ease: "ease",
+          duration: 1,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".project__container-3",
+            start: "90% bottom",
+            toggleActions: "play none none reverse",
+            // scroller: ".projects-wrapper",
+          },
+        });
 
-    // Descriptions Container
-    gsap.to(".project__description--container-1", {
-      x: 20,
-      ease: "ease",
-      duration: 0.8,
-      opacity: 1,
-      scrollTrigger: {
-        trigger: ".project__container-1",
-        start: "90% bottom",
-        toggleActions: "play none none reverse",
-        // scroller: ".projects-wrapper",
-      },
-    });
-    gsap.to(".project__description--container-2", {
-      x: 20,
-      ease: "ease",
-      duration: 0.8,
-      opacity: 1,
-      scrollTrigger: {
-        trigger: ".project__container-2",
-        start: "90% bottom",
-        toggleActions: "play none none reverse",
-        // scroller: ".projects-wrapper",
-      },
-    });
-    gsap.to(".project__description--container-3", {
-      x: 20,
-      ease: "ease",
-      duration: 0.8,
-      opacity: 1,
-      scrollTrigger: {
-        trigger: ".project__container-3",
-        start: "90% bottom",
-        toggleActions: "play none none reverse",
-        // scroller: ".projects-wrapper",
+        // Descriptions Container
+        gsap.to(".project__description--container-1", {
+          x: 20,
+          ease: "ease",
+          duration: 0.8,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".project__container-1",
+            start: "90% bottom",
+            toggleActions: "play none none reverse",
+            // scroller: ".projects-wrapper",
+          },
+        });
+        gsap.to(".project__description--container-2", {
+          x: 20,
+          ease: "ease",
+          duration: 0.8,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".project__container-2",
+            start: "90% bottom",
+            toggleActions: "play none none reverse",
+            // scroller: ".projects-wrapper",
+          },
+        });
+        gsap.to(".project__description--container-3", {
+          x: 20,
+          ease: "ease",
+          duration: 0.8,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".project__container-3",
+            start: "90% bottom",
+            toggleActions: "play none none reverse",
+            // scroller: ".projects-wrapper",
+          },
+        });
       },
     });
   }, []);

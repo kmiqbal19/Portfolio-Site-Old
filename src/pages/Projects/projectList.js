@@ -9,7 +9,7 @@ const ProjectList = [
     projectHeading: "Audrey Clothing",
     projectLink: "https://audrey-clothings.netlify.app",
     projectDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget. Facilisis sed odio morbi quis. Augue ut lectus arcu bibendum  at varius vel pharetra.",
+      "This is a small app mimicking a clothing site. Built with react library, redux (state management), firebase (authorization) and stripe for payment(without backend). Routing is enabled with react-router and images are from unsplash.com. All links and locations used here is for demonstation",
     bgColor: "green",
   },
   {
@@ -19,17 +19,17 @@ const ProjectList = [
     projectHeading: "Food Mine",
     projectLink: "http://food-mine.netlify.app",
     projectDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget. Facilisis sed odio morbi quis. Augue ut lectus arcu bibendum  at varius vel pharetra.",
+      "This is a small recipe app. Built with vanilla javasript, css and html.  Modules are used here to ease the MVC architechture and parcel bundler has been used. The API used here is Jonas schmedtmann's forkify app's api. This app is also inspired by his forkify app.",
     bgColor: "yellow",
   },
   {
-    projectImage: image3,
-    projectImageName: "fdsafa",
+    projectImage: "https://i.ibb.co/r4dYbdL/Capture.png",
+    projectImageName: "platonic-villa",
     projectNumber: "03",
-    projectHeading: "Green Life",
-    projectLink: "www.google.com",
+    projectHeading: "Platonic Villa",
+    projectLink: "https://platonic-villa.netlify.app/",
     projectDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget. Facilisis sed odio morbi quis. Augue ut lectus arcu bibendum  at varius vel pharetra.",
+      "This is a pure html and css landing page of a resort. Images here used are from unsplash.com",
     bgColor: "purple",
   },
 ];

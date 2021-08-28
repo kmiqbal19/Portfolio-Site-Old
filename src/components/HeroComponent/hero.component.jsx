@@ -21,11 +21,13 @@ function HeroComponent() {
         <Typical
           steps={[
             "A Frontend Developer",
-            4000,
-            "An Urban Planner",
-            2000,
-            "A M.Sc Student",
-            2000,
+            3000,
+            "JavaScript Enthusiast",
+            3000,
+            "A Engineering Student",
+            1500,
+            "A Planner",
+            1500,
           ]}
           loop={Infinity}
         />

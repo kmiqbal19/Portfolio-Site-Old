@@ -14,11 +14,11 @@ div.project__container {
   position: relative;
 }
 .project__image--container {
-  width: calc(25vw + 15rem);
-  height: calc(30vh + 15rem);
+  width: calc(25vw + 10rem);
+  height: calc(30vh + 10rem);
   position: absolute;
-  top: 10%;
-  right: 18%;
+  top: 20%;
+  right: 15%;
   z-index: 1;
   opacity: 0;
   box-shadow: 0.5px 3px 5px rgba(20, 20, 20, 0.877),
@@ -30,16 +30,16 @@ div.project__container {
   object-fit: cover;
 }
 .project__bg {
-  width: calc(20vw + 10rem);
-  height: calc(30vh + 5rem);
+  width: calc(10vw + 10rem);
+  height: calc(20vh + 5rem);
   background-color: purple;
 
   position: absolute;
-  top: 50%;
+  top: 60%;
   right: 5%;
 }
 .project-number {
-  font-size: calc(10rem + 20vh);
+  font-size: calc(10rem + 10vh);
   font-family: "Monoton", cursive;
   position: absolute;
   top: -40%;
@@ -47,23 +47,24 @@ div.project__container {
   color: rgb(255, 255, 255);
 }
 .project__description--container {
-  width: calc(20vw + 15rem);
+  width: calc(25vw + 10rem);
   height: calc(40vh + 20rem);
-
+  /* border: 1px solid black; */
   position: absolute;
-  top: 5%;
+  top: 16%;
   left: 4%;
   z-index: 2;
   opacity: 0;
 }
 .project__description--heading {
-  font-size: calc(5rem + 3vw);
+  font-size: calc(3rem + 2vw);
 
   padding: 0rem 3rem 1.5rem;
   color: #1d1b26;
-  text-transform: uppercase;
-  letter-spacing: 4px;
+  /* text-transform: uppercase; */
+  letter-spacing: 3px;
   font-family: "Kaisei Tokumin", serif;
+  margin-bottom: 4rem;
 }
 .live-button__project {
   padding: 1rem 1.5rem;

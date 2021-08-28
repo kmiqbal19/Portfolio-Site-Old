@@ -1417,7 +1417,7 @@ function CityComponent() {
       </svg>
       <div ref={paraRef} className="description--journey-two">
         <span className="para-two">
-          Wow!!!! Did you saw that...What a planned beautiful city. I started to
+          Have you noticed that...a planned beautiful city. Well, I started to
           learn programming
         </span>
         <span className="para-two">

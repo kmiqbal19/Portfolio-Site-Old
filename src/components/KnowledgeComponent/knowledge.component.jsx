@@ -105,9 +105,9 @@ function KnowledgeComponent() {
           SOMETIMES I WONDER WHERE IS THE CONNECTION BETWEEN ALL THESE ...
         </span>
         <div className="remember__span--container">
-          <span className="then-knowledge remember__span">THEN THIS QUOTE</span>
-          <span className="i-knowledge remember__span">PACIFIES LITTLE</span>
-          <span className="remember-knowledge remember__span">MY QUESTION</span>
+          <span className="then-knowledge remember__span">THEN </span>
+          <span className="i-knowledge remember__span">I</span>
+          <span className="remember-knowledge remember__span">REMEMBER</span>
         </div>
       </div>
     </div>
