@@ -113,7 +113,7 @@ div.project__container {
     /* border: 1px solid black; */
     position: relative;
 
-    z-index: 0;
+    z-index: 1;
     opacity: 1;
   }
   .project__description--heading {
@@ -141,6 +141,7 @@ div.project__container {
     position: absolute;
     bottom: 35%;
     right: 45%;
+    z-index: 2;
   }
   .project__description--para {
     /* padding: 3rem; */
@@ -204,6 +205,7 @@ div.project__container {
     position: absolute;
     bottom: 45%;
     right: 45%;
+    z-index: 2;
   }
   .project__description--para {
     /* padding: 3rem; */
@@ -232,6 +234,7 @@ div.project__container {
   }
   .live-button__project {
     right: 40%;
+    z-index: 2;
   }
   .project__description--para {
     bottom: 30%;
