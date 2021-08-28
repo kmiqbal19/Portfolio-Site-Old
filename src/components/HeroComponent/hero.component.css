@@ -32,7 +32,7 @@ div.hero h3.hero-name span {
 @media screen and (max-width: 750px) {
   div.hero {
     left: 12vw;
-    top: 20vh;
+    top: 40vh;
   }
   div.hero .hero-name {
     font-size: calc(5vw + 1rem);
