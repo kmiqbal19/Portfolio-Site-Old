@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { withRouter } from "react-router-dom";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./projects.component.css";
@@ -135,12 +136,20 @@ function ProjectsPage() {
   };
   return (
     <>
-      <Nav />
-      <section className="projects-wrapper">
-        <ProjectsGen />
-      </section>
+      {window.innerWidth < 750 ? (
+        <section className="projects-wrapper">
+          <ProjectsGen />
+        </section>
+      ) : (
+        <>
+          <Nav />
+          <section className="projects-wrapper">
+            <ProjectsGen />
+          </section>
+        </>
+      )}
     </>
   );
 }
 
-export default ProjectsPage;
+export default withRouter(ProjectsPage);

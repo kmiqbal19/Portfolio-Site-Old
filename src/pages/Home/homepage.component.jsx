@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import { withRouter } from "react-router-dom";
 import "./homepage.component.css";
 import HeroComponent from "../../components/HeroComponent/hero.component";
 import ShootingCube from "../../components/ShootingCubeComponent/shootingcube.component";
@@ -73,4 +74,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default withRouter(HomePage);

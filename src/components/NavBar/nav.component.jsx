@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, withRouter } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import "./nav.component.css";
 import { menuLists } from "./MenuLists";
 import Logo from "./logo/main-logo.component";

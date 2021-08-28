@@ -1,5 +1,5 @@
 import React from "react";
-
+import { withRouter } from "react-router";
 function SkillsPage() {
   return (
     <div className="skills-container" data-scroll-section>
@@ -8,4 +8,4 @@ function SkillsPage() {
   );
 }
 
-export default SkillsPage;
+export default withRouter(SkillsPage);
