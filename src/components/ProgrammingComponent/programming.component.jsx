@@ -378,8 +378,8 @@ function ProgrammingComponent() {
           interest in this. I taught myself
         </span>
         <span className="para-three">
-          with different great resources of web development. And eventually my
-          interest has turned to my passion.
+          with different resources of web development. And gradually my interest
+          has turned into my passion.
         </span>
       </div>
     </div>

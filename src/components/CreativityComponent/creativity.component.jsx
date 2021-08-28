@@ -19,10 +19,13 @@ function CreativityComponent() {
       type: "x,y",
 
       onPress: function () {
-        gsap.to(this.target, { scale: 0.8 });
+        gsap.to(this.target, { scale: 0.8, fill: "red" });
       },
       onRelease: function () {
-        gsap.to(this.target, { scale: 1 });
+        gsap.to(this.target, {
+          scale: 1,
+          fill: "yellow",
+        });
       },
       // onDrag: function () {
       //   if (this.hitTest(boxes)) {
@@ -221,7 +224,7 @@ function CreativityComponent() {
           />
         </g>
       </svg>
-      <span className="creativity-span">make your own word...</span>
+      <span className="creativity-span">Drag and make your own word...</span>
     </div>
   );
 }

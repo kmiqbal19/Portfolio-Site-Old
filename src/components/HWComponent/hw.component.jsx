@@ -69,18 +69,18 @@ function HWComponent() {
           ease: "linear",
           duration: 8,
         });
-        // BUT
-        gsap.to(".but-hw", {
-          opacity: 1,
-          duration: 0.3,
-          ease: "ease",
-          scrollTrigger: {
-            trigger: ".but-hw__container",
-            start: "300% bottom",
-            end: "300% bottom",
-            // markers: true,
-          },
-        });
+        // // BUT
+        // gsap.to(".but-hw", {
+        //   opacity: 1,
+        //   duration: 0.1,
+        //   ease: "ease",
+        //   scrollTrigger: {
+        //     trigger: ".but-hw__container",
+        //     start: "300% bottom",
+        //     end: "300% bottom",
+        //     // markers: true,
+        //   },
+        // });
         // Nav Lists
         gsap.to(".nav-list", {
           color: "#ddd",

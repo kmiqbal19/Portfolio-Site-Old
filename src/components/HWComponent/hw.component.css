@@ -22,9 +22,9 @@
 }
 .but-hw {
   color: white;
-  font-size: 2rem;
+  font-size: calc(1rem + 1vw);
   text-align: center;
-  opacity: 0;
+  opacity: 1;
   font-family: "Indie Flower", cursive;
   letter-spacing: 1px;
 }

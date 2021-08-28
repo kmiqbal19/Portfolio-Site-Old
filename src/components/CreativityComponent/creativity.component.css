@@ -76,7 +76,7 @@ div.creativity-container {
   .creativity-span {
     font-size: 1.5rem;
 
-    right: 30%;
+    right: 10%;
     top: 5%;
   }
 }
@@ -103,7 +103,7 @@ div.creativity-container {
     font-size: 1.5rem;
     letter-spacing: 1px;
     right: 18%;
-    top: 6%;
+    top: 15%;
   }
 }
 @media screen and (max-width: 550px) {
@@ -126,10 +126,10 @@ div.creativity-container {
     left: 35%;
   }
   .creativity-span {
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 1px;
-    right: 10%;
-    top: 7%;
+    right: 25%;
+    top: 17%;
   }
 }
 @media screen and (max-width: 430px) {
@@ -152,9 +152,9 @@ div.creativity-container {
     left: 40%;
   }
   .creativity-span {
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 1px;
     right: 20%;
-    top: 7%;
+    top: 25%;
   }
 }
