@@ -1,9 +1,9 @@
 import * as THREE from "three";
-import { useTransition } from "@react-spring/three";
+
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "react-three-fiber";
 import { OrbitControls } from "@react-three/drei";
-import { useSpring, a } from "@react-spring/three";
+import { useSpring } from "@react-spring/three";
 import Model from "./Scene.js";
 import "./threeD.component.css";
 

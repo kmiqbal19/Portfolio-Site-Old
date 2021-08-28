@@ -34,3 +34,9 @@ canvas {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
 }
+@media screen and (max-width: 550px) {
+  .loading-img {
+    width: 20rem;
+    height: 20rem;
+  }
+}
