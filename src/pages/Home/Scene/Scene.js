@@ -6,7 +6,7 @@ source: https://sketchfab.com/3d-models/particles-tests-3-7765368dcd4f43d4a2c0e3
 title: Particles Tests - 3
 */
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 
 export default function Model({ scale }) {
@@ -16,6 +16,7 @@ export default function Model({ scale }) {
   // useEffect(() => {
   //   return actions.animation_0.play();
   // });
+
   return (
     <group ref={group} scale={0.4} dispose={null} position={[1, 0, 0]}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
