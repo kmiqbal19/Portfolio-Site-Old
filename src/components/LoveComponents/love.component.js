@@ -201,14 +201,14 @@ function LoveComponent() {
             opacity: 1,
             scale: 1,
             ease: Elastic.easeOut,
-            duration: 1,
+            duration: 0.5,
           })
           .to(loveTextMeRef.current, {
             opacity: 0,
             scale: 0,
             ease: "ease",
             duration: 0.5,
-            delay: 2,
+            delay: 0.5,
           })
           .to(loveTextCodingRef.current, {
             opacity: 1,
@@ -221,7 +221,7 @@ function LoveComponent() {
             scale: 0,
             ease: "ease",
             duration: 0.5,
-            delay: 2,
+            delay: 0.5,
           });
 
         const loveSunTl = gsap.timeline({ repeat: -1 });
