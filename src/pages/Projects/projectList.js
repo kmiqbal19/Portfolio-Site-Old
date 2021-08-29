@@ -1,9 +1,6 @@
-import image1 from "../../assets/Images/Projects Image/art-1478831_1280.jpg";
-import image2 from "../../assets/Images/Projects Image/pro-1.jpg";
-import image3 from "../../assets/Images/Projects Image/startup-594090_1280.jpg";
 const ProjectList = [
   {
-    projectImage: "https://i.ibb.co/6WSzy63/audrey-clothings.png",
+    projectImage: "https://i.ibb.co/f9bv0Kn/audrey-clothing-f.jpg",
     projectImageName: "audrey-clothing",
     projectNumber: "01",
     projectHeading: "Audrey Clothing",
@@ -12,8 +9,9 @@ const ProjectList = [
       "This is a small app mimicking a clothing site. Built with react library, redux (state management), firebase (authorization) and stripe for payment(without backend). Routing is enabled with react-router and images are from unsplash.com. All links and locations used here is for demonstation",
     bgColor: "green",
   },
+
   {
-    projectImage: "https://i.ibb.co/4Mfw3sV/food-mine.png",
+    projectImage: "https://i.ibb.co/rsdSrzX/food-mine-f.jpg",
     projectImageName: "food-mine",
     projectNumber: "02",
     projectHeading: "Food Mine",
@@ -23,7 +21,7 @@ const ProjectList = [
     bgColor: "yellow",
   },
   {
-    projectImage: "https://i.ibb.co/r4dYbdL/Capture.png",
+    projectImage: "https://i.ibb.co/7zmftf9/platonic-villa-f.jpg",
     projectImageName: "platonic-villa",
     projectNumber: "03",
     projectHeading: "Platonic Villa",
@@ -33,13 +31,23 @@ const ProjectList = [
     bgColor: "purple",
   },
   {
-    projectImage: "https://i.ibb.co/k9p7HBM/glow-todo.png",
+    projectImage: "https://i.ibb.co/fnR2nyf/glow-todo-f.jpg",
     projectImageName: "glow-todo",
     projectNumber: "04",
     projectHeading: "Glow Todo",
     projectLink: "https://glow-todo.netlify.app/",
     projectDescription:
       "This is a vanilla javascript , html and css small todo app. It is fully responsive to devices.",
+    bgColor: "purple",
+  },
+  {
+    projectImage: "https://i.ibb.co/9h1V4wQ/km-f.jpg",
+    projectImageName: "km-iqbal",
+    projectNumber: "05",
+    projectHeading: "kmiqbal.com",
+    projectLink: "https://stupefied-yalow-839d65.netlify.app",
+    projectDescription:
+      "This is one of my favorite project. It's built with react, react-router, react-three-fiber, gsap, figma , photoshop. This website is fully responsive. It's an ongoing project. I will update it more with time and oppurtunity.",
     bgColor: "purple",
   },
 ];

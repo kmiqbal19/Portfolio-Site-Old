@@ -31,7 +31,7 @@ function ProjectsPage() {
           scrollTrigger: {
             trigger: ".project__container-1",
             start: "90% bottom",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
             // scroller: ".projects-wrapper",
           },
         });
@@ -43,7 +43,7 @@ function ProjectsPage() {
           scrollTrigger: {
             trigger: ".project__container-2",
             start: "90% bottom",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
             // scroller: ".projects-wrapper",
           },
         });
@@ -55,7 +55,7 @@ function ProjectsPage() {
           scrollTrigger: {
             trigger: ".project__container-3",
             start: "90% bottom",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
             // scroller: ".projects-wrapper",
           },
         });
@@ -67,7 +67,7 @@ function ProjectsPage() {
           scrollTrigger: {
             trigger: ".project__container-4",
             start: "90% bottom",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
             // scroller: ".projects-wrapper",
           },
         });
@@ -81,7 +81,7 @@ function ProjectsPage() {
           scrollTrigger: {
             trigger: ".project__container-1",
             start: "90% bottom",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
             // scroller: ".projects-wrapper",
           },
         });
@@ -93,7 +93,7 @@ function ProjectsPage() {
           scrollTrigger: {
             trigger: ".project__container-2",
             start: "90% bottom",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
             // scroller: ".projects-wrapper",
           },
         });
@@ -105,7 +105,7 @@ function ProjectsPage() {
           scrollTrigger: {
             trigger: ".project__container-3",
             start: "90% bottom",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
             // scroller: ".projects-wrapper",
           },
         });
@@ -117,7 +117,7 @@ function ProjectsPage() {
           scrollTrigger: {
             trigger: ".project__container-4",
             start: "90% bottom",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
             // scroller: ".projects-wrapper",
           },
         });
