@@ -32,5 +32,15 @@ const ProjectList = [
       "This is a pure html and css fully responsive landing page of a resort. Images here used are from unsplash.com",
     bgColor: "purple",
   },
+  {
+    projectImage: "https://i.ibb.co/k9p7HBM/glow-todo.png",
+    projectImageName: "glow-todo",
+    projectNumber: "04",
+    projectHeading: "Glow Todo",
+    projectLink: "https://glow-todo.netlify.app/",
+    projectDescription:
+      "This is a vanilla javascript , html and css small todo app. It is fully responsive to devices.",
+    bgColor: "purple",
+  },
 ];
 export default ProjectList;
