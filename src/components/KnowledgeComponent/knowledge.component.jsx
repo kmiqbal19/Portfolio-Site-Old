@@ -15,7 +15,7 @@ function KnowledgeComponent() {
         gsap.to(spansKnowledge, {
           opacity: 1,
           ease: "ease",
-          stagger: 0.6,
+          stagger: 0.3,
           scrollTrigger: {
             trigger: spansContainerRef.current,
             start: "80% bottom",

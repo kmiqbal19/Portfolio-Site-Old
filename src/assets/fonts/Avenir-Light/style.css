@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Avenir';
+    src: local('Avenir Light'), local('Avenir-Light'),
+        url('Avenir-Light.woff2') format('woff2'),
+        url('Avenir-Light.woff') format('woff'),
+        url('Avenir-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }

@@ -1,6 +1,8 @@
 /* Import Fonts */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&family=Source+Code+Pro&display=swap");
+@import url("../../assets/fonts/Avenir-Light/style.css");
 /* Main Stylings */
+
 .footer-container {
   width: 100vw;
   height: 100vh;
@@ -19,7 +21,7 @@
 }
 .losefear-footer {
   position: absolute;
-  top: 40%;
+  top: 25%;
   left: 5%;
   display: flex;
   flex-direction: column;
@@ -27,7 +29,7 @@
 }
 .losefear-footer__text {
   color: grey;
-  font-size: calc(1vw + 1rem);
+  font-size: calc(1vw + 0.8rem);
   margin-top: calc(1.5vh + 1rem);
   font-family: "Source Code Pro", monospace;
 }
@@ -107,9 +109,15 @@
   padding: 1rem;
 }
 .thankyou__footer {
-  font-size: calc(2vw + 1rem);
+  font-size: calc(1.5vw + 1rem);
   color: #ddd;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Avenir";
+  letter-spacing: 2px;
+}
+.thankyou__footer span {
+  font-size: calc(2vw + 1rem);
+  color: rgb(248, 56, 56);
+  text-decoration: underline;
 }
 .bg-footer {
   position: absolute;
@@ -121,6 +129,20 @@
   pointer-events: none;
   mix-blend-mode: multiply;
   opacity: 0;
+}
+.checkout-projects__footer {
+  color: #ddd;
+  position: absolute;
+  top: 45%;
+  font-size: calc(2vw + 1rem);
+  left: 5%;
+  letter-spacing: 3px;
+  font-family: "Avenir";
+}
+.checkout-projects__footer span {
+  color: rgb(248, 56, 56);
+  font-size: calc(3vw + 2rem);
+  text-decoration: underline;
 }
 /* Media Queries */
 @media screen and (max-width: 1300px) {

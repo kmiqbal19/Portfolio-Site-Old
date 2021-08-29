@@ -65,11 +65,11 @@ function FooterComponent() {
         alt="bg-thankyou"
       />
       <div ref={loseFearRef} className="losefear-footer">
-        <span className="thankyou__footer">
-          Thanks for checking out my website!
-        </span>
+        <p className="thankyou__footer">
+          <span>Thanks</span> for checking out my website!
+        </p>
         <span className="losefear-footer__text">
-          {"// To be creative, lose the fear of being wrong.."}
+          {"// To be creative, lose the fear of being wrong..."}
         </span>
       </div>
       <div className="designed-footer">
@@ -95,6 +95,9 @@ function FooterComponent() {
           <BuiltWith />
         </div>
       </div>
+      <p className="checkout-projects__footer">
+        Check out my <span>projects</span> for more details...
+      </p>
     </div>
   );
 }

@@ -71,6 +71,18 @@ function ProjectsPage() {
             // scroller: ".projects-wrapper",
           },
         });
+        gsap.to(".project__image--container-5", {
+          y: -20,
+          ease: "ease",
+          duration: 1,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".project__container-5",
+            start: "90% bottom",
+            toggleActions: "play none none none",
+            // scroller: ".projects-wrapper",
+          },
+        });
 
         // Descriptions Container
         gsap.to(".project__description--container-1", {
@@ -116,6 +128,18 @@ function ProjectsPage() {
           opacity: 1,
           scrollTrigger: {
             trigger: ".project__container-4",
+            start: "90% bottom",
+            toggleActions: "play none none none",
+            // scroller: ".projects-wrapper",
+          },
+        });
+        gsap.to(".project__description--container-5", {
+          x: 20,
+          ease: "ease",
+          duration: 0.8,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".project__container-5",
             start: "90% bottom",
             toggleActions: "play none none none",
             // scroller: ".projects-wrapper",

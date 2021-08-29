@@ -27,7 +27,7 @@ const ProjectList = [
     projectHeading: "Platonic Villa",
     projectLink: "https://platonic-villa.netlify.app/",
     projectDescription:
-      "This is a pure html and css fully responsive landing page of a resort. Images here used are from unsplash.com",
+      "This is a fully responsive landing page of a resort built with pure html and css. Images used here, are from unsplash.com",
     bgColor: "purple",
   },
   {
