@@ -7,17 +7,24 @@ import { useSpring } from "@react-spring/three";
 import Model from "./Scene.js";
 import "./threeD.component.css";
 import { withRouter } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-const ThreeDElements = ({ history }) => {
-  console.log(history);
-  let loadingRef = useRef(null);
+const ThreeDElements = () => {
   const [finished, setFinished] = useState(false);
+
+  const history = useHistory();
+
   useEffect(() => {
     THREE.DefaultLoadingManager.onLoad = () => setFinished(true);
   }, []);
+  useEffect(() => {
+    if (history.location.pathname === "/home") {
+      setFinished(true);
+    }
+  }, [history.location.pathname]);
   const Loading = () => {
     return finished === false ? (
-      <div ref={loadingRef} className="loading">
+      <div className="loading">
         <img
           className="loading-img"
           src="https://i.ibb.co/X8j9kQL/SVKl.gif"

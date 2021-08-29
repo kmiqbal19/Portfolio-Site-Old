@@ -11,7 +11,7 @@ canvas {
   opacity: 1;
 }
 .loading {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;

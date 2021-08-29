@@ -40,7 +40,7 @@ function Nav({ history }) {
         >
           {MenuLists}
         </ul>
-        <div className="hamburger" onClick={() => clickHandler()}>
+        <div className="hamburger" onClick={clickHandler}>
           <div
             className={hamClicked ? "line line-1 clicked" : "line line-1"}
           ></div>
