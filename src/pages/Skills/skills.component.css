@@ -1,0 +1,92 @@
+.skills-container {
+  width: 100vw;
+  min-height: 100%;
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.comfort-skills__wrapper {
+  margin-top: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 1px solid red; */
+  justify-content: center;
+  align-items: center;
+}
+.skills-comfort__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: calc(10vw + 10rem);
+  height: calc(10vh + 10rem);
+  /* border: 2px solid black; */
+  margin: 1.5rem;
+  /* background-color: rgba(255, 255, 255, 0.733); */
+  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  position: relative;
+  z-index: 0;
+  overflow: visible;
+}
+.skills-comfort__container p {
+  margin: 1rem;
+  font-size: calc(1rem + 1vw);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 2px;
+  color: rgba(36, 35, 35, 0.966);
+}
+.skills-comfort__container::before {
+  position: absolute;
+  bottom: 5%;
+  content: "";
+  width: 40%;
+  height: 40%;
+  border-radius: 30px;
+  /* background: linear-gradient(
+    to right,
+    rgba(245, 102, 37, 1) 0%,
+    rgba(252, 245, 0, 1) 50%,
+    rgba(245, 61, 147) 80%
+  );
+  box-shadow: 0px 0px 10px rgb(245, 214, 37), 0px 0px 10px rgb(245, 86, 37);
+  box-shadow: inset 0px 0px 10px rgb(245, 68, 37),
+    0px 0px 10px rgb(224, 245, 37); */
+  background-color: rgb(0, 238, 255);
+  box-shadow: 0px 0px 20px cyan, 0px 0px 20px rgb(0, 238, 255),
+    0px 0px 30px rgb(0, 238, 255), 0px 0px 50px rgb(0, 238, 255),
+    0px 0px 60px cyan;
+  z-index: -2;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.skills-comfort__container::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(139, 141, 137, 0.383);
+  box-shadow: 2px 2px 5px 0rem rgba(128, 126, 126, 0.774);
+  backdrop-filter: blur(4px);
+  border-radius: 5%;
+  z-index: -1;
+}
+.skills-comfort__container:hover::before {
+  width: 110%;
+}
+.skills-comfort__container:hover {
+  transform: translateY(-10px);
+}
+.skills-comfort__image--container {
+  /* border: 1px solid rgb(0, 255, 21); */
+  width: 60%;
+  height: 60%;
+  margin: 1rem;
+}
+.skills-comfort__image--container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

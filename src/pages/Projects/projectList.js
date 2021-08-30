@@ -34,7 +34,7 @@ const ProjectList = [
     projectImage: "https://i.ibb.co/fnR2nyf/glow-todo-f.jpg",
     projectImageName: "glow-todo",
     projectNumber: "04",
-    projectHeading: "Glow Todo",
+    projectHeading: "Glow ToDo",
     projectLink: "https://glow-todo.netlify.app/",
     projectDescription:
       "This is a vanilla javascript , html and css small todo app. It is fully responsive to devices.",
@@ -45,7 +45,7 @@ const ProjectList = [
     projectImageName: "km-iqbal",
     projectNumber: "05",
     projectHeading: "kmiqbal.com",
-    projectLink: "https://stupefied-yalow-839d65.netlify.app",
+    projectLink: "https://festive-lichterman-c3dabe.netlify.app",
     projectDescription:
       "This is one of my favorite project. It's built with react, react-router, react-three-fiber, gsap, figma , photoshop. This website is fully responsive. It's an ongoing project. I will update it more with time and oppurtunity.",
     bgColor: "purple",

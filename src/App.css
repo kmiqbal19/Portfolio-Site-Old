@@ -33,9 +33,9 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(76, 76, 82, 0.986);
 }
-/* @media screen and (min-width: 1610px) {
+@media screen and (min-width: 1610px) {
   body {
-    width: 1610px;
+    width: 1550px;
     margin: 0 auto;
   }
-} */
+}
