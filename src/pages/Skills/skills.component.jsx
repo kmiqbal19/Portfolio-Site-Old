@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import React, { useEffect } from "react";
 import "./skills.component.css";
+import { gsap } from "gsap";
+import { withRouter } from "react-router-dom";
 import SkillsDataComfortable from "./skillsDataComfortable";
 import SkillsDataBasic from "./skillsDataBasic";
 function SkillsPageComponent() {
@@ -14,6 +15,9 @@ function SkillsPageComponent() {
       backgroundImage: "linear-gradient(to bottom, #ddd 50%, transparent)",
     });
     gsap.to(".nav-list", { color: "black" });
+    // // gsap containers
+    // const skills = document.querySelectorAll(".skills");
+    // gsap.to(skills, 1.5, { opacity: 1, ease: "ease", stagger: 0.2 });
   }, []);
   const SkillsComfortGen = () => {
     return SkillsDataComfortable.map((skills, index) => {
@@ -55,4 +59,4 @@ function SkillsPageComponent() {
   );
 }
 
-export default SkillsPageComponent;
+export default withRouter(SkillsPageComponent);

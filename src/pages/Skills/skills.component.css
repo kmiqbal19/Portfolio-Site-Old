@@ -37,10 +37,11 @@
   /* border: 2px solid black; */
   margin: 1.5rem;
   /* background-color: rgba(255, 255, 255, 0.733); */
-  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: all 0.3s ease-in-out;
   position: relative;
   z-index: 0;
   overflow: visible;
+  /* opacity: 0; */
 }
 .skills-comfort__container p,
 .skills-basic__container p {
@@ -61,7 +62,6 @@
     rgba(252, 245, 0, 1) 0%,
     rgba(245, 102, 37, 1) 60%
   );
-  /* rgba(245, 61, 147) 80% */
 
   box-shadow: 0px 0px 10px rgba(245, 79, 37, 0.849),
     0px 0px 20px rgba(245, 79, 37, 0.883),
@@ -69,12 +69,8 @@
     0px 0px 40px rgba(245, 172, 37, 0.883),
     0px 0px 50px rgba(245, 172, 37, 0.883);
 
-  /* background-color: rgb(0, 238, 255);
-  box-shadow: 0px 0px 20px cyan, 0px 0px 20px rgb(0, 238, 255),
-    0px 0px 30px rgb(0, 238, 255), 0px 0px 50px rgb(0, 238, 255),
-    0px 0px 60px cyan; */
   z-index: -2;
-  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.3s ease;
 }
 .skills-basic__container::before {
   position: absolute;
