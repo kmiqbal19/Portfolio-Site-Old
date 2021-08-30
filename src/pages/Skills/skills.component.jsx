@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { withRouter } from "react-router-dom";
 import SkillsDataComfortable from "./skillsDataComfortable";
 import SkillsDataBasic from "./skillsDataBasic";
+import Nav from "../../components/NavBar/nav.component.jsx";
 function SkillsPageComponent() {
   useEffect(() => {
     // Main Logo
@@ -15,9 +16,6 @@ function SkillsPageComponent() {
       backgroundImage: "linear-gradient(to bottom, #ddd 50%, transparent)",
     });
     gsap.to(".nav-list", { color: "black" });
-    // // gsap containers
-    // const skills = document.querySelectorAll(".skills");
-    // gsap.to(skills, 1.5, { opacity: 1, ease: "ease", stagger: 0.2 });
   }, []);
   const SkillsComfortGen = () => {
     return SkillsDataComfortable.map((skills, index) => {
@@ -44,18 +42,21 @@ function SkillsPageComponent() {
     });
   };
   return (
-    <div className="skills-container">
-      <h2>Moderate</h2>
-      <div className="hr-skills"></div>
-      <div className="comfort-skills__wrapper">
-        <SkillsComfortGen />
+    <>
+      <Nav />
+      <div className="skills-container">
+        <h2>Moderate</h2>
+        <div className="hr-skills"></div>
+        <div className="comfort-skills__wrapper">
+          <SkillsComfortGen />
+        </div>
+        <h2>Basic</h2>
+        <div className="hr-skills"></div>
+        <div className="basic-skills__wrapper">
+          <SkillsBasicGen />
+        </div>
       </div>
-      <h2>Basic</h2>
-      <div className="hr-skills"></div>
-      <div className="basic-skills__wrapper">
-        <SkillsBasicGen />
-      </div>
-    </div>
+    </>
   );
 }
 

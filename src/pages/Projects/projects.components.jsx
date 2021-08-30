@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import "./projects.component.css";
 import ProjectList from "./projectList";
 // import useLocoScroll from "../../hooks/useLocoScroll";
-// import Nav from "../../components/NavBar/nav.component";
+import Nav from "../../components/NavBar/nav.component";
 function ProjectsPage() {
   gsap.registerPlugin(ScrollTrigger);
   // useLocoScroll(".projects-wrapper");
@@ -187,9 +187,12 @@ function ProjectsPage() {
     });
   };
   return (
-    <section className="projects-wrapper">
-      <ProjectsGen />
-    </section>
+    <>
+      <Nav />
+      <section className="projects-wrapper">
+        <ProjectsGen />
+      </section>
+    </>
   );
 }
 

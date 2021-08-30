@@ -5,6 +5,7 @@
     rgba(255, 241, 95, 1) 61%,
     rgba(232, 133, 28, 0.827) 100%
   );
+  width: 100vw;
   min-height: 100%;
 }
 .aeroplane-wind__line {
@@ -48,5 +49,10 @@ svg.city-svg {
   }
   .description--journey-two {
     transform: translateY(-300px);
+  }
+}
+@media screen and (min-width: 1600px) {
+  .city-svg {
+    width: 100%;
   }
 }

@@ -3,7 +3,7 @@
 /* Main Style */
 .skills-container {
   padding-top: 5rem;
-  width: 100vw;
+  width: 100%;
   min-height: 100%;
   background-color: #ddd;
   display: flex;
@@ -58,7 +58,14 @@
   width: 40%;
   height: 40%;
   border-radius: 30px;
-  background: radial-gradient(
+  background-color: rgb(255, 255, 255);
+
+  box-shadow: 0px 0px 10px rgb(255, 255, 255),
+    0px 0px 20px rgba(243, 243, 243, 0.883),
+    0px 0px 30px rgba(255, 255, 255, 0.883),
+    0px 0px 40px rgba(255, 255, 255, 0.883),
+    0px 0px 50px rgba(37, 238, 245, 0.418);
+  /* background: radial-gradient(
     rgba(252, 245, 0, 1) 0%,
     rgba(245, 102, 37, 1) 60%
   );
@@ -67,7 +74,7 @@
     0px 0px 20px rgba(245, 79, 37, 0.883),
     0px 0px 30px rgba(245, 172, 37, 0.883),
     0px 0px 40px rgba(245, 172, 37, 0.883),
-    0px 0px 50px rgba(245, 172, 37, 0.883);
+    0px 0px 50px rgba(245, 172, 37, 0.883); */
 
   z-index: -2;
   transition: all 0.3s ease;

@@ -5,6 +5,7 @@
   padding-top: calc(5vh + 2rem);
   position: relative;
 }
+
 .bird-1,
 .bird-2 {
   fill: rgb(255, 174, 0);
@@ -49,5 +50,10 @@
   .cloud-svg {
     transform: scaleY(1.8);
     width: calc(80vw + 20vw);
+  }
+}
+@media screen and (min-width: 1600px) {
+  .cloud-svg {
+    width: 100%;
   }
 }

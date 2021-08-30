@@ -69,18 +69,7 @@ function HWComponent() {
           ease: "linear",
           duration: 8,
         });
-        // // BUT
-        // gsap.to(".but-hw", {
-        //   opacity: 1,
-        //   duration: 0.1,
-        //   ease: "ease",
-        //   scrollTrigger: {
-        //     trigger: ".but-hw__container",
-        //     start: "300% bottom",
-        //     end: "300% bottom",
-        //     // markers: true,
-        //   },
-        // });
+
         // Nav Lists
         gsap.to(".nav-list", {
           color: "#ddd",
@@ -91,7 +80,7 @@ function HWComponent() {
           },
         });
       },
-      "(min-width:751px)": function () {
+      "(min-width:751px) and (max-width:1600px)": function () {
         // Moon Sun Star Scroll
         const moonSunHWTl = gsap.timeline({
           scrollTrigger: {
@@ -152,6 +141,45 @@ function HWComponent() {
             ".moon__hw",
             { x: -300, y: -150, scale: 0.5 },
             { y: -100, x: 1000, scale: 0.8 }
+          )
+          .to(".star-hw", { opacity: 1 });
+        // Background Scroll
+        const containerColorHWTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: hwSvgRef.current,
+            start: "40% 30%",
+            end: "+=1500",
+            scrub: 3,
+            // markers: true,
+            pin: true,
+          },
+        });
+        containerColorHWTl
+          .to(hwContainerRef.current, { backgroundColor: "#ffd7b5" })
+          .to(hwContainerRef.current, { backgroundColor: "black" });
+      },
+      "(min-width:1601px)": function () {
+        // Moon Sun Star Scroll
+        const moonSunHWTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: hwSvgRef.current,
+            start: "40% 30%",
+            end: "+=1500",
+            scrub: 1,
+            // markers: true,
+            pin: true,
+          },
+        });
+        moonSunHWTl
+          .fromTo(
+            ".sun__hw",
+            { opacity: 1, x: -900, y: -500, scale: 0.5 },
+            { y: -400, x: 2000, scale: 1 }
+          )
+          .fromTo(
+            ".moon__hw",
+            { x: -800, y: -150, scale: 0.5 },
+            { y: -100, x: 1400, scale: 0.8 }
           )
           .to(".star-hw", { opacity: 1 });
         // Background Scroll

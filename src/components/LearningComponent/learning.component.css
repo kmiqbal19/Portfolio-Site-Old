@@ -75,3 +75,10 @@ div.learning-container img {
     margin-left: 0rem;
   }
 }
+@media screen and (min-width: 1600px) {
+  .heading-parallax {
+    top: 20%;
+    left: 18%;
+    font-size: calc(4vw + 3rem);
+  }
+}

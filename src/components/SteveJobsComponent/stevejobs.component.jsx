@@ -30,7 +30,33 @@ function StevejobsComponent() {
           ease: "linear",
         });
       },
-      "(min-width: 1350px)": function () {
+      "(min-width: 1801px) and (max-width:2561px)": function () {
+        // Rings movement
+        const ringMoveTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "bottom bottom",
+            end: "bottom bottom",
+            // markers: true,
+            toggleActions: "play none none reverse",
+          },
+        });
+        ringMoveTl
+          .to(ring2Ref.current, { x: 800, duration: 0.5 })
+          .to(ring1Ref.current, {
+            x: 800,
+            ease: Expo.easeIn,
+            duration: 0.7,
+          })
+          .to(steveQuoteContainerRef.current, {
+            opacity: 1,
+            y: -10,
+            ease: "ease",
+            duration: 0.5,
+            delay: 0.4,
+          });
+      },
+      "(min-width: 1350px) and (max-width:1800px)": function () {
         // Rings movement
         const ringMoveTl = gsap.timeline({
           scrollTrigger: {
