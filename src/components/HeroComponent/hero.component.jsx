@@ -24,7 +24,7 @@ function HeroComponent() {
             3000,
             "JavaScript Enthusiast",
             3000,
-            "A Engineering Student",
+            "An Engineering Student",
             1500,
             "A Planner",
             1500,
