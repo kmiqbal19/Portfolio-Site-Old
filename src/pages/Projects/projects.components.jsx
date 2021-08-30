@@ -194,7 +194,7 @@ function ProjectsPage() {
         </section>
       ) : (
         <>
-          <Nav />
+          {/* <Nav /> */}
           <section className="projects-wrapper">
             <ProjectsGen />
           </section>

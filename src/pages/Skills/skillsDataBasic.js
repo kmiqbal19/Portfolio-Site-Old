@@ -1,29 +1,29 @@
 const SkillsDataBasic = [
   {
     skillName: "Three.js",
-    skillLogo: "fdsf",
+    skillLogo: "https://i.ibb.co/djDZ2KM/three-js.png",
     skillLogoName: "three.js",
   },
   {
     skillName: "BootStrap",
-    skillLogo: "fdsf",
+    skillLogo: "https://i.ibb.co/dP7Xsmy/bootstrap.png",
     skillLogoName: "bootstrap",
   },
   {
     skillName: "Firebase",
-    skillLogo: "fdsf",
+    skillLogo: "https://i.ibb.co/bdwgBLk/firebase.png",
     skillLogoName: "firebase",
   },
 
   {
     skillName: "Python",
-    skillLogo: "fdsf",
+    skillLogo: "https://i.ibb.co/JCcrdDJ/python.png",
     skillLogoName: "python",
   },
   {
-    skillName: "C",
-    skillLogo: "fdsf",
-    skillLogoName: "c",
+    skillName: "Photoshop",
+    skillLogo: "https://i.ibb.co/FbvqHbd/photoshop.png",
+    skillLogoName: "photoshop",
   },
 ];
 export default SkillsDataBasic;

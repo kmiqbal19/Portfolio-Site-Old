@@ -1,4 +1,8 @@
+/* Import Fonts */
+@import url("../../assets/fonts/IvyMode/style.css");
+/* Main Style */
 .skills-container {
+  padding-top: 5rem;
   width: 100vw;
   min-height: 100%;
   background-color: #ddd;
@@ -7,15 +11,23 @@
   justify-content: center;
   align-items: center;
 }
-.comfort-skills__wrapper {
-  margin-top: 6rem;
+.skills-container h2 {
+  align-self: flex-start;
+  margin: 0.5rem 0rem 0.7rem 5rem;
+  font-family: "Ivy Mode";
+  letter-spacing: 1.5px;
+}
+.comfort-skills__wrapper,
+.basic-skills__wrapper {
+  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   /* border: 1px solid red; */
   justify-content: center;
   align-items: center;
 }
-.skills-comfort__container {
+.skills-comfort__container,
+.skills-basic__container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -30,7 +42,8 @@
   z-index: 0;
   overflow: visible;
 }
-.skills-comfort__container p {
+.skills-comfort__container p,
+.skills-basic__container p {
   margin: 1rem;
   font-size: calc(1rem + 1vw);
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -44,15 +57,33 @@
   width: 40%;
   height: 40%;
   border-radius: 30px;
-  /* background: linear-gradient(
-    to right,
-    rgba(245, 102, 37, 1) 0%,
-    rgba(252, 245, 0, 1) 50%,
-    rgba(245, 61, 147) 80%
+  background: radial-gradient(
+    rgba(252, 245, 0, 1) 0%,
+    rgba(245, 102, 37, 1) 60%
   );
-  box-shadow: 0px 0px 10px rgb(245, 214, 37), 0px 0px 10px rgb(245, 86, 37);
-  box-shadow: inset 0px 0px 10px rgb(245, 68, 37),
-    0px 0px 10px rgb(224, 245, 37); */
+  /* rgba(245, 61, 147) 80% */
+
+  box-shadow: 0px 0px 10px rgba(245, 79, 37, 0.849),
+    0px 0px 20px rgba(245, 79, 37, 0.883),
+    0px 0px 30px rgba(245, 172, 37, 0.883),
+    0px 0px 40px rgba(245, 172, 37, 0.883),
+    0px 0px 50px rgba(245, 172, 37, 0.883);
+
+  /* background-color: rgb(0, 238, 255);
+  box-shadow: 0px 0px 20px cyan, 0px 0px 20px rgb(0, 238, 255),
+    0px 0px 30px rgb(0, 238, 255), 0px 0px 50px rgb(0, 238, 255),
+    0px 0px 60px cyan; */
+  z-index: -2;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.skills-basic__container::before {
+  position: absolute;
+  bottom: 5%;
+  content: "";
+  width: 40%;
+  height: 40%;
+  border-radius: 30px;
+
   background-color: rgb(0, 238, 255);
   box-shadow: 0px 0px 20px cyan, 0px 0px 20px rgb(0, 238, 255),
     0px 0px 30px rgb(0, 238, 255), 0px 0px 50px rgb(0, 238, 255),
@@ -60,7 +91,8 @@
   z-index: -2;
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.skills-comfort__container::after {
+.skills-comfort__container::after,
+.skills-basic__container::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -68,25 +100,39 @@
   width: 100%;
   height: 100%;
   background-color: rgba(139, 141, 137, 0.383);
-  box-shadow: 2px 2px 5px 0rem rgba(128, 126, 126, 0.774);
+  box-shadow: 2px 2px 5px 0rem rgba(78, 78, 78, 0.774);
   backdrop-filter: blur(4px);
-  border-radius: 5%;
+  border-radius: 1%;
   z-index: -1;
 }
-.skills-comfort__container:hover::before {
+.skills-comfort__container:hover::before,
+.skills-basic__container:hover::before {
   width: 110%;
 }
-.skills-comfort__container:hover {
+.skills-comfort__container:hover,
+.skills-basic__container:hover {
   transform: translateY(-10px);
 }
-.skills-comfort__image--container {
+.skills-comfort__image--container,
+.skills-basic__image--container {
   /* border: 1px solid rgb(0, 255, 21); */
   width: 60%;
   height: 60%;
   margin: 1rem;
 }
-.skills-comfort__image--container img {
+.skills-comfort__image--container img,
+.skills-basic__image--container img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.hr-skills {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(75, 74, 74, 0.548),
+    transparent
+  );
 }

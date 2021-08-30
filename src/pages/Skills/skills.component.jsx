@@ -13,7 +13,7 @@ function SkillsPageComponent() {
     gsap.to("#main-nav", {
       backgroundImage: "linear-gradient(to bottom, #ddd 50%, transparent)",
     });
-    gsap.to(".nav-list", { color: "#1d1b26" });
+    gsap.to(".nav-list", { color: "black" });
   }, []);
   const SkillsComfortGen = () => {
     return SkillsDataComfortable.map((skills, index) => {
@@ -41,10 +41,13 @@ function SkillsPageComponent() {
   };
   return (
     <div className="skills-container">
+      <h2>Moderate</h2>
+      <div className="hr-skills"></div>
       <div className="comfort-skills__wrapper">
         <SkillsComfortGen />
       </div>
       <h2>Basic</h2>
+      <div className="hr-skills"></div>
       <div className="basic-skills__wrapper">
         <SkillsBasicGen />
       </div>
