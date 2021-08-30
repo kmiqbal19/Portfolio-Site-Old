@@ -39,6 +39,12 @@ function Nav({ history }) {
           }
         >
           {MenuLists}
+          <li className="nav-list--item">
+            <a className="nav-list" href="mailto:km.iqbal01@gmail.com">
+              <span className="active">{`</`}</span>contact
+              <span className="active">{` >`}</span>
+            </a>
+          </li>
         </ul>
         <div className="hamburger" onClick={clickHandler}>
           <div

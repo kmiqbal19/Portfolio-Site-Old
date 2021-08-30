@@ -15,8 +15,8 @@ export const menuLists = [
     title: "about",
     url: "/about",
   },
-  {
-    title: "contact",
-    url: "/contact",
-  },
+  // {
+  //   title: "contact",
+  //   url: "/contact",
+  // },
 ];
