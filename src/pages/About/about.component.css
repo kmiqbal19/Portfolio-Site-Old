@@ -10,7 +10,7 @@
   color: white;
   position: relative;
   /* font-family: "Avenir"; */
-  font-family: "Montserrat Alternates", sans-serif;
+
   overflow: hidden;
 }
 .image-container__about {
@@ -42,15 +42,18 @@
   font-size: calc(2vw + 2rem);
   padding: 0.5rem 4rem;
   letter-spacing: 2px;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 .about-text__container p {
-  font-size: calc(1vw + 0.5rem);
+  font-size: calc(0.8vw + 0.5rem);
   padding: 0.5rem 3rem;
   text-align: justify;
   line-height: 1.5;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+  font-family: "Avenir";
+  letter-spacing: 1px;
 }
-.about-text__container a {
+.about-text__container .resume-download {
   text-decoration: none;
   padding: 0.7rem 2rem;
   border-radius: 3px;
@@ -59,7 +62,7 @@
   letter-spacing: 1.5px;
   margin: 5rem;
 }
-.about-text__container a:hover {
+.about-text__container .resume-download:hover {
   background-color: rgba(165, 42, 42, 0.852);
 }
 
@@ -73,15 +76,16 @@ ul.social-links__about--container {
   justify-content: flex-end;
   align-items: center;
 }
-.social-links__about--container li {
+.social-links__about--container a {
   list-style: none;
   padding: 1rem;
   font-size: 1.3rem;
   /* cursor: pointer; */
+  text-decoration: none;
 }
-.social-links__about--container li:last-of-type {
+.social-links__about--container a:last-of-type {
   margin-right: 5rem;
 }
-.social-links__about--container li:hover {
+.social-links__about--container a:hover {
   color: rgb(70, 153, 247);
 }
