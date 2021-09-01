@@ -1,0 +1,87 @@
+/* Import Fonts */
+/* @import url("../../assets/fonts/Avenir-Light/style.css"); */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&display=swap");
+/* Main Styling */
+.about-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #1d1b26;
+  display: flex;
+  color: white;
+  position: relative;
+  /* font-family: "Avenir"; */
+  font-family: "Montserrat Alternates", sans-serif;
+  overflow: hidden;
+}
+.image-container__about {
+  width: 45vw;
+  height: 100%;
+  /* border: 3px solid red; */
+  background-image: url("https://i.ibb.co/8D0LnTJ/IMG-4774-1.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.image-container__about::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(to right, #1d1b26, transparent);
+  top: 0;
+  left: 0;
+}
+
+.about-text__container {
+  width: 55vw;
+  height: 100vh;
+  /* border: 3px solid green; */
+}
+.about-text__container h2 {
+  margin-top: 6rem;
+  font-size: calc(2vw + 2rem);
+  padding: 0.5rem 4rem;
+  letter-spacing: 2px;
+}
+.about-text__container p {
+  font-size: calc(1vw + 0.5rem);
+  padding: 0.5rem 3rem;
+  text-align: justify;
+  line-height: 1.5;
+  margin-bottom: 5rem;
+}
+.about-text__container a {
+  text-decoration: none;
+  padding: 0.7rem 2rem;
+  border-radius: 3px;
+  background-color: brown;
+  color: white;
+  letter-spacing: 1.5px;
+  margin: 5rem;
+}
+.about-text__container a:hover {
+  background-color: rgba(165, 42, 42, 0.852);
+}
+
+ul.social-links__about--container {
+  display: flex;
+  /* border: 3px solid blue; */
+  width: 100%;
+  height: 5rem;
+  margin-top: 7rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.social-links__about--container li {
+  list-style: none;
+  padding: 1rem;
+  font-size: 1.3rem;
+  /* cursor: pointer; */
+}
+.social-links__about--container li:last-of-type {
+  margin-right: 5rem;
+}
+.social-links__about--container li:hover {
+  color: rgb(70, 153, 247);
+}

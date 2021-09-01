@@ -76,7 +76,7 @@ function CloudComponent() {
           },
         });
       },
-      "(min-width: 1601px) and (max-width: 2561px)": function () {
+      "(min-width: 1601px)": function () {
         // Cloud Scroll
         const cloudBirdScrollTimeline = gsap.timeline({
           scrollTrigger: {
