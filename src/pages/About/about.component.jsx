@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import "./about.component.css";
 import Nav from "../../components/NavBar/nav.component";
+import Resume from "./CV-1.1.pdf";
 function AboutPage() {
   useEffect(() => {
     // Main Logo
@@ -35,7 +36,7 @@ function AboutPage() {
             think , I can ink it for you.
           </p>
 
-          <a className="resume-download" href="sdk">
+          <a className="resume-download" href={Resume}>
             <i class="fas fa-download"></i> Resume
           </a>
           <ul className="social-links__about--container">
