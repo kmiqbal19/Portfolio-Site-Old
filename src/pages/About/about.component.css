@@ -13,6 +13,7 @@
 
   overflow: hidden;
 }
+
 .image-container__about {
   width: 45vw;
   height: 100%;
@@ -88,4 +89,31 @@ ul.social-links__about--container {
 }
 .social-links__about--container a:hover {
   color: rgb(70, 153, 247);
+}
+/* Media Queries */
+
+@media screen and (max-width: 750px) {
+  .about-container {
+    position: relative;
+    flex-direction: column;
+  }
+  .about-text__container {
+    z-index: 1;
+    width: 100vw;
+  }
+  .image-container__about {
+    position: absolute;
+    width: 100vw;
+  }
+  .image-container__about::before {
+    background: linear-gradient(to bottom, #1d1b26, transparent);
+    width: 100%;
+    height: 100%;
+  }
+  ul.social-links__about--container {
+    margin-top: 6vh;
+  }
+  .social-links__about--container a:last-of-type {
+    margin-right: 2rem;
+  }
 }
