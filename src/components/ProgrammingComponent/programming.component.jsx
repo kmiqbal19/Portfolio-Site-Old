@@ -66,7 +66,7 @@ function ProgrammingComponent() {
             transformOrigin: "bottom",
           });
       },
-      "(min-width: 300px)": function () {
+      "(min-width: 300px) and (max-width: 1900px)": function () {
         // Programming Window
         const windowTl = gsap.timeline({
           scrollTrigger: {
@@ -82,11 +82,35 @@ function ProgrammingComponent() {
         });
         windowTl
           .to(progWindowRef.current, { scale: 0.9, x: 100, duration: 1 })
-          .from(boyProgRef.current, { x: -650, ease: "ease", duration: 1 })
+          .from(boyProgRef.current, { x: -850, ease: "ease", duration: 1 })
           .to(paraRef.current, {
             opacity: 1,
             duration: 0.5,
             y: -260,
+            ease: "ease",
+          });
+      },
+      "(min-width: 1901px)": function () {
+        // Programming Window
+        const windowTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: progSvgRef.current,
+            start: "30% center",
+            end: "+=400",
+            // markers: true,
+
+            toggleActions: "play none none reverse",
+            // pin: true,
+            // scroller: ".home-container",
+          },
+        });
+        windowTl
+          .to(progWindowRef.current, { scale: 0.9, x: 100, duration: 1 })
+          .from(boyProgRef.current, { x: -1050, ease: "ease", duration: 1 })
+          .to(paraRef.current, {
+            opacity: 1,
+            duration: 0.5,
+            y: -200,
             ease: "ease",
           });
       },
