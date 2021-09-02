@@ -1,7 +1,8 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { withRouter } from "react-router-dom";
 import "./homepage.component.css";
+import Nav from "../../components/NavBar/nav.component";
 import HeroComponent from "../../components/HeroComponent/hero.component";
 import ShootingCube from "../../components/ShootingCubeComponent/shootingcube.component";
 import ThreeDElements from "./Scene/threeD.component.jsx";
@@ -30,47 +31,50 @@ function HomePage() {
     gsap.to(".nav-list", { color: "#ddd" });
   }, []);
   return (
-    <div className="home-container">
-      <section id="showcase">
-        <HeroComponent />
-        <ShootingCube />
-        <ThreeDElements />
-      </section>
-      <section id="journey1">
-        <CloudComponent />
-      </section>
-      <section id="journey2">
-        <CityComponent />
-      </section>
-      <section id="journey3">
-        <ProgrammingComponent />
-      </section>
+    <>
+      <Nav />
+      <div className="home-container">
+        <section id="showcase">
+          <HeroComponent />
+          <ShootingCube />
+          <ThreeDElements />
+        </section>
+        <section id="journey1">
+          <CloudComponent />
+        </section>
+        <section id="journey2">
+          <CityComponent />
+        </section>
+        <section id="journey3">
+          <ProgrammingComponent />
+        </section>
 
-      <section id="journey4">
-        <LoveComponent />
-      </section>
-      <section id="journey5">
-        <HWComponent />
-      </section>
-      <section id="journey6">
-        <LearningComponent />
-      </section>
-      <section id="journey7">
-        <KnowledgeComponent />
-      </section>
-      <section id="journey8">
-        <StevejobsComponent />
-      </section>
-      <section id="journey9">
-        <ImportComponent />
-      </section>
-      <section id="journey10">
-        <CreativityComponent />
-      </section>
-      <section id="journey11">
-        <FooterComponent />
-      </section>
-    </div>
+        <section id="journey4">
+          <LoveComponent />
+        </section>
+        <section id="journey5">
+          <HWComponent />
+        </section>
+        <section id="journey6">
+          <LearningComponent />
+        </section>
+        <section id="journey7">
+          <KnowledgeComponent />
+        </section>
+        <section id="journey8">
+          <StevejobsComponent />
+        </section>
+        <section id="journey9">
+          <ImportComponent />
+        </section>
+        <section id="journey10">
+          <CreativityComponent />
+        </section>
+        <section id="journey11">
+          <FooterComponent />
+        </section>
+      </div>
+    </>
   );
 }
 
