@@ -7,6 +7,7 @@ import bgImage from "../../../src/assets/Images/bg-thankyou.png";
 function FooterComponent() {
   let footerContainerRef = useRef(null);
   let loseFearRef = useRef(null);
+  let checkProjectRef = useRef(null);
   let bgFooterRef = useRef(null);
   const [infoClick, setInfoClicked] = useState(false);
   const clickHandler = () => setInfoClicked(!infoClick);
@@ -17,7 +18,18 @@ function FooterComponent() {
           y: -20,
           opacity: 1,
           ease: "ease",
-          duration: 1,
+          duration: 0.3,
+          scrollTrigger: {
+            trigger: footerContainerRef.current,
+            start: "98% bottom",
+            toggleActions: "play none none reverse",
+          },
+        });
+        gsap.to(checkProjectRef.current, {
+          y: -20,
+          opacity: 1,
+          ease: "ease",
+          duration: 2,
           scrollTrigger: {
             trigger: footerContainerRef.current,
             start: "98% bottom",
@@ -95,7 +107,7 @@ function FooterComponent() {
           <BuiltWith />
         </div>
       </div>
-      <p className="checkout-projects__footer">
+      <p ref={checkProjectRef} className="checkout-projects__footer">
         Check out my <span>projects</span> for more details...
       </p>
     </div>

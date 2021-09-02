@@ -133,11 +133,12 @@
 .checkout-projects__footer {
   color: #ddd;
   position: absolute;
-  top: 45%;
+  top: 47%;
   font-size: calc(2vw + 1rem);
   left: 5%;
   letter-spacing: 3px;
   font-family: "Avenir";
+  opacity: 0;
 }
 .checkout-projects__footer span {
   color: rgb(248, 56, 56);

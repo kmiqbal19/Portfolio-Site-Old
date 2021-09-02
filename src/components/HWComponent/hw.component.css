@@ -51,4 +51,7 @@
   .hw-svg {
     transform: scale(2) translateX(-100px);
   }
+  .but-hw {
+    font-size: 1rem;
+  }
 }
