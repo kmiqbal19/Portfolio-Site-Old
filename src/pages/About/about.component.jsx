@@ -4,6 +4,7 @@ import "./about.component.css";
 import Nav from "../../components/NavBar/nav.component";
 import Resume from "./CV-1.1.pdf";
 function AboutPage() {
+  let textContainerRef = useRef(null);
   useEffect(() => {
     // Main Logo
     gsap.to("#left-ellipse", { fill: "white" });
@@ -14,12 +15,19 @@ function AboutPage() {
       backgroundImage: "linear-gradient(to bottom, #1d1b26 50%, transparent)",
     });
     gsap.to(".nav-list", { color: "white" });
+    // text container
+    gsap.from(textContainerRef.current, {
+      opacity: 0,
+      y: -30,
+      ease: "ease",
+      duration: 1,
+    });
   }, []);
   return (
     <>
       <Nav />
       <div className="about-container">
-        <div className="about-text__container">
+        <div ref={textContainerRef} className="about-text__container">
           <h2>About Me</h2>
           <p>
             I am a self taught frontend developer. My frondend works are mostly
