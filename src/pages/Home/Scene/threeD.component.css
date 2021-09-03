@@ -35,7 +35,7 @@ canvas {
   font-weight: 300;
   animation: loading-anime 1s ease-in-out 1s infinite;
 }
-@keyframes liading-anime {
+@keyframes loading-anime {
   0%,
   100% {
     opacity: 1;
