@@ -77,6 +77,9 @@ div.project__container {
   text-decoration: none;
   color: whitesmoke;
 }
+.live-button__project:hover {
+  background-color: rgb(241, 63, 63);
+}
 .project__description--para {
   padding: 3rem;
   font-size: 1.2rem;
@@ -207,6 +210,7 @@ div.project__container {
     right: 45%;
     z-index: 2;
   }
+
   .project__description--para {
     /* padding: 3rem; */
     width: 100vw;
