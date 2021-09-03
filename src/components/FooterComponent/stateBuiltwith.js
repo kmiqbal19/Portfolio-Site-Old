@@ -21,5 +21,11 @@ const stateBuilt = [
     logoName: "gsap-logo",
     toolDescription: "Animation",
   },
+  {
+    toolLogo: "https://i.ibb.co/MPT2zZ5/netlify-logo-png-transparent.png",
+    toolName: "Netlify",
+    logoName: "netlify-logo",
+    toolDescription: "Hosting",
+  },
 ];
 export default stateBuilt;

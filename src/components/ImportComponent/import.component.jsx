@@ -31,11 +31,11 @@ function ImportComponent() {
       duration: 1,
       ease: "ease",
       stagger: 0.3,
-      delay: 1,
+
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "60% bottom",
-        end: "60% bottom",
+        start: "20% bottom",
+        end: "20% bottom",
 
         toggleActions: "play none none reverse",
         // markers: true,

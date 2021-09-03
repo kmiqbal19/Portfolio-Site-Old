@@ -30,18 +30,21 @@ function AboutPage() {
         <div ref={textContainerRef} className="about-text__container">
           <h2>About Me</h2>
           <p>
-            I am a self taught frontend developer. My frondend works are mostly
+            I am a creative frontend developer. My frondend works are mostly
             influenced by animations, interactions, UI and imaginations. I
             always try to aquire diversified knowledge. As you know human brain
             can hold 4.7 billion books. So I believe not only science ,
             engineering , programming is important in my life, but also i need
-            social , law , cultute, history to know. "Anyone who only
-            understands chemistry, doesn’t even understand that correctly." -
-            Georg Christoph Lichtenberg. But after all I am really passionate
-            about programming and i am very enthusiastic about javaScript. My
-            goal is to become a better and up-to-date web developer. I am a self
-            motivated and hard working person, focused to my work. If you can
-            think , I can ink it for you.
+            social , law , cultute, history to know.
+            <q>
+              "Anyone who only understands chemistry, doesn’t even understand
+              that correctly."
+            </q>
+            -<em>Georg Christoph Lichtenberg</em>. But after all I am really
+            passionate about programming and i am very enthusiastic about
+            javaScript. My goal is to become a better and up-to-date web
+            developer. I am a self motivated and hard working person, focused to
+            my work. If you can think , I can ink it for you.
           </p>
 
           <a className="resume-download" href={Resume}>
