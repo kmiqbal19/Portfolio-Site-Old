@@ -1,7 +1,6 @@
-import React, { useRef, useEffect } from "react";
-import { gsap, Elastic } from "gsap";
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
 import { Draggable } from "gsap/Draggable";
-import { snap } from "gsap/gsap-core";
 
 import "./creativity.component.css";
 function CreativityComponent() {
@@ -11,7 +10,7 @@ function CreativityComponent() {
   const curlyBraceRight = "}";
 
   useEffect(() => {
-    const boxes = document.querySelectorAll(".creativity-box");
+    // const boxes = document.querySelectorAll(".creativity-box");
     const letters = document.querySelectorAll(".creativity-letter");
 
     Draggable.create(letters, {

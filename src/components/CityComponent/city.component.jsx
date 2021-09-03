@@ -391,60 +391,6 @@ function CityComponent() {
                 stroke="black"
                 stroke-width="0.685714"
               />
-              {/* <line
-                className="aeroplane-wind__line"
-                x1="120.466"
-                y1="276.657"
-                x2="147.894"
-                y2="277.361"
-                stroke="black"
-                stroke-width="0.685714"
-              />
-              <line
-                className="aeroplane-wind__line"
-                x1="120.466"
-                y1="339.057"
-                x2="147.894"
-                y2="339.761"
-                stroke="black"
-                stroke-width="0.685714"
-              />
-              <line
-                className="aeroplane-wind__line"
-                x1="131.437"
-                y1="280.086"
-                x2="158.866"
-                y2="280.789"
-                stroke="black"
-                stroke-width="0.685714"
-              />
-              <line
-                className="aeroplane-wind__line"
-                x1="131.437"
-                y1="342.486"
-                x2="158.866"
-                y2="343.189"
-                stroke="black"
-                stroke-width="0.685714"
-              />
-              <line
-                className="aeroplane-wind__line"
-                x1="104.009"
-                y1="283.514"
-                x2="131.437"
-                y2="284.218"
-                stroke="black"
-                stroke-width="0.685714"
-              />
-              <line
-                className="aeroplane-wind__line"
-                x1="104.009"
-                y1="345.914"
-                x2="131.437"
-                y2="346.618"
-                stroke="black"
-                stroke-width="0.685714"
-              /> */}
             </g>
           </g>
           <g className="main-city">
