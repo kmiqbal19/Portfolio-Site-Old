@@ -18,10 +18,7 @@ const ThreeDElements = () => {
     THREE.DefaultLoadingManager.onLoad = () => setFinished(true);
   }, []);
   useEffect(() => {
-    if (
-      history.location.pathname === "/home" ||
-      history.location.pathname === "/"
-    ) {
+    if (history.location.pathname === "/home") {
       setFinished(true);
     }
   }, [history.location.pathname]);
