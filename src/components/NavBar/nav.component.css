@@ -20,7 +20,7 @@ nav#main-nav {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 4;
   /* border: 2px solid red; */
 }
 

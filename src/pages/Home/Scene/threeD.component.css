@@ -21,7 +21,7 @@ canvas {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  z-index: 3;
+  z-index: 5;
 }
 .loading-img {
   width: 30vw;
