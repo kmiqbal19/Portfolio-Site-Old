@@ -48,10 +48,10 @@ function AboutPage() {
             <i class="fas fa-download"></i> Resume
           </a>
           <ul className="social-links__about--container">
-            <a href="sd">
+            <a href="https://www.linkedin.com/in/k-m-iqbal-96a112146">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="sdd">
+            <a href="https://github.com/kmiqbal19">
               <i class="fab fa-github"></i>
             </a>
           </ul>

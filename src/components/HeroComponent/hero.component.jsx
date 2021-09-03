@@ -21,7 +21,7 @@ function HeroComponent() {
         <Typical
           steps={[
             "A Frontend Developer",
-            3000,
+            4000,
             "JavaScript Enthusiast",
             3000,
             "An Engineering Student",

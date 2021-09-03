@@ -106,7 +106,7 @@ function ProgrammingComponent() {
         });
         windowTl
           .to(progWindowRef.current, { scale: 0.9, x: 100, duration: 1 })
-          .from(boyProgRef.current, { x: -1050, ease: "ease", duration: 1 })
+          .from(boyProgRef.current, { x: -1250, ease: "ease", duration: 1 })
           .to(paraRef.current, {
             opacity: 1,
             duration: 0.5,
