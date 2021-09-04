@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import "./footer.component.css";
 import stateBuilt from "./stateBuiltwith";
 import bgImage from "../../../src/assets/Images/bg-thankyou.png";
@@ -108,7 +110,8 @@ function FooterComponent() {
         </div>
       </div>
       <p ref={checkProjectRef} className="checkout-projects__footer">
-        Check out my <span>projects</span> for more details...
+        Check out my <NavLink to="/projects">projects</NavLink> for more
+        details...
       </p>
     </div>
   );

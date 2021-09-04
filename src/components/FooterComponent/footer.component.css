@@ -140,7 +140,7 @@
   font-family: "Avenir";
   opacity: 0;
 }
-.checkout-projects__footer span {
+.checkout-projects__footer a {
   color: rgb(248, 56, 56);
   font-size: calc(3vw + 2rem);
   text-decoration: underline;

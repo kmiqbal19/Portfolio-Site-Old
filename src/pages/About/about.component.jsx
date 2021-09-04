@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import "./about.component.css";
 import Nav from "../../components/NavBar/nav.component";
-import Resume from "./CV_Final.pdf";
+import Resume from "./Resume_Iqbal.pdf";
 function AboutPage() {
   let textContainerRef = useRef(null);
   useEffect(() => {

@@ -45,7 +45,7 @@ const ProjectList = [
     projectImageName: "km-iqbal",
     projectNumber: "05",
     projectHeading: "kmiqbal.com",
-    projectLink: "https://festive-lichterman-c3dabe.netlify.app",
+    projectLink: "https://www.kmiqbal.com",
     projectDescription:
       "This is one of my favorite project. It's built with react, react-router, react-three-fiber, gsap, figma , photoshop. This website is fully responsive. It's an ongoing project. I will update it more with time and oppurtunity.",
     bgColor: "purple",
