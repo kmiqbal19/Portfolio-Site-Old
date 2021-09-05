@@ -77,7 +77,7 @@ function CityComponent() {
         });
         gsap.to(".car-body-2", { y: 4, yoyo: true, repeat: -1 });
       },
-      "(min-width: 300px) and (max-width:1600px)": function () {
+      "(max-width:1600px)": function () {
         // Aeroplane and Clouds
         const aeroplaneCloudScrollTl = gsap.timeline({
           scrollTrigger: {
@@ -205,7 +205,86 @@ function CityComponent() {
           },
         });
       },
-      "(min-width: 1601px)": function () {
+      "(min-width: 1601px) and (max-width:2200px)": function () {
+        // Aeroplane and Clouds
+        const aeroplaneCloudScrollTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: cityRef.current,
+            start: "75% bottom",
+            end: "+=1000",
+            // markers: true,
+            scrub: 3,
+            pin: true,
+            // scroller: '.home-container'
+          },
+        });
+        aeroplaneCloudScrollTl
+          .from(".cloud-1-city", {
+            x: -1800,
+            ease: "ease",
+            duration: 2,
+          })
+          .from(".cloud-2-city", {
+            x: 1800,
+            ease: "ease",
+            duration: 2,
+          })
+          .fromTo(
+            ".aeroplane-main",
+            { x: -600 },
+            {
+              x: 2000,
+              ease: "ease",
+              duration: 5,
+            }
+          );
+
+        //  Car 2 Scroll
+        gsap.fromTo(
+          ".car-2",
+          {
+            x: -500,
+          },
+          {
+            x: 1000,
+            duration: 10,
+            scrollTrigger: {
+              trigger: cityRef.current,
+              start: "80% 40%",
+              end: "+=500",
+              scrub: 4,
+              // markers: true,
+              // scroller: '.home-container'
+            },
+          }
+        );
+        gsap.to(".car-wheel-2", {
+          rotate: 1440,
+
+          transformOrigin: "center",
+          scrollTrigger: {
+            trigger: cityRef.current,
+            start: "80% 40%",
+            end: "+=350",
+            scrub: 4,
+            // scroller: '.home-container'
+          },
+        });
+      },
+      "(min-width: 2201px)": function () {
+        gsap.to(".aeroplane-main", {
+          scale: 1.3,
+          transformOrigin: "center",
+        });
+        gsap.to(".cloud-1-city", {
+          scale: 1.3,
+          transformOrigin: "center",
+        });
+        gsap.to(".cloud-2-city", {
+          scale: 1.3,
+          transformOrigin: "center",
+        });
+
         // Aeroplane and Clouds
         const aeroplaneCloudScrollTl = gsap.timeline({
           scrollTrigger: {

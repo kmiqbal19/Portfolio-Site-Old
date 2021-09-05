@@ -39,40 +39,40 @@ function HomePage() {
           <ShootingCube />
           <ThreeDElements />
         </section>
-        <section id="journey1">
-          <CloudComponent />
-        </section>
-        <section id="journey2">
-          <CityComponent />
-        </section>
-        <section id="journey3">
-          <ProgrammingComponent />
-        </section>
+        {/* <section id="journey1"> */}
+        <CloudComponent />
+        {/* </section> */}
+        {/* <section id="journey2"> */}
+        <CityComponent />
+        {/* </section> */}
+        {/* <section id="journey3"> */}
+        <ProgrammingComponent />
+        {/* </section> */}
 
-        <section id="journey4">
-          <LoveComponent />
-        </section>
-        <section id="journey5">
-          <HWComponent />
-        </section>
-        <section id="journey6">
-          <LearningComponent />
-        </section>
-        <section id="journey7">
-          <KnowledgeComponent />
-        </section>
-        <section id="journey8">
-          <StevejobsComponent />
-        </section>
-        <section id="journey9">
-          <ImportComponent />
-        </section>
-        <section id="journey10">
-          <CreativityComponent />
-        </section>
-        <section id="journey11">
-          <FooterComponent />
-        </section>
+        {/* <section id="journey4"> */}
+        <LoveComponent />
+        {/* </section> */}
+        {/* <section id="journey5"> */}
+        <HWComponent />
+        {/* </section> */}
+        {/* <section id="journey6"> */}
+        <LearningComponent />
+        {/* </section> */}
+        {/* <section id="journey7"> */}
+        <KnowledgeComponent />
+        {/* </section> */}
+        {/* <section id="journey8"> */}
+        <StevejobsComponent />
+        {/* </section> */}
+        {/* <section id="journey9"> */}
+        <ImportComponent />
+        {/* </section> */}
+        {/* <section id="journey10"> */}
+        <CreativityComponent />
+        {/* </section> */}
+        {/* <section id="journey11"> */}
+        <FooterComponent />
+        {/* </section> */}
       </div>
     </>
   );

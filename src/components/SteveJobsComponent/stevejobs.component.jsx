@@ -30,7 +30,42 @@ function StevejobsComponent() {
           ease: "linear",
         });
       },
-      "(min-width: 1801px) and (max-width:2561px)": function () {
+      "(min-width: 2201px) ": function () {
+        // Rings movement
+        const ringMoveTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "bottom bottom",
+            end: "bottom bottom",
+            // markers: true,
+            toggleActions: "play none none reverse",
+          },
+        });
+        ringMoveTl
+          .to(ring2Ref.current, {
+            x: 1100,
+            duration: 0.5,
+            scale: 1.2,
+            y: 150,
+            transformOrigin: "center",
+          })
+          .to(ring1Ref.current, {
+            x: 1100,
+            scale: 1.2,
+            y: 150,
+            transformOrigin: "center",
+            ease: Expo.easeIn,
+            duration: 0.7,
+          })
+          .to(steveQuoteContainerRef.current, {
+            opacity: 1,
+            y: -10,
+            ease: "ease",
+            duration: 0.5,
+            delay: 0.4,
+          });
+      },
+      "(min-width: 1801px) and (max-width:2200px)": function () {
         // Rings movement
         const ringMoveTl = gsap.timeline({
           scrollTrigger: {

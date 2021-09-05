@@ -76,13 +76,141 @@ function CloudComponent() {
           },
         });
       },
-      "(min-width: 1601px)": function () {
+      " (min-width: 2301px) and (min-height:1200px)": function () {
+        // Cloud SVG
+        gsap.to(".cloud-svg", {
+          scale: 1.3,
+          transformOrigin: "center",
+          y: 100,
+        });
         // Cloud Scroll
         const cloudBirdScrollTimeline = gsap.timeline({
           scrollTrigger: {
             trigger: containerCloudRef.current,
             // markers: true,
+            start: "100% 90%",
+            end: "+=1800",
+            scrub: 3,
+            pin: true,
+            // scroller: ".home-container",
+          },
+        });
+        cloudBirdScrollTimeline
+          .to(containerCloudRef.current, 1.5, {
+            backgroundImage:
+              "linear-gradient(to bottom, rgba(90,222,255,1) 0%, rgba(196,224,232,1) 73%, rgba(0,203,254,1) 100%)",
+            delay: 0.5,
+          })
+          .from(cloud1Ref.current, {
+            x: 2300,
+            duration: 5,
+            delay: 0,
+            ease: "SlowMo",
+          })
+          .from(cloud2Ref.current, {
+            x: -2300,
+            duration: 5,
+            delay: 0,
+            ease: "SlowMo",
+          })
+          // Bird Scroll
+          .to(".bird-1", 5, {
+            x: 2200,
+            delay: 0,
+            ease: "SlowMo",
+          })
+          .to(".bird-2", 5, {
+            x: -2350,
+            delay: 0,
+            ease: "SlowMo",
+          });
+
+        gsap.to(paraRef.current, {
+          opacity: 1,
+          delay: 1,
+          y: -50,
+          ease: "ease",
+          duration: 5,
+          scrollTrigger: {
+            trigger: containerCloudRef.current,
+            // markers: true,
             start: "90% bottom",
+            end: "+=100",
+
+            scrub: 1,
+            // scroller: ".home-container",
+          },
+        });
+      },
+      "(min-width: 2001px) and (max-width:2300px)": function () {
+        // Cloud SVG
+        gsap.to(".cloud-svg", { scale: 1.2, transformOrigin: "center" });
+        // Cloud Scroll
+        const cloudBirdScrollTimeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerCloudRef.current,
+            // markers: true,
+            start: "100% bottom",
+            end: "+=1800",
+            scrub: 3,
+            pin: true,
+            // scroller: ".home-container",
+          },
+        });
+        cloudBirdScrollTimeline
+          .to(containerCloudRef.current, 1.5, {
+            backgroundImage:
+              "linear-gradient(to bottom, rgba(90,222,255,1) 0%, rgba(196,224,232,1) 73%, rgba(0,203,254,1) 100%)",
+            delay: 0.5,
+          })
+          .from(cloud1Ref.current, {
+            x: 2300,
+            duration: 5,
+            delay: 0,
+            ease: "SlowMo",
+          })
+          .from(cloud2Ref.current, {
+            x: -2300,
+            duration: 5,
+            delay: 0,
+            ease: "SlowMo",
+          })
+          // Bird Scroll
+          .to(".bird-1", 5, {
+            x: 2200,
+            delay: 0,
+            ease: "SlowMo",
+          })
+          .to(".bird-2", 5, {
+            x: -2350,
+            delay: 0,
+            ease: "SlowMo",
+          });
+
+        gsap.to(paraRef.current, {
+          opacity: 1,
+          delay: 1,
+          y: -200,
+          ease: "ease",
+          duration: 5,
+          scrollTrigger: {
+            trigger: containerCloudRef.current,
+            // markers: true,
+            start: "90% bottom",
+            end: "+=100",
+
+            scrub: 1,
+            // scroller: ".home-container",
+          },
+        });
+      },
+      "(min-width: 1601px) and (max-width:2000px)": function () {
+        // Cloud Scroll
+        const cloudBirdScrollTimeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerCloudRef.current,
+            // markers: true,
+            start: "100% bottom",
             end: "+=1800",
             scrub: 3,
             pin: true,
@@ -136,7 +264,7 @@ function CloudComponent() {
           },
         });
       },
-      "(min-width: 300px) and (max-width: 1600px)": function () {
+      "(max-width: 1600px)": function () {
         // Cloud Scroll
         const cloudBirdScrollTimeline = gsap.timeline({
           scrollTrigger: {

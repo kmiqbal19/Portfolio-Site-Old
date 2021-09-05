@@ -13,6 +13,12 @@
   position: inherit;
   box-shadow: 0 0 2px rgb(57, 51, 58), 0 0 2px rgb(181, 192, 199);
 }
+@media screen and (min-height: 1900px) {
+  .cube {
+    width: 25px;
+    height: 25px;
+  }
+}
 .cube-1 {
   left: 5%;
   top: 15%;
