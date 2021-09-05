@@ -90,6 +90,9 @@ ul.social-links__about--container {
 .social-links__about--container a:hover {
   color: rgb(70, 153, 247);
 }
+.social-links__about--container a {
+  color: rgb(239, 242, 245);
+}
 /* Media Queries */
 
 @media screen and (max-width: 750px) {
