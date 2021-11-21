@@ -30,12 +30,12 @@ function AboutPage() {
         <div ref={textContainerRef} className="about-text__container">
           <h2>About Me</h2>
           <p>
-            I am a creative frontend developer. My frondend works are mostly
-            influenced by animations, interactions, UI and imaginations. I
-            always try to aquire diversified knowledge. As you know human brain
-            can hold 4.7 billion books. So I believe not only science ,
-            engineering , programming is important in my life, but also i need
-            social , law , cultute, history to know.
+            I am a frontend developer. My frondend works are mostly influenced
+            by animations, interactions, UI and imaginations. I always try to
+            aquire diversified knowledge. As you know human brain can hold 4.7
+            billion books. So I believe not only science , engineering ,
+            programming is important in my life, but also i need social , law ,
+            cultute, history to know.
             <q>
               "Anyone who only understands chemistry, doesn’t even understand
               that correctly."
