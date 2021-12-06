@@ -4,7 +4,7 @@ const ProjectList = [
       "https://i.ibb.co/7Wt7PFx/262665745-1326597921123161-1194570221142219422-n.jpg",
     projectImageName: "manchester-city-bd",
     projectNumber: "01",
-    projectHeading: "ManCity BD Supporters Club",
+    projectHeading: "MCFC Bangladesh",
     projectLink: "https://mcfcbd.com",
     projectDescription:
       "This is the official website for Manchester City Bangladesh Supporters Club. I built it with React. It's responsive to mobile devices also.",
