@@ -30,7 +30,7 @@ const ThreeDElements = () => {
           src="https://i.ibb.co/F31ZJFJ/Eclipse-1s-230px.gif"
           alt="loading-spinner"
         />
-        <h1 className="loading-header">Loading 3D Content...</h1>
+        <h1 className="loading-header">Loading...</h1>
       </div>
     ) : null;
   };
