@@ -398,8 +398,8 @@ function ProgrammingComponent() {
       </svg>
       <div ref={paraRef} className="description--journey-three">
         <span className="para-three">
-          Later in 2020, modern web development really picked my interest and I
-          started to taught myself
+          Later modern web development really picked my interest and I started
+          to taught myself
         </span>
         <span className="para-three">
           with different resources of web development. And gradually my interest

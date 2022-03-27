@@ -1508,12 +1508,10 @@ function CityComponent() {
       </svg>
       <div ref={paraRef} className="description--journey-two">
         <span className="para-two">
-          Have you noticed that...a planned beautiful city. Well, I started to
-          learn programming
+          I started to learn programming in my bachelor of urban planning.
         </span>
         <span className="para-two">
-          in my bachelor of urban planning. That mighty course was programming
-          for planners.
+          That mighty course was programming for planners.
         </span>
       </div>
     </div>
