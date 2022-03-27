@@ -20,9 +20,9 @@ function HeroComponent() {
       <p className="typing-para">
         <Typical
           steps={[
-            "A Frontend Developer",
-            4000,
             "JavaScript Enthusiast",
+            4000,
+            "Frontend Learner",
             3000,
             "An Engineering Student",
             1500,
