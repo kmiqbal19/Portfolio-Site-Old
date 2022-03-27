@@ -117,7 +117,7 @@
 .thankyou__footer span {
   font-size: calc(2vw + 1rem);
   color: rgb(248, 56, 56);
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 .bg-footer {
   position: absolute;
