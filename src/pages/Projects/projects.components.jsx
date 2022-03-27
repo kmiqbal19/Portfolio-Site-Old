@@ -145,6 +145,18 @@ function ProjectsPage() {
             // scroller: ".projects-wrapper",
           },
         });
+        gsap.to(".project__description--container-6", {
+          x: 20,
+          ease: "ease",
+          duration: 0.8,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".project__container-6",
+            start: "70% bottom",
+            toggleActions: "play none none none",
+            // scroller: ".projects-wrapper",
+          },
+        });
       },
     });
   }, []);

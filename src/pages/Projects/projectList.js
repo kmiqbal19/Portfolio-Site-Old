@@ -52,7 +52,8 @@ const ProjectList = [
     bgColor: "purple",
   },
   {
-    projectImage: "https://i.ibb.co/9h1V4wQ/km-f.jpg",
+    projectImage:
+      "https://i.ibb.co/8cT1phK/240711290-566014284552001-718623481016276918-n.jpg",
     projectImageName: "km-iqbal",
     projectNumber: "06",
     projectHeading: "kmiqbal.com",

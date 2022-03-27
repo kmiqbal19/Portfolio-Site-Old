@@ -17,7 +17,7 @@ import StevejobsComponent from "../../components/SteveJobsComponent/stevejobs.co
 import ImportComponent from "../../components/ImportComponent/import.component";
 import CreativityComponent from "../../components/CreativityComponent/creativity.component";
 import FooterComponent from "../../components/FooterComponent/footer.component";
-
+import SlowScroll from "../../components/ToSlowSlideComponent/toslowslide.component";
 function HomePage() {
   useEffect(() => {
     // Main Logo
@@ -35,6 +35,7 @@ function HomePage() {
       <Nav />
       <div className="home-container">
         <section id="showcase">
+          <SlowScroll />
           <HeroComponent />
           <ShootingCube />
           <ThreeDElements />
