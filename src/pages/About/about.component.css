@@ -23,7 +23,7 @@
   background-position: center;
   position: relative;
 }
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 2560px) {
   .image-container__about {
     background-image: url("https://i.ibb.co/dj9tV3Y/16996489-1064994096939380-4615477686718634980-n-1.jpg");
   }
