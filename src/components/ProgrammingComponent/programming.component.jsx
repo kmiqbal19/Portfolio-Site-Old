@@ -306,7 +306,7 @@ function ProgrammingComponent() {
               d="M1126.05 942.595H83V946H1126.05V942.595Z"
               fill="#CECAFA"
             />
-            <g ref={boyProgRef} className="boy-prog" clip-path="url(#clip0)">
+            <g ref={boyProgRef} className="boy-prog" clipPath="url(#clip0)">
               <path
                 id="Vector_28"
                 d="M217.136 923.383H234.495L242.755 852.121L217.133 852.123L217.136 923.383Z"

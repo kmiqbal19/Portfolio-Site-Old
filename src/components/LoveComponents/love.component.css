@@ -45,10 +45,8 @@
   transform: translateY(-150px);
   transition: transform 1s ease-in-out;
 }
-@media screen and (max-width: 800px) {
-  .description--journey-four {
-    position: absolute;
-    top: 70%;
-    left: 0;
-  }
+.description--journey-four {
+  position: absolute;
+  top: 70%;
+  left: 0;
 }

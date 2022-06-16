@@ -104,7 +104,7 @@ function FooterComponent() {
           }
         >
           <span className="builtwith-footer__text">
-            Built with <i class="fas fa-heart"></i>
+            Built with <i className="fas fa-heart"></i>
           </span>
           <BuiltWith />
         </div>

@@ -58,7 +58,7 @@ function ImportComponent() {
         <span className="parenthesis-text__import">( )</span>
         {"  "}
         <span className="arrowfunc-text__import">
-          =<i class="fas fa-angle-right fa-sm"></i>
+          =<i className="fas fa-angle-right fa-sm"></i>
         </span>
         <span className="curlyleft-text__import">{curlyBracketLeft}</span>
         <br />

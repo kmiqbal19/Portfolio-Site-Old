@@ -120,7 +120,7 @@ function CreativityComponent() {
             height="81"
             rx="14.5"
             stroke="#E5E5CE"
-            stroke-width="3"
+            strokeWidth="3"
           />
           <rect
             id="creativity-box-2"
@@ -131,7 +131,7 @@ function CreativityComponent() {
             height="81"
             rx="14.5"
             stroke="#E5E5CE"
-            stroke-width="3"
+            strokeWidth="3"
           />
           <rect
             id="creativity-box-3"
@@ -142,7 +142,7 @@ function CreativityComponent() {
             height="81"
             rx="14.5"
             stroke="#E5E5CE"
-            stroke-width="3"
+            strokeWidth="3"
           />
           <rect
             id="creativity-box-4"
@@ -153,7 +153,7 @@ function CreativityComponent() {
             height="81"
             rx="14.5"
             stroke="#E5E5CE"
-            stroke-width="3"
+            strokeWidth="3"
           />
           <rect
             id="creativity-box-5"
@@ -164,7 +164,7 @@ function CreativityComponent() {
             height="81"
             rx="14.5"
             stroke="#E5E5CE"
-            stroke-width="3"
+            strokeWidth="3"
           />
           <rect
             id="creativity-box-6"
@@ -175,7 +175,7 @@ function CreativityComponent() {
             height="81"
             rx="14.5"
             stroke="#E5E5CE"
-            stroke-width="3"
+            strokeWidth="3"
           />
           <rect
             id="creativity-box-7"
@@ -186,7 +186,7 @@ function CreativityComponent() {
             height="81"
             rx="14.5"
             stroke="#E5E5CE"
-            stroke-width="3"
+            strokeWidth="3"
           />
           <rect
             id="creativity-box-8"
@@ -197,7 +197,7 @@ function CreativityComponent() {
             height="81"
             rx="14.5"
             stroke="#E5E5CE"
-            stroke-width="3"
+            strokeWidth="3"
           />
           <rect
             id="creativity-box-9"
@@ -208,7 +208,7 @@ function CreativityComponent() {
             height="81"
             rx="14.5"
             stroke="#E5E5CE"
-            stroke-width="3"
+            strokeWidth="3"
           />
           <rect
             id="creativity-box-10"
@@ -219,7 +219,7 @@ function CreativityComponent() {
             height="81"
             rx="14.5"
             stroke="#E5E5CE"
-            stroke-width="3"
+            strokeWidth="3"
           />
         </g>
       </svg>

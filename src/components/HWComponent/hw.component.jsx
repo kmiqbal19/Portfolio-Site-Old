@@ -225,48 +225,48 @@ function HWComponent() {
               <g id="laptop__hw">
                 <path
                   id="path3354"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M1074.76 485.5V502.667L1056.26 522V502.667L1074.76 485.5Z"
                   fill="black"
                   stroke="black"
-                  stroke-width="0.227796"
+                  strokeWidth="0.227796"
                 />
                 <path
                   id="path3338"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M836.26 403.5L844.26 400.5L903.76 504L903.76 521L836.26 403.5Z"
                   fill="black"
                   stroke="black"
-                  stroke-width="0.227796"
+                  strokeWidth="0.227796"
                 />
                 <path
                   id="path3340"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M904.26 503V520.584C953.207 526.451 1003.49 529.044 1058.26 520.584V503H904.26Z"
                   fill="black"
                   stroke="black"
-                  stroke-width="0.227796"
+                  strokeWidth="0.227796"
                 />
                 <path
                   id="path3350"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M844.51 400.071L925.01 389.571L978.01 487.571L904.01 504.071L844.51 400.071Z"
                   fill="#666666"
                   stroke="black"
-                  stroke-width="0.227796"
+                  strokeWidth="0.227796"
                 />
                 <path
                   id="path3352"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M906.26 503L977.26 486H1075.76L1056.69 503H906.26Z"
                   fill="#B3B3B3"
                   stroke="black"
-                  stroke-width="0.227796"
+                  strokeWidth="0.227796"
                 />
                 <g id="text3356">
                   <path
@@ -303,111 +303,111 @@ function HWComponent() {
               </g>
               <path
                 className="right-arm__hw"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M1223 403V494L1049.3 484.9L1030 463.06L1150.62 457.6L1174.75 403H1223Z"
                 fill="#CF3B3B"
                 stroke="black"
-                stroke-width="0.414126"
+                strokeWidth="0.414126"
               />
               <path
                 id="body-hw"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M1159.72 402.988C1145.24 417.45 1140.48 438.386 1138.76 457.471C1135.43 494.181 1159.72 566.436 1159.72 566.436H1243.59C1243.59 566.436 1257.76 479.867 1243.59 439.31C1236.28 418.42 1226.01 390.43 1201.65 384.827C1186.55 381.353 1169.96 392.762 1159.72 402.988Z"
                 fill="#CF3B3B"
                 stroke="black"
-                stroke-width="0.414126"
+                strokeWidth="0.414126"
               />
               <path
                 className="right-leg__hw"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M1240.97 563.979C1240.97 563.979 1246.91 594.224 1242.37 612.993C1240.34 621.387 1227.78 637.031 1217.9 637.315L1127.79 639.904L1188.92 727.321L1168.48 746.077C1168.48 746.077 1074.56 674.011 1067.26 640.405C1064.37 627.121 1092.71 606.883 1103.48 596.998C1125.02 577.228 1157.14 566.387 1157.14 566.387L1240.97 563.979Z"
                 fill="black"
                 stroke="black"
-                stroke-width="0.414126"
+                strokeWidth="0.414126"
               />
               <path
                 className="left-leg__hw"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M1075.4 628.613L1001.72 739.262C1004.15 746.42 1033.21 747.702 1033.21 747.702L1096.08 670.868L1075.4 628.613Z"
                 fill="black"
                 stroke="black"
-                stroke-width="0.414126"
+                strokeWidth="0.414126"
               />
               <g id="table-hw">
                 <path
                   id="path3511"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M793.503 535.538V770.691H812.077L822.079 535.538H793.503Z"
                   fill="#554400"
                   stroke="black"
-                  stroke-width="0.282222"
+                  strokeWidth="0.282222"
                 />
                 <path
                   id="path3513"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M1033.54 534.301V769.453H1052.12L1062.12 534.301H1033.54Z"
                   fill="#554400"
                   stroke="black"
-                  stroke-width="0.282222"
+                  strokeWidth="0.282222"
                 />
                 <path
                   id="path3348"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M776.357 515.736V540.489H1104.98V515.736H776.357Z"
                   fill="#554400"
                   stroke="black"
-                  stroke-width="0.282222"
+                  strokeWidth="0.282222"
                 />
               </g>
               <g id="chair-hw">
                 <path
                   id="path3522"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M1136.44 634.568V646.908H1264.99V634.568H1136.44Z"
                   fill="#BE9D19"
                   stroke="black"
-                  stroke-width="0.298852"
+                  strokeWidth="0.298852"
                 />
                 <path
                   id="path3524"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M1250.72 634.55L1279.3 473.656H1293.58L1265.01 634.55H1250.72Z"
                   fill="#BE9D19"
                   stroke="black"
-                  stroke-width="0.282222"
+                  strokeWidth="0.282222"
                 />
                 <path
                   id="path3526"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M1137.66 646.769V762.185H1146.78L1151.69 646.769H1137.66Z"
                   fill="#BE9D19"
                   stroke="black"
-                  stroke-width="0.138519"
+                  strokeWidth="0.138519"
                 />
                 <path
                   id="path3528"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M1264.57 646.769V762.185H1255.45L1250.54 646.769H1264.57Z"
                   fill="#BE9D19"
                   stroke="black"
-                  stroke-width="0.138519"
+                  strokeWidth="0.138519"
                 />
               </g>
               <path
                 className="left-arm__hw"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M1212.47 418.757L1199.63 486.327L1041.65 443.78L1030.31 422.238L1142.81 444.404L1182.73 401.387L1212.47 418.757Z"
                 fill="#CF3B3B"
               />
@@ -417,7 +417,7 @@ function HWComponent() {
               d="M1179.6 352C1179.6 372.769 1162.98 389.597 1142.5 389.597C1122.02 389.597 1105.4 372.769 1105.4 352C1105.4 331.231 1122.02 314.403 1142.5 314.403C1162.98 314.403 1179.6 331.231 1179.6 352Z"
               fill="#C4C4C4"
               stroke="black"
-              stroke-width="0.805363"
+              strokeWidth="0.805363"
             />
             <g className="sunglass__hw">
               <path
@@ -434,7 +434,7 @@ function HWComponent() {
                 id="Vector 1"
                 d="M1116.32 345.182C1119.19 342.184 1126.02 338.119 1130.34 345.849"
                 stroke="black"
-                stroke-width="0.571477"
+                strokeWidth="0.571477"
               />
             </g>
           </g>
@@ -526,8 +526,8 @@ function HWComponent() {
       </div>
       <div className="but-hw__container">
         <p className="but-hw">
-          But I realized....Coding Sucks <i class="fas fa-tired"></i> !! And I
-          broke up with it <i class="fas fa-angry"></i>.......
+          But I realized....Coding Sucks <i className="fas fa-tired"></i> !! And
+          I broke up with it <i className="fas fa-angry"></i>.......
           <br />
           But also understood, the power of it will not come within one or two
           day or week or one two month. So I took my time to learn it and still
