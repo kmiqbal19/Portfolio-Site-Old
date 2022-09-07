@@ -10,7 +10,7 @@ My Previous Portfolio
 
 ![App Screenshot](https://i.ibb.co/9YVxbyh/kmiqbal-old.gif)
 
-![Logo](https://i.ibb.co/ZWM73tH/iqbal-Logofor-favicon.png)
+
 
 ## Available Scripts
 
